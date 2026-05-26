@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>juejin-skill：把文章发布到掘金做成可复用的 Skill - Memphis PPT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/Fill/style.css">
+  <style>
+/* Memphis HTML PPT - Exact palette from hugohe3/ppt-master */
+
+:root {
+  --paper: #FFF8EE;
+  --paper-2: #FFE9C7;
+  --ink: #1A1A2E;
+  --ink-2: #4A4A6A;
+  --pink: #FF3DA5;
+  --blue: #00B8D9;
+  --yellow: #FFD93D;
+  --mint: #00C896;
+  --coral: #FF6B4A;
+  --radius: 12px;
+  --border: 4px solid var(--ink);
+  --shadow: 6px 6px 0 rgba(26, 26, 46, 0.20);
+  --shadow-lg: 10px 10px 0 rgba(26, 26, 46, 0.18);
+  --font-title: 'Montserrat', 'Noto Sans SC', sans-serif;
+  --font-display: 'Bebas Neue', 'Montserrat', 'Noto Sans SC', sans-serif;
+  --font-body: 'Noto Sans SC', 'Montserrat', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  min-height: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 12%, rgba(255,217,61,0.30) 0%, transparent 16%),
+    radial-gradient(circle at 88% 14%, rgba(0,184,217,0.25) 0%, transparent 20%),
+    radial-gradient(circle at 50% 90%, rgba(255,61,165,0.20) 0%, transparent 24%),
+    var(--paper);
+}
+
+/* ── Progress bar ── */
+.progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--pink), var(--yellow), var(--mint), var(--blue));
+  width: 0;
+  z-index: 100;
+  transition: width 200ms ease;
+}
+
+/* ── Deck shell ── */
+.deck-shell {
+  position: relative;
+  width: min(100%, 1280px);
+  margin: 0 auto;
+}
+
+.slide-deck {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background: var(--paper);
+  border: 4px solid var(--ink);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 12px 12px 0 rgba(26,26,46,0.15);
+}
+
+/* ── Slide base ── */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+  padding: 48px 56px 52px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(40px);
+  transition: opacity 300ms ease, transform 300ms ease, visibility 300ms ease;
+  overflow: visible;
+}
+
+.slide.active {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* ── Memphis decorative layer ── */
+.memphis-deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.memphis-dots {
+  width: 100px; height: 100px;
+  background: radial-gradient(circle, var(--pink) 3.5px, transparent 4.5px) 0 0 / 16px 16px;
+  opacity: 0.50;
+}
+
+.memphis-zigzag {
+  width: 120px; height: 24px;
+  background: linear-gradient(135deg, var(--yellow) 25%, transparent 25%) -10px 0 / 20px 20px,
+              linear-gradient(225deg, var(--yellow) 25%, transparent 25%) -10px 0 / 20px 20px;
+  opacity: 0.55;
+}
+
+.memphis-triangle {
+  width: 0; height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid var(--coral);
+  opacity: 0.50;
+  transform: rotate(15deg);
+}
+
+.memphis-ring {
+  width: 80px; height: 80px;
+  border: 5px solid var(--blue);
+  border-radius: 50%;
+  opacity: 0.45;
+}
+
+.memphis-cross {
+  width: 50px; height: 50px;
+  position: relative;
+  opacity: 0.45;
+}
+.memphis-cross::before,
+.memphis-cross::after {
+  content: "";
+  position: absolute;
+  background: var(--mint);
+}
+.memphis-cross::before {
+  width: 100%; height: 5px;
+  top: 50%; left: 0;
+  transform: translateY(-50%);
+}
+.memphis-cross::after {
+  width: 5px; height: 100%;
+  left: 50%; top: 0;
+  transform: translateX(-50%);
+}
+
+.memphis-squiggle {
+  width: 120px; height: 40px;
+  border: 4px solid var(--pink);
+  border-color: var(--pink) transparent transparent transparent;
+  border-radius: 50% / 100% 100% 0 0;
+  opacity: 0.50;
+}
+
+.memphis-checker {
+  width: 70px; height: 70px;
+  background:
+    conic-gradient(var(--pink) 0deg 90deg, var(--yellow) 90deg 180deg, var(--mint) 180deg 270deg, var(--blue) 270deg 360deg);
+  opacity: 0.45;
+}
+
+/* ── Section chip (top-left) ── */
+.section-chip {
+  position: absolute;
+  top: 18px; left: 18px;
+  z-index: 10;
+  padding: 6px 14px;
+  border: var(--border);
+  background: var(--yellow);
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ── Page chip (bottom-right) ── */
+.page-chip {
+  position: absolute;
+  bottom: 18px; right: 18px;
+  z-index: 10;
+  padding: 6px 14px;
+  border: var(--border);
+  background: #fff;
+  font-family: var(--font-title);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+/* ── Source footer ── */
+.source-footer {
+  position: absolute;
+  bottom: 18px; left: 18px;
+  z-index: 10;
+  padding: 5px 10px;
+  border: 3px solid var(--ink);
+  background: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-2);
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Title system ── */
+.slide-title {
+  font-family: var(--font-title);
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.slide-subtitle {
+  font-size: clamp(14px, 1.6vw, 20px);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.slide-body {
+  font-size: clamp(13px, 1.3vw, 17px);
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 60ch;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* ── Card system ── */
+.card {
+  background: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.card-header {
+  padding: 14px 18px;
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header.pink { background: var(--pink); }
+.card-header.blue { background: var(--blue); }
+.card-header.yellow { background: var(--yellow); }
+.card-header.mint { background: var(--mint); }
+.card-header.coral { background: var(--coral); }
+.card-header.paper-2 { background: var(--paper-2); }
+
+.card-header .card-icon {
+  width: 24px; height: 24px;
+  flex-shrink: 0;
+}
+
+.card-header .card-label {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.card-body {
+  padding: 18px;
+}
+
+/* ── Colored accent bar ── */
+.accent-bar {
+  width: 14px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.accent-bar.pink { background: var(--pink); }
+.accent-bar.blue { background: var(--blue); }
+.accent-bar.yellow { background: var(--yellow); }
+.accent-bar.mint { background: var(--mint); }
+.accent-bar.coral { background: var(--coral); }
+
+/* ── Bullet list ── */
+.bullet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px;
+  border: var(--border);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 5px 5px 0 rgba(26,26,46,0.12);
+  font-size: clamp(13px, 1.2vw, 16px);
+  line-height: 1.55;
+}
+
+.bullet-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.bullet-dot.pink { background: var(--pink); }
+.bullet-dot.blue { background: var(--blue); }
+.bullet-dot.yellow { background: var(--yellow); }
+.bullet-dot.mint { background: var(--mint); }
+.bullet-dot.coral { background: var(--coral); }
+
+/* ── KPI / Metric tiles ── */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.metric-tile {
+  background: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  text-align: center;
+}
+
+.metric-tile-header {
+  padding: 10px;
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.metric-tile-header.pink { background: var(--pink); }
+.metric-tile-header.blue { background: var(--blue); }
+.metric-tile-header.yellow { background: var(--yellow); }
+.metric-tile-header.mint { background: var(--mint); }
+.metric-tile-header.coral { background: var(--coral); }
+
+.metric-number {
+  font-family: var(--font-title);
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 900;
+  line-height: 1;
+  padding: 16px 10px 8px;
+  color: var(--ink);
+}
+
+.metric-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-2);
+  padding: 0 10px 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── Process / Timeline steps ── */
+.process-lane {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.process-track {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--ink);
+  z-index: 0;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 14px 0;
+  position: relative;
+}
+
+.process-node {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 900;
+  flex-shrink: 0;
+  z-index: 1;
+  color: var(--ink);
+}
+
+.process-node.pink { background: var(--pink); }
+.process-node.blue { background: var(--blue); }
+.process-node.yellow { background: var(--yellow); }
+.process-node.mint { background: var(--mint); }
+.process-node.coral { background: var(--coral); }
+
+.process-content {
+  flex: 1;
+  padding: 10px 16px;
+  border: var(--border);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-left: 6px solid var(--ink);
+}
+
+.process-content h4 {
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.process-content p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+/* ── Comparison columns ── */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.compare-col {
+  background: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.compare-col-header {
+  padding: 14px 18px;
+  border-bottom: var(--border);
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.compare-col-header.left { background: var(--blue); }
+.compare-col-header.right { background: var(--yellow); }
+
+.compare-col-body {
+  padding: 18px;
+}
+
+.compare-col-body li {
+  list-style: none;
+  padding: 8px 0;
+  border-bottom: 2px dashed rgba(26,26,46,0.12);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.compare-col-body li:last-child { border-bottom: none; }
+
+.check-icon {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.check-icon.green { background: var(--mint); }
+.check-icon.red { background: var(--coral); }
+
+/* ── Quote / Callout ── */
+.callout-box {
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  background: var(--paper-2);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 2;
+}
+
+.callout-box::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 72px;
+  color: var(--pink);
+  opacity: 0.4;
+  position: absolute;
+  top: -10px; left: 14px;
+  line-height: 1;
+}
+
+.callout-text {
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 800;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.callout-author {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+/* ── Tag pills ── */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.tag {
+  padding: 6px 14px;
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.tag.pink { background: var(--pink); color: #fff; }
+.tag.blue { background: var(--blue); color: var(--ink); }
+.tag.yellow { background: var(--yellow); color: var(--ink); }
+.tag.mint { background: var(--mint); color: var(--ink); }
+.tag.coral { background: var(--coral); color: #fff; }
+
+/* ── Hero / Cover slide ── */
+.slide--hero-cover {
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 80px;
+}
+
+.slide--hero-cover .hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 5.5vw, 76px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  max-width: 14ch;
+  position: relative;
+  z-index: 2;
+}
+
+.slide--hero-cover .hero-subtitle {
+  font-size: clamp(20px, 2.5vw, 32px);
+  font-weight: 700;
+  color: var(--ink-2);
+  margin-top: 16px;
+  max-width: 36ch;
+  position: relative;
+  z-index: 2;
+}
+
+.slide--hero-cover .hero-tag {
+  margin-top: 24px;
+  display: inline-block;
+  padding: 10px 24px;
+  border: var(--border);
+  background: var(--pink);
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Closing slide ── */
+.slide--closing-card {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide--closing-card .closing-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.slide--closing-card .closing-body {
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 700;
+  color: var(--ink-2);
+  max-width: 40ch;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Layout helpers ── */
+.slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+  padding-top: 34px;
+  overflow: visible;
+}
+
+.slide-content.row {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.slide-content.row > * {
+  flex: 1;
+  min-width: 0;
+}
+
+.slide-content.center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── SVG icon styling ── */
+.icon-svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Phosphor Icons (Memphis bold style) ── */
+i[class*="ph-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Memphis icon containers */
+.icon-circle {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-circle.pink { background: var(--pink); }
+.icon-circle.blue { background: var(--blue); }
+.icon-circle.yellow { background: var(--yellow); }
+.icon-circle.mint { background: var(--mint); }
+.icon-circle.coral { background: var(--coral); }
+
+.icon-square {
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  border: var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-square.pink { background: var(--pink); }
+.icon-square.blue { background: var(--blue); }
+.icon-square.yellow { background: var(--yellow); }
+.icon-square.mint { background: var(--mint); }
+.icon-square.coral { background: var(--coral); }
+
+/* ── Navigation ── */
+.nav {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 60;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border: var(--border);
+  background: rgba(255, 248, 238, 0.95);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.nav button {
+  width: 38px; height: 38px;
+  border: var(--border);
+  background: var(--yellow);
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 100ms ease;
+}
+
+.nav button:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 rgba(26,26,46,0.20);
+}
+
+.nav button:active {
+  transform: translateY(0);
+}
+
+.counter {
+  min-width: 70px;
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+/* ── Keyboard hint ── */
+.keyboard-hint {
+  position: fixed;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 55;
+  font-size: 13px;
+  color: var(--ink-2);
+  opacity: 0.8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  body { padding: 8px; }
+  .slide { padding: 24px; }
+  .slide--hero-cover { padding: 40px 30px; }
+  .slide-content.row { flex-direction: column; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .metric-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .metric-grid { grid-template-columns: 1fr; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <main class="deck-shell">
+    <section class="slide-deck" aria-label="Memphis HTML PPT presentation">
+      <article class="slide slide--cover slide--hero-cover active" data-template="hero-cover" data-accent="pink">
+        <div class="memphis-deco memphis-cross" style="top:80px;right:8px"></div>
+        <div class="memphis-deco memphis-ring" style="bottom:60px;right:130px"></div>
+        <div class="memphis-deco memphis-checker" style="bottom:180px;right:8px"></div>
+        <div class="memphis-deco memphis-zigzag" style="top:8px;right:8px"></div>
+        <div class="section-chip">01 | juejin-skill：把文章...</div>
+        <div class="page-chip">1 / 14</div>
+        <div class="slide-content center" style="align-items:flex-start;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;"><i class="ph-fill ph-palette" style="font-size:32px;color:#1A1A2E;flex-shrink:0;"></i><span class="slide-subtitle" style="margin:0;">很多工具的起点都不宏大，往往只是为了去掉一段反复出现、但没有创造性的劳动。juejin skill 也是这样长出来的。</span></div>
+      <h1 class="hero-title">juejin-skill：把文章发布到掘金做成可复用的 Skill</h1>
+      
+      
+      <span class="hero-tag">01</span>
+    </div>
+      </article>
+      <article class="slide slide--bullet slide--bullet-grid" data-template="bullet-grid" data-accent="blue">
+        <div class="memphis-deco memphis-checker" style="bottom:8px;right:250px"></div>
+        <div class="memphis-deco memphis-zigzag" style="top:50%;right:6px;transform:translateY(-50%)"></div>
+        <div class="memphis-deco memphis-triangle" style="bottom:60px;left:8px"></div>
+        <div class="section-chip">02 | 为什么要做这个工具</div>
+        <div class="page-chip">2 / 14</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:10px;"><i class="ph-fill ph-circle" style="font-size:32px;color:#1A1A2E;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">为什么要做这个工具</h1></div>
+      <p class="slide-subtitle">本地写 Markdown，配图和草稿都按项目目录管理。文章完成后，回到掘金编辑器里补分类、挑标签、上传图片、创建草稿，偶尔做一次问题不大，但写作频率一稳定，这条链路就迅速变成额外负担。</p>
+      <ul class="bullet-list" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;"><li class="bullet-item"><span class="bullet-dot pink" aria-hidden="true"></span><span>登录态最好能复用，而不是每次重新处理登录流程</span></li><li class="bullet-item"><span class="bullet-dot blue" aria-hidden="true"></span><span>分类、标签和热榜信息应该可以直接查询，还能给出合理推荐</span></li><li class="bullet-item"><span class="bullet-dot yellow" aria-hidden="true"></span><span>本地 Markdown 应该能够直接转换成平台草稿</span></li><li class="bullet-item"><span class="bullet-dot mint" aria-hidden="true"></span><span>本地图片需要在发布前完成上传和替换</span></li><li class="bullet-item"><span class="bullet-dot coral" aria-hidden="true"></span><span>已发布文章需要支持基于本地稿件继续更新</span></li><li class="bullet-item"><span class="bullet-dot pink" aria-hidden="true"></span><span>真正公开发布时，应该保留一次明确确认</span></li></ul>
+    </div>
+      </article>
+      <article class="slide slide--quote slide--quote-insight" data-template="quote-insight" data-accent="yellow">
+        <div class="memphis-deco memphis-triangle" style="bottom:180px;right:8px"></div>
+        <div class="memphis-deco memphis-dots" style="top:8px;right:8px"></div>
+        <div class="memphis-deco memphis-squiggle" style="top:30%;right:6px"></div>
+        <div class="memphis-deco memphis-cross" style="bottom:120px;left:6px"></div>
+        <div class="section-chip">03 | 核心思路：先把能力收敛到 CLI</div>
+        <div class="page-chip">3 / 14</div>
+        <div class="slide-content center">
+      <div class="callout-box" style="text-align:center;max-width:800px;">
+        <p class="callout-text" style="font-size:clamp(20px,2.5vw,32px);">"做 Agent Skill 时，很容易先写提示词让模型去判断。但随着功能变多，维护成本上升很快。更稳妥的做法是先把确定性的动作收敛到 CLI，再让不同平台的 Skill 文档去调用这套命令。"</p>
+        <p class="callout-author">— verify：校验当前登录状态</p>
+      </div>
+      <div class="tag-row" style="justify-content:center;margin-top:16px;"><span class="tag pink">categories：查询平台分类列表</span><span class="tag blue">tags：查询指定分类下的推荐标签</span><span class="tag yellow">hot：查询全站热门文章</span></div>
+    </div>
+      </article>
+      <article class="slide slide--metric slide--metric-board" data-template="metric-board" data-accent="mint">
+        <div class="memphis-deco memphis-squiggle" style="bottom:60px;left:8px"></div>
+        <div class="memphis-deco memphis-cross" style="top:120px;left:8px"></div>
+        <div class="memphis-deco memphis-ring" style="top:8px;right:120px"></div>
+        <div class="section-chip">04 | HTTP 层要薄，错误要早暴露</div>
+        <div class="page-chip">4 / 14</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:10px;"><i class="ph-fill ph-chart-bar" style="font-size:32px;color:#1A1A2E;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">HTTP 层要薄，错误要早暴露</h1></div>
+      <p class="slide-subtitle">掘金的核心操作最终都落在 HTTP 请求上。刻意没有做太厚的封装，比如自动重试、业务错误猜测、静默降级等。</p>
+      <div class="metric-grid">
+        <div class="metric-tile">
+            <div class="metric-tile-header pink" style="display:flex;align-items:center;justify-content:center;gap:8px;">
+              <span class="icon-circle pink" style="width:32px;height:32px;border-width:2px;"><i class="ph-fill ph-chart-bar" style="font-size:22px;color:#1A1A2E;flex-shrink:0;"></i></span>
+              <span style="font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;">METRIC 1</span>
+            </div>
+            <div class="metric-number">和第三方站点打交</div>
+            <div class="metric-label">和第三方站点打交道时，接口变化、登录失效、参数缺失对应完全不同的问题</div>
+          </div><div class="metric-tile">
+            <div class="metric-tile-header blue" style="display:flex;align-items:center;justify-content:center;gap:8px;">
+              <span class="icon-circle blue" style="width:32px;height:32px;border-width:2px;"><i class="ph-fill ph-target" style="font-size:22px;color:#1A1A2E;flex-shrink:0;"></i></span>
+              <span style="font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;">METRIC 2</span>
+            </div>
+            <div class="metric-number">越早看到状态码和</div>
+            <div class="metric-label">越早看到状态码和响应片段，排查就越快</div>
+          </div><div class="metric-tile">
+            <div class="metric-tile-header yellow" style="display:flex;align-items:center;justify-content:center;gap:8px;">
+              <span class="icon-circle yellow" style="width:32px;height:32px;border-width:2px;"><i class="ph-fill ph-trophy" style="font-size:22px;color:#1A1A2E;flex-shrink:0;"></i></span>
+              <span style="font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;">METRIC 3</span>
+            </div>
+            <div class="metric-number">如果客户端层过度</div>
+            <div class="metric-label">如果客户端层过度&quot;聪明&quot;，出问题时反而不容易定位</div>
+          </div><div class="metric-tile">
+            <div class="metric-tile-header mint" style="display:flex;align-items:center;justify-content:center;gap:8px;">
+              <span class="icon-circle mint" style="width:32px;height:32px;border-width:2px;"><i class="ph-fill ph-fire" style="font-size:22px;color:#1A1A2E;flex-shrink:0;"></i></span>
+              <span style="font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;">METRIC 4</span>
+            </div>
+            <div class="metric-number">保留 fetch</div>
+            <div class="metric-label">保留 fetchImpl 注入点，让测试更干净</div>
+          </div>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--warning slide--warning-callout" data-template="warning-callout" data-accent="coral">
+        <div class="memphis-deco memphis-ring" style="top:30%;right:6px"></div>
+        <div class="memphis-deco memphis-checker" style="bottom:120px;left:6px"></div>
+        <div class="memphis-deco memphis-zigzag" style="bottom:8px;left:250px"></div>
+        <div class="memphis-deco memphis-triangle" style="top:8px;left:200px"></div>
+        <div class="section-chip">05 | 登录交给浏览器，会话交给本地文件</div>
+        <div class="page-chip">5 / 14</div>
+        <div class="slide-content">
+      <div class="callout-box">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;"><span class="icon-circle coral" style="width:40px;height:40px;border-width:3px;"><i class="ph-fill ph-shield-warning" style="font-size:28px;color:#1A1A2E;flex-shrink:0;"></i></span><h1 class="slide-title" style="margin:0;font-size:clamp(28px,3.5vw,44px);">登录交给浏览器，会话交给本地文件</h1></div>
+        <p class="slide-subtitle">对用户来说，最自然的体验是用浏览器完成正常登录，然后让程序复用登录结果。login 命令用 Playwright 启动浏览器，登录成功后提取会话 Cookie，保存到本地文件。</p>
+        <p class="slide-body">verify 命令用当前会话校验登录状态。很多&quot;发布失败&quot;表面看像参数问题，最后往往只是会话过期。</p>
+      </div>
+      <ul class="bullet-list"><li class="bullet-item" style="background:#FFF4ED;"><span class="bullet-dot coral" aria-hidden="true"></span><span>工具本身不接触账号密码，不需要处理扫码、验证码</span></li><li class="bullet-item" style="background:#FFF4ED;"><span class="bullet-dot coral" aria-hidden="true"></span><span>用户登录一次后，发布、更新和上传图片都复用同一份会话</span></li><li class="bullet-item" style="background:#FFF4ED;"><span class="bullet-dot coral" aria-hidden="true"></span><span>会话失效时，只需重新执行 login</span></li><li class="bullet-item" style="background:#FFF4ED;"><span class="bullet-dot coral" aria-hidden="true"></span><span>撤销登录状态，删除 session.json 即可</span></li></ul>
+    </div>
+      </article>
+      <article class="slide slide--compare slide--compare-dual" data-template="compare-dual" data-accent="pink">
+        <div class="memphis-deco memphis-zigzag" style="top:8px;right:120px"></div>
+        <div class="memphis-deco memphis-triangle" style="top:65%;right:10px"></div>
+        <div class="memphis-deco memphis-dots" style="top:40%;left:6px"></div>
+        <div class="section-chip">06 | 把分类、标签和热榜纳入同一工作流</div>
+        <div class="page-chip">6 / 14</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:10px;"><i class="ph-fill ph-briefcase" style="font-size:32px;color:#FF3DA5;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">把分类、标签和热榜纳入同一工作流</h1></div>
+      <p class="slide-subtitle">发文章不是只把正文上传出去。还要确认当前有哪些分类、某个分类下有哪些推荐标签、最近热门内容是什么。</p>
+      <div class="compare-grid">
+        <div class="compare-col">
+          <div class="compare-col-header left" style="display:flex;align-items:center;justify-content:center;gap:8px;"><i class="ph-fill ph-shield-check" style="font-size:24px;color:#1A1A2E;flex-shrink:0;"></i> OPTION A</div>
+          <div class="compare-col-body"><ul><li><span class="check-icon green"><i class="ph-fill ph-check" style="font-size:11px;color:#1A1A2E;"></i></span>categories：查询平台分类列表</li><li><span class="check-icon green"><i class="ph-fill ph-check" style="font-size:11px;color:#1A1A2E;"></i></span>tags：查询指定分类下的推荐标签，支持关键词过滤</li></ul></div>
+        </div>
+        <div class="compare-col">
+          <div class="compare-col-header right" style="display:flex;align-items:center;justify-content:center;gap:8px;"><i class="ph-fill ph-crosshair" style="font-size:24px;color:#1A1A2E;flex-shrink:0;"></i> OPTION B</div>
+          <div class="compare-col-body"><ul><li><span class="check-icon red"><i class="ph-fill ph-x" style="font-size:11px;color:#1A1A2E;"></i></span>hot：查询全站或指定分类下的热门文章</li></ul></div>
+        </div>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--essay slide--essay-panel" data-template="essay-panel" data-accent="blue">
+        <div class="memphis-deco memphis-dots" style="bottom:8px;left:250px"></div>
+        <div class="memphis-deco memphis-squiggle" style="top:8px;left:200px"></div>
+        <div class="memphis-deco memphis-cross" style="bottom:60px;right:10px"></div>
+        <div class="memphis-deco memphis-ring" style="top:15%;left:6px"></div>
+        <div class="section-chip">07 | 发布默认只创建草稿</div>
+        <div class="page-chip">7 / 14</div>
+        <div class="slide-content row">
+      <div style="flex:1.2;">
+        <div style="display:flex;align-items:center;gap:10px;"><i class="ph-fill ph-chat-circle" style="font-size:32px;color:#00B8D9;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">发布默认只创建草稿</h1></div>
+        <p class="slide-subtitle">发布逻辑的核心流程：读取 Markdown、提取标题、移除标题行避免重复、扫描本地图片完成上传、生成摘要、渲染为 HTML、创建草稿。只有在明确确认后，才执行公开发布。</p>
+        
+      </div>
+      <div style="flex:0.8;"><ul class="bullet-list"><li class="bullet-item"><span class="bullet-dot pink" aria-hidden="true"></span><span>默认行为是创建草稿而不是直接公开</span></li><li class="bullet-item"><span class="bullet-dot blue" aria-hidden="true"></span><span>要真正发布，必须显式传入 publish confirm publish</span></li><li class="bullet-item"><span class="bullet-dot yellow" aria-hidden="true"></span><span>自动化适合承担重复劳动，但公开发布需要作者明确授权</span></li><li class="bullet-item"><span class="bullet-dot mint" aria-hidden="true"></span><span>标题提取只认第一个一级标题，本地文稿保持完整</span></li></ul></div>
+    </div>
+      </article>
+      <article class="slide slide--htimeline slide--horizontal-timeline" data-template="horizontal-timeline" data-accent="yellow">
+        <div class="memphis-deco memphis-cross" style="top:40%;left:6px"></div>
+        <div class="memphis-deco memphis-ring" style="top:8px;left:8px"></div>
+        <div class="memphis-deco memphis-checker" style="top:80px;right:8px"></div>
+        <div class="section-chip">08 | 本地图片上传是最容易出问题的部分</div>
+        <div class="page-chip">8 / 14</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:12px;"><i class="ph-fill ph-arrow-up" style="font-size:32px;color:#FFD93D;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">本地图片上传是最容易出问题的部分</h1></div>
+      <div style="position:relative;z-index:2;margin-top:20px;">
+        <div style="display:flex;justify-content:space-between;position:relative;margin-bottom:12px;">
+          <div style="position:absolute;top:50%;left:0;right:0;height:4px;background:var(--ink);transform:translateY(-50%);z-index:0;"></div>
+          <div style="width:36px;height:36px;border-radius:50%;border:var(--border);background:var(--pink);display:flex;align-items:center;justify-content:center;z-index:1;font-family:var(--font-title);font-size:14px;font-weight:900;">1</div><div style="width:36px;height:36px;border-radius:50%;border:var(--border);background:var(--blue);display:flex;align-items:center;justify-content:center;z-index:1;font-family:var(--font-title);font-size:14px;font-weight:900;">2</div><div style="width:36px;height:36px;border-radius:50%;border:var(--border);background:var(--yellow);display:flex;align-items:center;justify-content:center;z-index:1;font-family:var(--font-title);font-size:14px;font-weight:900;">3</div><div style="width:36px;height:36px;border-radius:50%;border:var(--border);background:var(--mint);display:flex;align-items:center;justify-content:center;z-index:1;font-family:var(--font-title);font-size:14px;font-weight:900;">4</div><div style="width:36px;height:36px;border-radius:50%;border:var(--border);background:var(--coral);display:flex;align-items:center;justify-content:center;z-index:1;font-family:var(--font-title);font-size:14px;font-weight:900;">5</div>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:8px;">
+          <div style="flex:1;text-align:center;"><p style="font-size:13px;font-weight:700;line-height:1.4;">识别 Markdown 中的图片链接，只处理本地文件路径</p></div><div style="flex:1;text-align:center;"><p style="font-size:13px;font-weight:700;line-height:1.4;">远程图片、data: 图片直接跳过</p></div><div style="flex:1;text-align:center;"><p style="font-size:13px;font-weight:700;line-height:1.4;">同一张图片多次出现时，只上传一次</p></div><div style="flex:1;text-align:center;"><p style="font-size:13px;font-weight:700;line-height:1.4;">走平台当前网页编辑器使用的媒体上传链路</p></div><div style="flex:1;text-align:center;"><p style="font-size:13px;font-weight:700;line-height:1.4;">正文内容和图片元数据要同时更新</p></div>
+        </div>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--beforeafter slide--before-after" data-template="before-after" data-accent="mint">
+        <div class="memphis-deco memphis-checker" style="bottom:60px;right:10px"></div>
+        <div class="memphis-deco memphis-zigzag" style="top:15%;left:6px"></div>
+        <div class="memphis-deco memphis-triangle" style="bottom:8px;right:250px"></div>
+        <div class="memphis-deco memphis-dots" style="top:50%;right:6px;transform:translateY(-50%)"></div>
+        <div class="section-chip">09 | 更新文章时不要碰用户没让你碰的东...</div>
+        <div class="page-chip">9 / 14</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:12px;"><i class="ph-fill ph-infinity" style="font-size:32px;color:#00C896;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">更新文章时不要碰用户没让你碰的东西</h1></div>
+      <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;position:relative;z-index:2;">
+        <div class="card" style="padding:20px;text-align:center;">
+          <div class="card-header coral" style="justify-content:center;margin:-20px -20px 14px;border-radius:var(--radius) var(--radius) 0 0;"><span class="card-label">BEFORE</span></div>
+          <p style="font-size:14px;line-height:1.5;">默认行为依旧是更新草稿</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <i class="ph-fill ph-arrow-right" style="font-size:32px;color:var(--ink);"></i>
+          <span style="font-size:11px;font-weight:900;color:var(--ink-2);text-transform:uppercase;">Transform</span>
+        </div>
+        <div class="card" style="padding:20px;text-align:center;">
+          <div class="card-header mint" style="justify-content:center;margin:-20px -20px 14px;border-radius:var(--radius) var(--radius) 0 0;"><span class="card-label">AFTER</span></div>
+          <p style="font-size:14px;line-height:1.5;">进一步同步到公开文章需要显式确认</p>
+        </div>
+      </div>
+      <div class="tag-row" style="justify-content:center;margin-top:12px;"><span class="tag pink">分类、标签、封面、摘要、主题、原创状态应该继承原值</span><span class="tag blue">用户只是想修一张图、改一个段落，不应该把封面清空、标签弄丢</span><span class="tag yellow">标识字段沿用字符串表示，降低精度风险</span></div>
+    </div>
+      </article>
+      <article class="slide slide--feature slide--feature-benefit" data-template="feature-benefit" data-accent="coral">
+        <div class="memphis-deco memphis-triangle" style="top:80px;right:8px"></div>
+        <div class="memphis-deco memphis-dots" style="bottom:60px;right:130px"></div>
+        <div class="memphis-deco memphis-squiggle" style="bottom:180px;right:8px"></div>
+        <div class="section-chip">10 | 下载能力补齐了内容闭环</div>
+        <div class="page-chip">10 / 14</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:12px;"><i class="ph-fill ph-money" style="font-size:32px;color:#FF6B4A;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">下载能力补齐了内容闭环</h1></div>
+      <div style="display:flex;flex-direction:column;gap:10px;position:relative;z-index:2;">
+        <div style="display:flex;gap:12px;align-items:stretch;">
+            <div class="card" style="flex:1;display:flex;align-items:center;gap:10px;padding:14px;">
+              <span class="icon-circle pink" style="width:36px;height:36px;"><i class="ph-fill ph-bank" style="font-size:18px;color:#1A1A2E;flex-shrink:0;"></i></span>
+              <span style="font-size:14px;font-weight:800;">下载单篇文章：优先获取平台 Markdown，退回到浏览器抓取 HTML 转换</span>
+            </div>
+            <div style="display:flex;align-items:center;padding:0 6px;"><i class="ph-fill ph-arrow-right" style="font-size:20px;color:var(--ink);"></i></div>
+            <div class="card" style="flex:1;display:flex;align-items:center;gap:10px;padding:14px;background:var(--paper-2);">
+              <span class="icon-circle mint" style="width:36px;height:36px;"><i class="ph-fill ph-check" style="font-size:18px;color:#1A1A2E;flex-shrink:0;"></i></span>
+              <span style="font-size:14px;font-weight:800;">带 download images 时，远程图片一并下载到本地</span>
+            </div>
+          </div><div style="display:flex;gap:12px;align-items:stretch;">
+            <div class="card" style="flex:1;display:flex;align-items:center;gap:10px;padding:14px;">
+              <span class="icon-circle blue" style="width:36px;height:36px;"><i class="ph-fill ph-paint-brush" style="font-size:18px;color:#1A1A2E;flex-shrink:0;"></i></span>
+              <span style="font-size:14px;font-weight:800;">下载用户文章：批量下载指定用户的文章</span>
+            </div>
+            <div style="display:flex;align-items:center;padding:0 6px;"><i class="ph-fill ph-arrow-right" style="font-size:20px;color:var(--ink);"></i></div>
+            <div class="card" style="flex:1;display:flex;align-items:center;gap:10px;padding:14px;background:var(--paper-2);">
+              <span class="icon-circle mint" style="width:36px;height:36px;"><i class="ph-fill ph-check" style="font-size:18px;color:#1A1A2E;flex-shrink:0;"></i></span>
+              <span style="font-size:14px;font-weight:800;">本地原稿、图片和历史版本始终掌握在自己手里</span>
+            </div>
+          </div>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--agenda slide--agenda-overview" data-template="agenda-overview" data-accent="pink">
+        <div class="memphis-deco memphis-squiggle" style="bottom:8px;right:250px"></div>
+        <div class="memphis-deco memphis-cross" style="top:50%;right:6px;transform:translateY(-50%)"></div>
+        <div class="memphis-deco memphis-ring" style="bottom:60px;left:8px"></div>
+        <div class="memphis-deco memphis-checker" style="top:120px;left:8px"></div>
+        <div class="section-chip">11 | Codex 和 Claude C...</div>
+        <div class="page-chip">11 / 14</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:12px;"><i class="ph-fill ph-house" style="font-size:32px;color:#FF3DA5;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">Codex 和 Claude Code 共用一套运行时</h1></div>
+      <p class="slide-subtitle">同时服务两个平台，但没有各维护一套逻辑，而是共用同一套 Node.js CLI。</p>
+      <div style="display:flex;flex-direction:column;gap:8px;position:relative;z-index:2;">
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square pink" style="width:36px;height:36px;font-family:var(--font-title);font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;">01</span>
+            <span style="font-size:15px;font-weight:700;">Codex 侧依赖 SKILL.md 描述触发条件和安全边界</span>
+          </div><div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square blue" style="width:36px;height:36px;font-family:var(--font-title);font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;">02</span>
+            <span style="font-size:15px;font-weight:700;">Claude Code 侧在 .claude/commands/ 下定义命令文档</span>
+          </div><div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square yellow" style="width:36px;height:36px;font-family:var(--font-title);font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;">03</span>
+            <span style="font-size:15px;font-weight:700;">两边文档格式不同，但最终调用同一个入口</span>
+          </div><div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square mint" style="width:36px;height:36px;font-family:var(--font-title);font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;">04</span>
+            <span style="font-size:15px;font-weight:700;">功能只实现一次，测试围绕同一套核心代码</span>
+          </div>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--tree slide--hierarchy-tree" data-template="hierarchy-tree" data-accent="blue">
+        <div class="memphis-deco memphis-ring" style="bottom:180px;right:8px"></div>
+        <div class="memphis-deco memphis-checker" style="top:8px;right:8px"></div>
+        <div class="memphis-deco memphis-zigzag" style="top:30%;right:6px"></div>
+        <div class="section-chip">12 | 工程化一起补齐</div>
+        <div class="page-chip">12 / 14</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:12px;"><i class="ph-fill ph-atom" style="font-size:32px;color:#00B8D9;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">工程化一起补齐</h1></div>
+      <div style="text-align:center;position:relative;z-index:2;margin-top:10px;">
+        <div style="display:inline-block;padding:14px 28px;border:var(--border);border-radius:var(--radius);background:var(--pink);box-shadow:var(--shadow);font-family:var(--font-title);font-size:18px;font-weight:900;">推送标签后 GitHub Actions 自动完成构建和发布</div>
+        <div style="width:4px;height:24px;background:var(--ink);margin:0 auto;"></div>
+        <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:4px;height:16px;background:var(--ink);"></div>
+              <div style="padding:10px 20px;border:var(--border);border-radius:8px;background:var(--pink);box-shadow:var(--shadow);font-size:14px;font-weight:800;">安装依赖和浏览器运行环境</div>
+            </div><div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:4px;height:16px;background:var(--ink);"></div>
+              <div style="padding:10px 20px;border:var(--border);border-radius:8px;background:var(--blue);box-shadow:var(--shadow);font-size:14px;font-weight:800;">运行 lint 和测试</div>
+            </div><div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:4px;height:16px;background:var(--ink);"></div>
+              <div style="padding:10px 20px;border:var(--border);border-radius:8px;background:var(--yellow);box-shadow:var(--shadow);font-size:14px;font-weight:800;">构建两套产物</div>
+            </div><div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:4px;height:16px;background:var(--ink);"></div>
+              <div style="padding:10px 20px;border:var(--border);border-radius:8px;background:var(--mint);box-shadow:var(--shadow);font-size:14px;font-weight:800;">生成版本说明并上传 Release</div>
+            </div>
+        </div>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--table slide--data-table" data-template="data-table" data-accent="yellow">
+        <div class="memphis-deco memphis-zigzag" style="bottom:60px;left:8px"></div>
+        <div class="memphis-deco memphis-triangle" style="top:120px;left:8px"></div>
+        <div class="memphis-deco memphis-dots" style="top:8px;right:120px"></div>
+        <div class="memphis-deco memphis-squiggle" style="top:65%;right:10px"></div>
+        <div class="section-chip">13 | 测试守住的是自己的边界</div>
+        <div class="page-chip">13 / 14</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:12px;"><i class="ph-fill ph-chart-line" style="font-size:32px;color:#FFD93D;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">测试守住的是自己的边界</h1></div>
+      <div style="position:relative;z-index:2;border:var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+        <table style="width:100%;border-collapse:collapse;font-size:14px;">
+          <thead><tr style="background:var(--yellow);">
+            <th style="padding:10px 14px;border-bottom:var(--border);text-align:left;font-weight:900;font-family:var(--font-title);letter-spacing:0.04em;">Item</th><th style="padding:10px 14px;border-bottom:var(--border);text-align:left;font-weight:900;font-family:var(--font-title);letter-spacing:0.04em;">Detail</th>
+          </tr></thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:10px 14px;border-bottom:2px solid rgba(26,26,46,0.08);font-weight:700;">同一张本地图片重复出现时只上传一次</td>
+              <td style="padding:10px 14px;border-bottom:2px solid rgba(26,26,46,0.08);color:var(--ink-2);">—</td>
+            </tr><tr style="background:var(--paper);">
+              <td style="padding:10px 14px;border-bottom:2px solid rgba(26,26,46,0.08);font-weight:700;">远程图片不会被误判为本地文件</td>
+              <td style="padding:10px 14px;border-bottom:2px solid rgba(26,26,46,0.08);color:var(--ink-2);">—</td>
+            </tr><tr style="background:#fff;">
+              <td style="padding:10px 14px;border-bottom:2px solid rgba(26,26,46,0.08);font-weight:700;">更新文章时保留原有元信息</td>
+              <td style="padding:10px 14px;border-bottom:2px solid rgba(26,26,46,0.08);color:var(--ink-2);">—</td>
+            </tr><tr style="background:var(--paper);">
+              <td style="padding:10px 14px;border-bottom:2px solid rgba(26,26,46,0.08);font-weight:700;">没有明确确认时只停留在草稿阶段</td>
+              <td style="padding:10px 14px;border-bottom:2px solid rgba(26,26,46,0.08);color:var(--ink-2);">—</td>
+            </tr><tr style="background:#fff;">
+              <td style="padding:10px 14px;border-bottom:2px solid rgba(26,26,46,0.08);font-weight:700;">出故障时能更快区分是平台问题还是自己的问题</td>
+              <td style="padding:10px 14px;border-bottom:2px solid rgba(26,26,46,0.08);color:var(--ink-2);">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--closing slide--closing-card" data-template="closing-card" data-accent="mint">
+        <div class="memphis-deco memphis-dots" style="top:30%;right:6px"></div>
+        <div class="memphis-deco memphis-squiggle" style="bottom:120px;left:6px"></div>
+        <div class="memphis-deco memphis-cross" style="bottom:8px;left:250px"></div>
+        <div class="section-chip">14 | 最后的边界感</div>
+        <div class="page-chip">14 / 14</div>
+        <div class="slide-content center">
+      <div class="icon-circle pink" style="width:72px;height:72px;border-width:4px;margin-bottom:12px;"><i class="ph-fill ph-sparkle" style="font-size:36px;color:#1A1A2E;flex-shrink:0;"></i></div>
+      <h1 class="closing-title">最后的边界感</h1>
+      <p class="closing-body">juejin skill 已经不再只是一个&quot;帮我把文章发出去&quot;的脚本，而是一条完整的内容工作流：查分类、查标签、读 Markdown、上传图片、创建草稿、更新文章、下载归档。</p>
+      <p class="closing-body">重复操作交给工具，关键决策仍然留给作者。分类可以推荐，图片可以自动上传，草稿可以自动创建；但要不要公开发布、要不要覆盖线上内容，依然需要明确确认。</p>
+      
+    </div>
+      </article>
+    </section>
+  </main>
+  <div class="nav" aria-label="Slide navigation">
+    <button type="button" id="prev" aria-label="Previous slide">&#8592;</button>
+    <div class="counter"><span id="current">1</span> / <span id="total">14</span></div>
+    <button type="button" id="next" aria-label="Next slide">&#8594;</button>
+  </div>
+  <div class="keyboard-hint">Arrow keys or click to navigate</div>
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const progress = document.getElementById("progress");
+    const currentLabel = document.getElementById("current");
+    let current = 0;
+    function showSlide(nextIndex) {
+      current = Math.max(0, Math.min(slides.length - 1, nextIndex));
+      slides.forEach((s, i) => { s.classList.toggle("active", i === current); s.style.display = i === current ? "flex" : "none"; });
+      currentLabel.textContent = String(current + 1);
+      progress.style.width = ((current + 1) / slides.length * 100) + "%";
+    }
+    document.getElementById("prev").addEventListener("click", () => showSlide(current - 1));
+    document.getElementById("next").addEventListener("click", () => showSlide(current + 1));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); showSlide(current + 1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); showSlide(current - 1); }
+    });
+    document.addEventListener("click", (e) => { if (!e.target.closest(".nav")) showSlide(current + 1); });
+    showSlide(0);
+  </script>
+  <!-- source: /Users/dorck/self-projects/html-ppt/juejin-skill-ppt.md -->
+</body>
+</html>

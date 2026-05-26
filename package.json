@@ -1,0 +1,16 @@
+{
+  "name": "memphis-html-ppt",
+  "version": "0.1.0",
+  "description": "Generate Memphis-style HTML presentation previews from Markdown files or web pages.",
+  "type": "module",
+  "license": "MIT",
+  "author": "dorck",
+  "scripts": {
+    "preview": "node scripts/generate-preview.js",
+    "build": "node scripts/build-release.js",
+    "publish:local": "node scripts/publish-local.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

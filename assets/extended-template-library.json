@@ -1,0 +1,191 @@
+{
+  "templates": [
+    {
+      "id": "quote-insight",
+      "group": "quote",
+      "maxParagraphs": 2,
+      "maxBullets": 3,
+      "maxSupport": 2,
+      "maxParagraphChars": 180,
+      "maxBulletChars": 80,
+      "special": {
+        "quote": true,
+        "attribution": true
+      }
+    },
+    {
+      "id": "icon-grid",
+      "group": "icon",
+      "maxParagraphs": 1,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 100,
+      "maxBulletChars": 0,
+      "special": {
+        "iconTiles": 8
+      }
+    },
+    {
+      "id": "faq-panel",
+      "group": "faq",
+      "maxParagraphs": 0,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 150,
+      "maxBulletChars": 0,
+      "special": {
+        "qaPairs": 4
+      }
+    },
+    {
+      "id": "agenda-overview",
+      "group": "agenda",
+      "maxParagraphs": 1,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 100,
+      "maxBulletChars": 0,
+      "special": {
+        "agendaItems": 6
+      }
+    },
+    {
+      "id": "image-showcase",
+      "group": "image",
+      "maxParagraphs": 1,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 80,
+      "maxBulletChars": 0,
+      "special": {
+        "image": true,
+        "captions": 2
+      }
+    },
+    {
+      "id": "checklist-board",
+      "group": "checklist",
+      "maxParagraphs": 1,
+      "maxBullets": 8,
+      "maxSupport": 2,
+      "maxParagraphChars": 100,
+      "maxBulletChars": 80,
+      "special": {
+        "checklist": true
+      }
+    },
+    {
+      "id": "horizontal-timeline",
+      "group": "timeline",
+      "maxParagraphs": 1,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 100,
+      "maxBulletChars": 0,
+      "special": {
+        "phases": 6
+      }
+    },
+    {
+      "id": "stat-highlight",
+      "group": "stat",
+      "maxParagraphs": 1,
+      "maxBullets": 3,
+      "maxSupport": 2,
+      "maxParagraphChars": 180,
+      "maxBulletChars": 60,
+      "special": {
+        "heroNumber": true
+      }
+    },
+    {
+      "id": "hierarchy-tree",
+      "group": "hierarchy",
+      "maxParagraphs": 1,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 120,
+      "maxBulletChars": 0,
+      "special": {
+        "nodes": 12
+      }
+    },
+    {
+      "id": "swim-lane",
+      "group": "swimlane",
+      "maxParagraphs": 0,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 0,
+      "maxBulletChars": 0,
+      "special": {
+        "lanes": 4,
+        "phases": 4,
+        "tasks": 10
+      }
+    },
+    {
+      "id": "data-table",
+      "group": "table",
+      "maxParagraphs": 1,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 100,
+      "maxBulletChars": 0,
+      "special": {
+        "columns": 4,
+        "rows": 6
+      }
+    },
+    {
+      "id": "feature-benefit",
+      "group": "feature",
+      "maxParagraphs": 1,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 100,
+      "maxBulletChars": 0,
+      "special": {
+        "featureBenefitPairs": 4
+      }
+    },
+    {
+      "id": "contact-cta",
+      "group": "contact",
+      "maxParagraphs": 1,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 80,
+      "maxBulletChars": 0,
+      "special": {
+        "contactItems": 3,
+        "nextSteps": 2
+      }
+    },
+    {
+      "id": "before-after",
+      "group": "transform",
+      "maxParagraphs": 1,
+      "maxBullets": 3,
+      "maxSupport": 2,
+      "maxParagraphChars": 100,
+      "maxBulletChars": 60,
+      "special": {
+        "beforeBlock": true,
+        "afterBlock": true
+      }
+    },
+    {
+      "id": "layer-stack",
+      "group": "stack",
+      "maxParagraphs": 0,
+      "maxBullets": 0,
+      "maxSupport": 2,
+      "maxParagraphChars": 80,
+      "maxBulletChars": 0,
+      "special": {
+        "layers": 5
+      }
+    }
+  ]
+}

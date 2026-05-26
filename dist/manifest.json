@@ -1,0 +1,8 @@
+{
+  "generatedAt": "2026-05-26T04:23:33.276Z",
+  "packageName": "memphis-html-ppt",
+  "bundles": {
+    "codex": "dist/codex/memphis-html-ppt",
+    "claude": "dist/claude/memphis-html-ppt"
+  }
+}

@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年AI产品设计趋势报告 - Memphis PPT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/Fill/style.css">
+  <style>
+/* Memphis HTML PPT - Exact palette from hugohe3/ppt-master */
+
+:root {
+  --paper: #FFF8EE;
+  --paper-2: #FFE9C7;
+  --ink: #1A1A2E;
+  --ink-2: #4A4A6A;
+  --pink: #FF3DA5;
+  --blue: #00B8D9;
+  --yellow: #FFD93D;
+  --mint: #00C896;
+  --coral: #FF6B4A;
+  --radius: 12px;
+  --border: 4px solid var(--ink);
+  --shadow: 6px 6px 0 rgba(26, 26, 46, 0.20);
+  --shadow-lg: 10px 10px 0 rgba(26, 26, 46, 0.18);
+  --font-title: 'Montserrat', 'Noto Sans SC', sans-serif;
+  --font-display: 'Bebas Neue', 'Montserrat', 'Noto Sans SC', sans-serif;
+  --font-body: 'Noto Sans SC', 'Montserrat', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  min-height: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 12%, rgba(255,217,61,0.30) 0%, transparent 16%),
+    radial-gradient(circle at 88% 14%, rgba(0,184,217,0.25) 0%, transparent 20%),
+    radial-gradient(circle at 50% 90%, rgba(255,61,165,0.20) 0%, transparent 24%),
+    var(--paper);
+}
+
+/* ── Progress bar ── */
+.progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--pink), var(--yellow), var(--mint), var(--blue));
+  width: 0;
+  z-index: 100;
+  transition: width 200ms ease;
+}
+
+/* ── Deck shell ── */
+.deck-shell {
+  position: relative;
+  width: min(100%, 1280px);
+  margin: 0 auto;
+}
+
+.slide-deck {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background: var(--paper);
+  border: 4px solid var(--ink);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 12px 12px 0 rgba(26,26,46,0.15);
+}
+
+/* ── Slide base ── */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+  padding: 48px 56px 52px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(40px);
+  transition: opacity 300ms ease, transform 300ms ease, visibility 300ms ease;
+  overflow: visible;
+}
+
+.slide.active {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* ── Memphis decorative layer ── */
+.memphis-deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.memphis-dots {
+  width: 100px; height: 100px;
+  background: radial-gradient(circle, var(--pink) 3.5px, transparent 4.5px) 0 0 / 16px 16px;
+  opacity: 0.50;
+}
+
+.memphis-zigzag {
+  width: 120px; height: 24px;
+  background: linear-gradient(135deg, var(--yellow) 25%, transparent 25%) -10px 0 / 20px 20px,
+              linear-gradient(225deg, var(--yellow) 25%, transparent 25%) -10px 0 / 20px 20px;
+  opacity: 0.55;
+}
+
+.memphis-triangle {
+  width: 0; height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid var(--coral);
+  opacity: 0.50;
+  transform: rotate(15deg);
+}
+
+.memphis-ring {
+  width: 80px; height: 80px;
+  border: 5px solid var(--blue);
+  border-radius: 50%;
+  opacity: 0.45;
+}
+
+.memphis-cross {
+  width: 50px; height: 50px;
+  position: relative;
+  opacity: 0.45;
+}
+.memphis-cross::before,
+.memphis-cross::after {
+  content: "";
+  position: absolute;
+  background: var(--mint);
+}
+.memphis-cross::before {
+  width: 100%; height: 5px;
+  top: 50%; left: 0;
+  transform: translateY(-50%);
+}
+.memphis-cross::after {
+  width: 5px; height: 100%;
+  left: 50%; top: 0;
+  transform: translateX(-50%);
+}
+
+.memphis-squiggle {
+  width: 120px; height: 40px;
+  border: 4px solid var(--pink);
+  border-color: var(--pink) transparent transparent transparent;
+  border-radius: 50% / 100% 100% 0 0;
+  opacity: 0.50;
+}
+
+.memphis-checker {
+  width: 70px; height: 70px;
+  background:
+    conic-gradient(var(--pink) 0deg 90deg, var(--yellow) 90deg 180deg, var(--mint) 180deg 270deg, var(--blue) 270deg 360deg);
+  opacity: 0.45;
+}
+
+/* ── Section chip (top-left) ── */
+.section-chip {
+  position: absolute;
+  top: 18px; left: 18px;
+  z-index: 10;
+  padding: 6px 14px;
+  border: var(--border);
+  background: var(--yellow);
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ── Page chip (bottom-right) ── */
+.page-chip {
+  position: absolute;
+  bottom: 18px; right: 18px;
+  z-index: 10;
+  padding: 6px 14px;
+  border: var(--border);
+  background: #fff;
+  font-family: var(--font-title);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+/* ── Source footer ── */
+.source-footer {
+  position: absolute;
+  bottom: 18px; left: 18px;
+  z-index: 10;
+  padding: 5px 10px;
+  border: 3px solid var(--ink);
+  background: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-2);
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Title system ── */
+.slide-title {
+  font-family: var(--font-title);
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.slide-subtitle {
+  font-size: clamp(14px, 1.6vw, 20px);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.slide-body {
+  font-size: clamp(13px, 1.3vw, 17px);
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 60ch;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* ── Card system ── */
+.card {
+  background: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.card-header {
+  padding: 14px 18px;
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header.pink { background: var(--pink); }
+.card-header.blue { background: var(--blue); }
+.card-header.yellow { background: var(--yellow); }
+.card-header.mint { background: var(--mint); }
+.card-header.coral { background: var(--coral); }
+.card-header.paper-2 { background: var(--paper-2); }
+
+.card-header .card-icon {
+  width: 24px; height: 24px;
+  flex-shrink: 0;
+}
+
+.card-header .card-label {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.card-body {
+  padding: 18px;
+}
+
+/* ── Colored accent bar ── */
+.accent-bar {
+  width: 14px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.accent-bar.pink { background: var(--pink); }
+.accent-bar.blue { background: var(--blue); }
+.accent-bar.yellow { background: var(--yellow); }
+.accent-bar.mint { background: var(--mint); }
+.accent-bar.coral { background: var(--coral); }
+
+/* ── Bullet list ── */
+.bullet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px;
+  border: var(--border);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 5px 5px 0 rgba(26,26,46,0.12);
+  font-size: clamp(13px, 1.2vw, 16px);
+  line-height: 1.55;
+}
+
+.bullet-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.bullet-dot.pink { background: var(--pink); }
+.bullet-dot.blue { background: var(--blue); }
+.bullet-dot.yellow { background: var(--yellow); }
+.bullet-dot.mint { background: var(--mint); }
+.bullet-dot.coral { background: var(--coral); }
+
+/* ── KPI / Metric tiles ── */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.metric-tile {
+  background: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  text-align: center;
+}
+
+.metric-tile-header {
+  padding: 10px;
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.metric-tile-header.pink { background: var(--pink); }
+.metric-tile-header.blue { background: var(--blue); }
+.metric-tile-header.yellow { background: var(--yellow); }
+.metric-tile-header.mint { background: var(--mint); }
+.metric-tile-header.coral { background: var(--coral); }
+
+.metric-number {
+  font-family: var(--font-title);
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 900;
+  line-height: 1;
+  padding: 16px 10px 8px;
+  color: var(--ink);
+}
+
+.metric-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-2);
+  padding: 0 10px 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── Process / Timeline steps ── */
+.process-lane {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.process-track {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--ink);
+  z-index: 0;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 14px 0;
+  position: relative;
+}
+
+.process-node {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 900;
+  flex-shrink: 0;
+  z-index: 1;
+  color: var(--ink);
+}
+
+.process-node.pink { background: var(--pink); }
+.process-node.blue { background: var(--blue); }
+.process-node.yellow { background: var(--yellow); }
+.process-node.mint { background: var(--mint); }
+.process-node.coral { background: var(--coral); }
+
+.process-content {
+  flex: 1;
+  padding: 10px 16px;
+  border: var(--border);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-left: 6px solid var(--ink);
+}
+
+.process-content h4 {
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.process-content p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+/* ── Comparison columns ── */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.compare-col {
+  background: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.compare-col-header {
+  padding: 14px 18px;
+  border-bottom: var(--border);
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.compare-col-header.left { background: var(--blue); }
+.compare-col-header.right { background: var(--yellow); }
+
+.compare-col-body {
+  padding: 18px;
+}
+
+.compare-col-body li {
+  list-style: none;
+  padding: 8px 0;
+  border-bottom: 2px dashed rgba(26,26,46,0.12);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.compare-col-body li:last-child { border-bottom: none; }
+
+.check-icon {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.check-icon.green { background: var(--mint); }
+.check-icon.red { background: var(--coral); }
+
+/* ── Quote / Callout ── */
+.callout-box {
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  background: var(--paper-2);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 2;
+}
+
+.callout-box::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 72px;
+  color: var(--pink);
+  opacity: 0.4;
+  position: absolute;
+  top: -10px; left: 14px;
+  line-height: 1;
+}
+
+.callout-text {
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 800;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.callout-author {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+/* ── Tag pills ── */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.tag {
+  padding: 6px 14px;
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.tag.pink { background: var(--pink); color: #fff; }
+.tag.blue { background: var(--blue); color: var(--ink); }
+.tag.yellow { background: var(--yellow); color: var(--ink); }
+.tag.mint { background: var(--mint); color: var(--ink); }
+.tag.coral { background: var(--coral); color: #fff; }
+
+/* ── Hero / Cover slide ── */
+.slide--hero-cover {
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 80px;
+}
+
+.slide--hero-cover .hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 5.5vw, 76px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  max-width: 14ch;
+  position: relative;
+  z-index: 2;
+}
+
+.slide--hero-cover .hero-subtitle {
+  font-size: clamp(20px, 2.5vw, 32px);
+  font-weight: 700;
+  color: var(--ink-2);
+  margin-top: 16px;
+  max-width: 36ch;
+  position: relative;
+  z-index: 2;
+}
+
+.slide--hero-cover .hero-tag {
+  margin-top: 24px;
+  display: inline-block;
+  padding: 10px 24px;
+  border: var(--border);
+  background: var(--pink);
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Closing slide ── */
+.slide--closing-card {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide--closing-card .closing-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.slide--closing-card .closing-body {
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 700;
+  color: var(--ink-2);
+  max-width: 40ch;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Layout helpers ── */
+.slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+  padding-top: 34px;
+  overflow: visible;
+}
+
+.slide-content.row {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.slide-content.row > * {
+  flex: 1;
+  min-width: 0;
+}
+
+.slide-content.center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── SVG icon styling ── */
+.icon-svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Phosphor Icons (Memphis bold style) ── */
+i[class*="ph-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Memphis icon containers */
+.icon-circle {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-circle.pink { background: var(--pink); }
+.icon-circle.blue { background: var(--blue); }
+.icon-circle.yellow { background: var(--yellow); }
+.icon-circle.mint { background: var(--mint); }
+.icon-circle.coral { background: var(--coral); }
+
+.icon-square {
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  border: var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-square.pink { background: var(--pink); }
+.icon-square.blue { background: var(--blue); }
+.icon-square.yellow { background: var(--yellow); }
+.icon-square.mint { background: var(--mint); }
+.icon-square.coral { background: var(--coral); }
+
+/* ── Navigation ── */
+.nav {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 60;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border: var(--border);
+  background: rgba(255, 248, 238, 0.95);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.nav button {
+  width: 38px; height: 38px;
+  border: var(--border);
+  background: var(--yellow);
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 100ms ease;
+}
+
+.nav button:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 rgba(26,26,46,0.20);
+}
+
+.nav button:active {
+  transform: translateY(0);
+}
+
+.counter {
+  min-width: 70px;
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+/* ── Keyboard hint ── */
+.keyboard-hint {
+  position: fixed;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 55;
+  font-size: 13px;
+  color: var(--ink-2);
+  opacity: 0.8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  body { padding: 8px; }
+  .slide { padding: 24px; }
+  .slide--hero-cover { padding: 40px 30px; }
+  .slide-content.row { flex-direction: column; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .metric-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .metric-grid { grid-template-columns: 1fr; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <main class="deck-shell">
+    <section class="slide-deck" aria-label="Memphis HTML PPT presentation">
+      <article class="slide slide--cover slide--hero-cover active" data-template="hero-cover" data-accent="pink">
+        <div class="memphis-deco memphis-cross" style="top:80px;right:8px"></div>
+        <div class="memphis-deco memphis-ring" style="bottom:60px;right:130px"></div>
+        <div class="memphis-deco memphis-checker" style="bottom:180px;right:8px"></div>
+        <div class="memphis-deco memphis-zigzag" style="top:8px;right:8px"></div>
+        <div class="section-chip">01 | 2026年AI产品设计趋势报告</div>
+        <div class="page-chip">1 / 9</div>
+        <div class="slide-content center" style="align-items:flex-start;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;"><i class="ph-fill ph-palette" style="font-size:32px;color:#1A1A2E;flex-shrink:0;"></i><span class="slide-subtitle" style="margin:0;">本报告深入分析了2026年人工智能产品设计领域的关键趋势、技术突破和最佳实践。</span></div>
+      <h1 class="hero-title">2026年AI产品设计趋势报告</h1>
+      
+      
+      <span class="hero-tag">01</span>
+    </div>
+      </article>
+      <article class="slide slide--warning slide--warning-callout" data-template="warning-callout" data-accent="blue">
+        <div class="memphis-deco memphis-checker" style="bottom:8px;right:250px"></div>
+        <div class="memphis-deco memphis-zigzag" style="top:50%;right:6px;transform:translateY(-50%)"></div>
+        <div class="memphis-deco memphis-triangle" style="bottom:60px;left:8px"></div>
+        <div class="section-chip">02 | 为什么AI产品设计需要新范式</div>
+        <div class="page-chip">2 / 9</div>
+        <div class="slide-content">
+      <div class="callout-box">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;"><span class="icon-circle coral" style="width:40px;height:40px;border-width:3px;"><i class="ph-fill ph-shield-warning" style="font-size:28px;color:#1A1A2E;flex-shrink:0;"></i></span><h1 class="slide-title" style="margin:0;font-size:clamp(28px,3.5vw,44px);">为什么AI产品设计需要新范式</h1></div>
+        <p class="slide-subtitle">传统的用户界面设计范式正在被AI彻底颠覆。过去我们设计的是工具，现在我们需要设计的是协作者。</p>
+        
+      </div>
+      <ul class="bullet-list"><li class="bullet-item" style="background:#FFF4ED;"><span class="bullet-dot coral" aria-hidden="true"></span><span>用户期望从&quot;点击按钮&quot;转变为&quot;对话协作&quot;</span></li><li class="bullet-item" style="background:#FFF4ED;"><span class="bullet-dot coral" aria-hidden="true"></span><span>界面从静态布局演变为动态自适应</span></li><li class="bullet-item" style="background:#FFF4ED;"><span class="bullet-dot coral" aria-hidden="true"></span><span>个性化不再是可选项，而是基本要求</span></li><li class="bullet-item" style="background:#FFF4ED;"><span class="bullet-dot coral" aria-hidden="true"></span><span>信任和透明度成为设计的核心考量</span></li><li class="bullet-item" style="background:#FFF4ED;"><span class="bullet-dot coral" aria-hidden="true"></span><span>多模态交互成为标配</span></li></ul>
+    </div>
+      </article>
+      <article class="slide slide--compare slide--compare-dual" data-template="compare-dual" data-accent="yellow">
+        <div class="memphis-deco memphis-triangle" style="bottom:180px;right:8px"></div>
+        <div class="memphis-deco memphis-dots" style="top:8px;right:8px"></div>
+        <div class="memphis-deco memphis-squiggle" style="top:30%;right:6px"></div>
+        <div class="memphis-deco memphis-cross" style="bottom:120px;left:6px"></div>
+        <div class="section-chip">03 | 核心设计原则</div>
+        <div class="page-chip">3 / 9</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:10px;"><i class="ph-fill ph-briefcase" style="font-size:32px;color:#FFD93D;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">核心设计原则</h1></div>
+      <p class="slide-subtitle">AI产品设计需要遵循一套全新的设计原则，这些原则源于对人机协作本质的理解。</p>
+      <div class="compare-grid">
+        <div class="compare-col">
+          <div class="compare-col-header left" style="display:flex;align-items:center;justify-content:center;gap:8px;"><i class="ph-fill ph-shield-check" style="font-size:24px;color:#1A1A2E;flex-shrink:0;"></i> OPTION A</div>
+          <div class="compare-col-body"><ul><li><span class="check-icon green"><i class="ph-fill ph-check" style="font-size:11px;color:#1A1A2E;"></i></span>人类始终保有最终决策权</li><li><span class="check-icon green"><i class="ph-fill ph-check" style="font-size:11px;color:#1A1A2E;"></i></span>AI的推理过程必须可解释可追溯</li></ul></div>
+        </div>
+        <div class="compare-col">
+          <div class="compare-col-header right" style="display:flex;align-items:center;justify-content:center;gap:8px;"><i class="ph-fill ph-crosshair" style="font-size:24px;color:#1A1A2E;flex-shrink:0;"></i> OPTION B</div>
+          <div class="compare-col-body"><ul><li><span class="check-icon red"><i class="ph-fill ph-x" style="font-size:11px;color:#1A1A2E;"></i></span>失败场景的设计比成功场景更重要</li><li><span class="check-icon red"><i class="ph-fill ph-x" style="font-size:11px;color:#1A1A2E;"></i></span>渐进式披露复杂功能</li></ul></div>
+        </div>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--agenda slide--agenda-overview" data-template="agenda-overview" data-accent="mint">
+        <div class="memphis-deco memphis-squiggle" style="bottom:60px;left:8px"></div>
+        <div class="memphis-deco memphis-cross" style="top:120px;left:8px"></div>
+        <div class="memphis-deco memphis-ring" style="top:8px;right:120px"></div>
+        <div class="section-chip">04 | 关键数据指标</div>
+        <div class="page-chip">4 / 9</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:12px;"><i class="ph-fill ph-clock" style="font-size:32px;color:#00C896;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">关键数据指标</h1></div>
+      <p class="slide-subtitle">2026年AI产品市场呈现爆发式增长，以下数据揭示了行业的关键走向。</p>
+      <div style="display:flex;flex-direction:column;gap:8px;position:relative;z-index:2;">
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square pink" style="width:36px;height:36px;font-family:var(--font-title);font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;">01</span>
+            <span style="font-size:15px;font-weight:700;">全球AI产品市场规模达到5800亿美元</span>
+          </div><div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square blue" style="width:36px;height:36px;font-family:var(--font-title);font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;">02</span>
+            <span style="font-size:15px;font-weight:700;">采用AI辅助设计的团队效率提升340%</span>
+          </div><div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square yellow" style="width:36px;height:36px;font-family:var(--font-title);font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;">03</span>
+            <span style="font-size:15px;font-weight:700;">用户对AI产品的信任度从32%上升到67%</span>
+          </div><div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square mint" style="width:36px;height:36px;font-family:var(--font-title);font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;">04</span>
+            <span style="font-size:15px;font-weight:700;">78%的企业已将AI集成到核心产品中</span>
+          </div>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--essay slide--essay-panel" data-template="essay-panel" data-accent="coral">
+        <div class="memphis-deco memphis-ring" style="top:30%;right:6px"></div>
+        <div class="memphis-deco memphis-checker" style="bottom:120px;left:6px"></div>
+        <div class="memphis-deco memphis-zigzag" style="bottom:8px;left:250px"></div>
+        <div class="memphis-deco memphis-triangle" style="top:8px;left:200px"></div>
+        <div class="section-chip">05 | 交互设计的三大阶段</div>
+        <div class="page-chip">5 / 9</div>
+        <div class="slide-content row">
+      <div style="flex:1.2;">
+        <div style="display:flex;align-items:center;gap:10px;"><i class="ph-fill ph-users" style="font-size:32px;color:#FF6B4A;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">交互设计的三大阶段</h1></div>
+        <p class="slide-subtitle">AI产品的交互设计经历了从简单到复杂的演进过程，每个阶段都有其独特的设计挑战。</p>
+        
+      </div>
+      <div style="flex:0.8;"><ul class="bullet-list"><li class="bullet-item"><span class="bullet-dot pink" aria-hidden="true"></span><span>第一阶段：命令式交互，用户需要学习特定指令</span></li><li class="bullet-item"><span class="bullet-dot blue" aria-hidden="true"></span><span>第二阶段：对话式交互，自然语言成为主要界面</span></li><li class="bullet-item"><span class="bullet-dot yellow" aria-hidden="true"></span><span>第三阶段：意图式交互，AI主动理解用户需求并预判行动</span></li></ul></div>
+    </div>
+      </article>
+      <article class="slide slide--checklist slide--checklist-board" data-template="checklist-board" data-accent="pink">
+        <div class="memphis-deco memphis-zigzag" style="top:8px;right:120px"></div>
+        <div class="memphis-deco memphis-triangle" style="top:65%;right:10px"></div>
+        <div class="memphis-deco memphis-dots" style="top:40%;left:6px"></div>
+        <div class="section-chip">06 | 对比传统设计与AI原生设计</div>
+        <div class="page-chip">6 / 9</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:12px;"><i class="ph-fill ph-chart-bar" style="font-size:32px;color:#FF3DA5;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">对比传统设计与AI原生设计</h1></div>
+      <p class="slide-subtitle">传统设计方法和AI原生设计方法存在根本性差异，理解这些差异对于构建成功的AI产品至关重要。</p>
+      <div style="display:flex;flex-direction:column;gap:8px;position:relative;z-index:2;">
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square pink" style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;"><i class="ph-fill ph-check" style="font-size:16px;color:#1A1A2E;flex-shrink:0;"></i></span>
+            <span style="font-size:15px;font-weight:700;">传统设计：固定流程，用户适应系统</span>
+          </div><div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square blue" style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;"><i class="ph-fill ph-check" style="font-size:16px;color:#1A1A2E;flex-shrink:0;"></i></span>
+            <span style="font-size:15px;font-weight:700;">传统设计：线性导航，层级分明</span>
+          </div><div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square yellow" style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;"><i class="ph-fill ph-minus" style="font-size:16px;color:#1A1A2E;flex-shrink:0;"></i></span>
+            <span style="font-size:15px;font-weight:700;">AI原生设计：动态路径，系统适应用户</span>
+          </div><div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border:var(--border);border-radius:8px;background:#fff;box-shadow:var(--shadow);">
+            <span class="icon-square mint" style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;"><i class="ph-fill ph-minus" style="font-size:16px;color:#1A1A2E;flex-shrink:0;"></i></span>
+            <span style="font-size:15px;font-weight:700;">AI原生设计：网状探索，意图驱动</span>
+          </div>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--tree slide--hierarchy-tree" data-template="hierarchy-tree" data-accent="blue">
+        <div class="memphis-deco memphis-dots" style="bottom:8px;left:250px"></div>
+        <div class="memphis-deco memphis-squiggle" style="top:8px;left:200px"></div>
+        <div class="memphis-deco memphis-cross" style="bottom:60px;right:10px"></div>
+        <div class="memphis-deco memphis-ring" style="top:15%;left:6px"></div>
+        <div class="section-chip">07 | 风险与注意事项</div>
+        <div class="page-chip">7 / 9</div>
+        <div class="slide-content">
+      <div style="display:flex;align-items:center;gap:12px;"><i class="ph-fill ph-cpu" style="font-size:32px;color:#00B8D9;flex-shrink:0;"></i><h1 class="slide-title" style="margin:0;">风险与注意事项</h1></div>
+      <div style="text-align:center;position:relative;z-index:2;margin-top:10px;">
+        <div style="display:inline-block;padding:14px 28px;border:var(--border);border-radius:var(--radius);background:var(--pink);box-shadow:var(--shadow);font-family:var(--font-title);font-size:18px;font-weight:900;">算法偏见可能导致不公平的用户体验</div>
+        <div style="width:4px;height:24px;background:var(--ink);margin:0 auto;"></div>
+        <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:4px;height:16px;background:var(--ink);"></div>
+              <div style="padding:10px 20px;border:var(--border);border-radius:8px;background:var(--pink);box-shadow:var(--shadow);font-size:14px;font-weight:800;">过度依赖AI可能削弱用户的自主能力</div>
+            </div><div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:4px;height:16px;background:var(--ink);"></div>
+              <div style="padding:10px 20px;border:var(--border);border-radius:8px;background:var(--blue);box-shadow:var(--shadow);font-size:14px;font-weight:800;">隐私数据的收集和使用必须透明合规</div>
+            </div><div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:4px;height:16px;background:var(--ink);"></div>
+              <div style="padding:10px 20px;border:var(--border);border-radius:8px;background:var(--yellow);box-shadow:var(--shadow);font-size:14px;font-weight:800;">AI幻觉问题需要建立有效的检测和纠正机制</div>
+            </div>
+        </div>
+      </div>
+    </div>
+      </article>
+      <article class="slide slide--quote slide--quote-insight" data-template="quote-insight" data-accent="yellow">
+        <div class="memphis-deco memphis-cross" style="top:40%;left:6px"></div>
+        <div class="memphis-deco memphis-ring" style="top:8px;left:8px"></div>
+        <div class="memphis-deco memphis-checker" style="top:80px;right:8px"></div>
+        <div class="section-chip">08 | 设计工具与工作流</div>
+        <div class="page-chip">8 / 9</div>
+        <div class="slide-content center">
+      <div class="callout-box" style="text-align:center;max-width:800px;">
+        <p class="callout-text" style="font-size:clamp(20px,2.5vw,32px);">"现代AI产品设计依赖一套精密的工具链，从研究到原型到测试形成完整闭环。"</p>
+        <p class="callout-author">— 利用生成式AI快速创建设计变体</p>
+      </div>
+      <div class="tag-row" style="justify-content:center;margin-top:16px;"><span class="tag pink">通过AI驱动的可用性测试加速迭代</span><span class="tag blue">建立设计系统确保AI组件的一致性</span></div>
+    </div>
+      </article>
+      <article class="slide slide--closing slide--closing-card" data-template="closing-card" data-accent="mint">
+        <div class="memphis-deco memphis-checker" style="bottom:60px;right:10px"></div>
+        <div class="memphis-deco memphis-zigzag" style="top:15%;left:6px"></div>
+        <div class="memphis-deco memphis-triangle" style="bottom:8px;right:250px"></div>
+        <div class="memphis-deco memphis-dots" style="top:50%;right:6px;transform:translateY(-50%)"></div>
+        <div class="section-chip">09 | 未来展望</div>
+        <div class="page-chip">9 / 9</div>
+        <div class="slide-content center">
+      <div class="icon-circle pink" style="width:72px;height:72px;border-width:4px;margin-bottom:12px;"><i class="ph-fill ph-sparkle" style="font-size:36px;color:#1A1A2E;flex-shrink:0;"></i></div>
+      <h1 class="closing-title">未来展望</h1>
+      <p class="closing-body">AI产品设计的未来充满可能性，我们需要为即将到来的变革做好准备。</p>
+      
+      <div class="tag-row" style="justify-content:center;margin-top:16px;"><span class="tag pink">多Agent协作界面将成为新的设计范式</span><span class="tag blue">空间计算与AI的融合将创造全新体验</span><span class="tag yellow">情感计算将使AI产品具备真正的同理心</span><span class="tag mint">自主AI系统的设计将挑战我们对控制权的理解</span></div>
+    </div>
+      </article>
+    </section>
+  </main>
+  <div class="nav" aria-label="Slide navigation">
+    <button type="button" id="prev" aria-label="Previous slide">&#8592;</button>
+    <div class="counter"><span id="current">1</span> / <span id="total">9</span></div>
+    <button type="button" id="next" aria-label="Next slide">&#8594;</button>
+  </div>
+  <div class="keyboard-hint">Arrow keys or click to navigate</div>
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const progress = document.getElementById("progress");
+    const currentLabel = document.getElementById("current");
+    let current = 0;
+    function showSlide(nextIndex) {
+      current = Math.max(0, Math.min(slides.length - 1, nextIndex));
+      slides.forEach((s, i) => { s.classList.toggle("active", i === current); s.style.display = i === current ? "flex" : "none"; });
+      currentLabel.textContent = String(current + 1);
+      progress.style.width = ((current + 1) / slides.length * 100) + "%";
+    }
+    document.getElementById("prev").addEventListener("click", () => showSlide(current - 1));
+    document.getElementById("next").addEventListener("click", () => showSlide(current + 1));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); showSlide(current + 1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); showSlide(current - 1); }
+    });
+    document.addEventListener("click", (e) => { if (!e.target.closest(".nav")) showSlide(current + 1); });
+    showSlide(0);
+  </script>
+  <!-- source: ./test-content.md -->
+</body>
+</html>
