@@ -2,7 +2,7 @@
 
 [中文文档](README.zh-CN.md)
 
-![Memphis HTML PPT project banner](assets/readme-banner.png)
+![Memphis HTML PPT project banner](assets/readme-banner.jpg)
 
 Memphis HTML PPT is a lightweight toolkit for turning Markdown files or web pages into a local HTML slide deck with a bold Memphis-inspired visual style.
 
@@ -26,7 +26,7 @@ This repository is currently best described as a practical generator and reusabl
 
 ## Preview
 
-![Travel preview](assets/travel-preview.png)
+![Travel preview](assets/travel-preview.jpg)
 
 ## Directory Structure
 

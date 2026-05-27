@@ -2,7 +2,7 @@
 
 [English README](README.md)
 
-![Memphis HTML PPT 项目横幅](assets/readme-banner.png)
+![Memphis HTML PPT 项目横幅](assets/readme-banner.jpg)
 
 Memphis HTML PPT 是一个轻量级工具集，用于将 Markdown 文档或网页快速转换为本地可打开的 HTML 幻灯片预览，并采用鲜明的 Memphis 风格视觉设计。
 
@@ -31,7 +31,7 @@ Memphis HTML PPT 是一个轻量级工具集，用于将 Markdown 文档或网�
 
 ## 预览效果
 
-![旅游方向预览图](assets/travel-preview.png)
+![旅游方向预览图](assets/travel-preview.jpg)
 
 ## 目录结构
 
