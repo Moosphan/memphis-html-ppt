@@ -1,0 +1,136 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .paper { fill: #FFF8EE; }
+      .paper-soft { fill: #FFE9C7; }
+      .ink { fill: #1A1A2E; }
+      .ink-soft { fill: #4A4A6A; }
+      .pink { fill: #FF3DA5; }
+      .blue { fill: #00B8D9; }
+      .yellow { fill: #FFD93D; }
+      .mint { fill: #00C896; }
+      .coral { fill: #FF6B4A; }
+      .chip {
+        font-family: "Montserrat", "Noto Sans SC", sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+      }
+      .title {
+        font-family: "Georgia", "Times New Roman", serif;
+        font-size: 86px;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+      }
+      .subtitle {
+        font-family: "Montserrat", "Noto Sans SC", sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.35;
+      }
+      .card-title {
+        font-family: "Montserrat", "Noto Sans SC", sans-serif;
+        font-size: 28px;
+        font-weight: 900;
+      }
+      .body {
+        font-family: "Montserrat", "Noto Sans SC", sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.45;
+      }
+      .big-number {
+        font-family: "Georgia", "Times New Roman", serif;
+        font-size: 120px;
+        font-weight: 700;
+        letter-spacing: -0.06em;
+      }
+      .small {
+        font-family: "Montserrat", "Noto Sans SC", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    </style>
+    <pattern id="dots-b" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="3" fill="#1A1A2E" fill-opacity="0.38"/>
+    </pattern>
+    <filter id="shadow-b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="10" dy="10" stdDeviation="0" flood-color="#1A1A2E" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" class="paper"/>
+  <rect x="0" y="0" width="1600" height="98" class="ink"/>
+  <circle cx="156" cy="822" r="116" fill="#FF6B4A" fill-opacity="0.15"/>
+  <circle cx="1418" cy="186" r="136" fill="#FFD93D" fill-opacity="0.20"/>
+
+  <rect x="72" y="122" width="232" height="56" class="yellow"/>
+  <rect x="72" y="122" width="232" height="56" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+  <text x="102" y="158" class="chip ink">SECTION 02</text>
+
+  <rect x="1284" y="764" width="204" height="58" fill="#FFFFFF" stroke="#1A1A2E" stroke-width="6"/>
+  <text x="1334" y="802" class="chip ink">04 / 12</text>
+
+  <text x="82" y="258" class="title ink">Insight Board</text>
+  <text x="84" y="316" class="subtitle ink-soft">A structured Memphis slide for metrics, highlights, and supporting content.</text>
+
+  <g transform="translate(78 382)">
+    <rect x="0" y="0" width="422" height="356" rx="28" fill="#FFFFFF" filter="url(#shadow-b)"/>
+    <rect x="0" y="0" width="422" height="356" rx="28" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+    <text x="44" y="72" class="card-title ink">Hero Metric</text>
+    <text x="42" y="198" class="big-number coral">78%</text>
+    <text x="46" y="250" class="subtitle ink-soft">Put a big result, shift, or KPI here.</text>
+    <rect x="44" y="278" width="148" height="42" rx="16" class="mint"/>
+    <rect x="44" y="278" width="148" height="42" rx="16" fill="none" stroke="#1A1A2E" stroke-width="4"/>
+    <text x="72" y="305" class="small" fill="#FFF8EE">+12% vs last</text>
+  </g>
+
+  <g transform="translate(538 382)">
+    <rect x="0" y="0" width="468" height="356" rx="28" class="paper-soft" filter="url(#shadow-b)"/>
+    <rect x="0" y="0" width="468" height="356" rx="28" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+    <text x="42" y="72" class="card-title ink">Key Points</text>
+
+    <circle cx="58" cy="126" r="14" class="coral"/>
+    <text x="92" y="135" class="body ink-soft">Use this block for three to four decisive supporting bullets.</text>
+
+    <circle cx="58" cy="192" r="14" class="blue"/>
+    <text x="92" y="201" class="body ink-soft">Keep each line short, punchy, and presentation-friendly.</text>
+
+    <circle cx="58" cy="258" r="14" class="yellow"/>
+    <text x="92" y="267" class="body ink-soft">Memphis decorations should frame the hierarchy, not distract.</text>
+
+    <rect x="312" y="222" width="104" height="104" class="mint" fill-opacity="0.84"/>
+    <circle cx="386" cy="112" r="48" class="pink" fill-opacity="0.22"/>
+  </g>
+
+  <g transform="translate(1044 382)">
+    <rect x="0" y="0" width="478" height="170" rx="28" fill="#FFFFFF" filter="url(#shadow-b)"/>
+    <rect x="0" y="0" width="478" height="170" rx="28" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+    <text x="38" y="60" class="card-title ink">Visual Placeholder</text>
+    <rect x="38" y="82" width="404" height="54" rx="18" fill="none" stroke="#1A1A2E" stroke-width="4" stroke-dasharray="12 10"/>
+    <text x="128" y="117" class="small ink-soft">Chart / screenshot / product panel</text>
+  </g>
+
+  <g transform="translate(1044 568)">
+    <rect x="0" y="0" width="228" height="170" rx="28" class="blue" filter="url(#shadow-b)"/>
+    <rect x="0" y="0" width="228" height="170" rx="28" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+    <text x="30" y="60" class="card-title" fill="#FFF8EE">Quote</text>
+    <text x="30" y="102" class="subtitle" fill="#FFF8EE">“Drop a sharp insight or team takeaway here.”</text>
+  </g>
+
+  <g transform="translate(1294 568)">
+    <rect x="0" y="0" width="228" height="170" rx="28" class="coral" filter="url(#shadow-b)"/>
+    <rect x="0" y="0" width="228" height="170" rx="28" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+    <text x="28" y="58" class="card-title" fill="#FFF8EE">Next Step</text>
+    <text x="28" y="96" class="body" fill="#FFF8EE">Call out an action, owner, or follow-up move.</text>
+  </g>
+
+  <rect x="1280" y="124" width="180" height="96" fill="url(#dots-b)"/>
+  <rect x="114" y="770" width="210" height="70" fill="url(#dots-b)"/>
+  <path d="M1208 152C1238 120 1280 120 1310 152C1340 184 1382 184 1412 152" stroke="#00C896" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1486 252L1568 314L1486 376Z" class="yellow"/>
+  <path d="M1486 252L1568 314L1486 376Z" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+  <path d="M508 812C622 760 752 792 872 826C974 854 1072 848 1166 800" stroke="#1A1A2E" stroke-width="4" stroke-dasharray="12 12" fill="none"/>
+  <circle cx="492" cy="818" r="18" class="ink"/>
+  <circle cx="1184" cy="794" r="18" class="ink"/>
+</svg>
