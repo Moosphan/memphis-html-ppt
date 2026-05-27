@@ -2,6 +2,8 @@
 
 [中文文档](README.zh-CN.md)
 
+![Memphis HTML PPT project banner](assets/readme-banner.png)
+
 Memphis HTML PPT is a lightweight toolkit for turning Markdown files or web pages into a local HTML slide deck with a bold Memphis-inspired visual style.
 
 It is designed for quick presentation prototyping, skill packaging, and visual storytelling experiments where you want a deck-like preview without opening PowerPoint, Keynote, or Google Slides.
@@ -21,6 +23,10 @@ This repository is currently best described as a practical generator and reusabl
 - The preview generator is usable now
 - The packaging scripts are usable for local bundle generation
 - The project includes a minimal `package.json` for Node.js script management
+
+## Preview
+
+![Travel preview](assets/travel-preview.png)
 
 ## Directory Structure
 
