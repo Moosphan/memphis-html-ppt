@@ -78,6 +78,12 @@ node scripts/generate-preview.js --input https://example.com/article --output ./
 
 生成后，直接用浏览器打开 `preview.html` 即可查看。
 
+导出当前 premium 版最终 HTML PPT：
+
+```bash
+npm run export:premium -- --input ./test-content.md --output ./final.premium.html
+```
+
 ## 可用脚本
 
 ### `scripts/generate-preview.js`
@@ -113,6 +119,20 @@ node scripts/build-release.js
 
 - `dist/codex/memphis-html-ppt`
 - `dist/claude/memphis-html-ppt`
+
+### `scripts/export-premium-html.js`
+
+导出当前 premium 版 HTML PPT 成品。
+
+```bash
+node scripts/export-premium-html.js --input <url-or-file> --output <html-file>
+```
+
+主要行为：
+
+- 读取源文档
+- 将内容映射到当前 premium 模板规范
+- 输出最终 premium HTML Deck 文件
 
 ### `scripts/publish-local.js`
 

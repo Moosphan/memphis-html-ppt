@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+
+  <g id="bg">
+    <rect width="1280" height="720" fill="#FFF8EE" />
+  </g>
+
+  <!-- Header -->
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#FFD93D" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">BY THE NUMBERS</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">数据概览 · KEY METRICS</text>
+    <g transform="translate(1140, 60)">
+      <rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- 主指标卡片 (左侧大卡) -->
+  <g id="hero-metric">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,150 H614 A14,14 0 0 1 628,164 V564 A14,14 0 0 1 614,578 H74 A14,14 0 0 1 60,564 V164 A14,14 0 0 1 74,150 Z" />
+    <path d="M 64 150 h 560 a 10 10 0 0 1 4 4 v 56 h -568 v -56 a 10 10 0 0 1 4 -4 Z" fill="#FF6B4A" />
+    <g transform="translate(76, 160) scale(2.25)" fill="#1A1A2E"><path d="M0 10H4V16H0V10ZM6 6H10V16H6V6ZM12 2H16V16H12V2Z"/></g>
+    <text x="122" y="186" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E" letter-spacing="2">HERO METRIC</text>
+
+    <!-- 大数字 -->
+    <text x="100" y="340" font-family="Impact, Arial Black, sans-serif" font-size="120" font-weight="900" fill="#1A1A2E" letter-spacing="-3">84%</text>
+    <text x="100" y="390" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#5C5C7A">of presentations use visual-heavy layouts</text>
+
+    <!-- 变化标签 -->
+    <rect x="100" y="420" width="140" height="36" rx="18" fill="#00C896" stroke="#1A1A2E" stroke-width="2.5" />
+    <text x="126" y="444" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="1">+12% VS LAST</text>
+
+    <!-- 底部说明 -->
+    <line x1="100" y1="480" x2="580" y2="480" stroke="#1A1A2E" stroke-width="1" stroke-dasharray="4,4" opacity="0.2" />
+    <text x="100" y="516" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">Based on survey of 2,400+ presenters</text>
+    <text x="100" y="540" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">across 12 industries, 2024-2025.</text>
+  </g>
+
+  <!-- 右侧: 3 个辅助指标卡片 -->
+  <g id="metric-a">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M668,150 H1206 A14,14 0 0 1 1220,164 V310 A14,14 0 0 1 1206,324 H668 A14,14 0 0 1 654,310 V164 A14,14 0 0 1 668,150 Z" />
+    <path d="M 654 150 h 552 a 10 10 0 0 1 4 4 v 56 h -560 v -56 a 10 10 0 0 1 4 -4 Z" fill="#00B8D9" />
+    <g transform="translate(666, 160) scale(2.0)" fill="#1A1A2E"><path d="M4 0H10L14 4V14C14 15.1 13.1 16 12 16H4C2.9 16 2 15.1 2 14V2C2 0.9 2.9 0 4 0ZM10 0V4H14L10 0Z"/></g>
+    <text x="700" y="186" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E" letter-spacing="2">AVG DECK SIZE</text>
+
+    <text x="694" y="260" font-family="Impact, Arial Black, sans-serif" font-size="64" font-weight="900" fill="#1A1A2E" letter-spacing="-1">24</text>
+    <text x="790" y="260" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A">slides</text>
+    <text x="694" y="290" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">per presentation average</text>
+  </g>
+
+  <g id="metric-b">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M668,348 H930 A14,14 0 0 1 944,362 V504 A14,14 0 0 1 930,518 H668 A14,14 0 0 1 654,504 V362 A14,14 0 0 1 668,348 Z" />
+    <path d="M 654 348 h 276 a 10 10 0 0 1 4 4 v 40 h -284 v -40 a 10 10 0 0 1 4 -4 Z" fill="#FF3DA5" />
+    <g transform="translate(666, 354) scale(1.8)" fill="#1A1A2E"><path d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM8 14C4.69 14 2 11.31 2 8C2 4.69 4.69 2 8 2C11.31 2 14 4.69 14 8C14 11.31 11.31 14 8 14ZM7 4H9V8.5L12 10.5L11 12L7 9.5V4Z"/></g>
+    <text x="698" y="378" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#1A1A2E" letter-spacing="2">TIME SAVED</text>
+
+    <text x="694" y="440" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="-1">87%</text>
+    <text x="694" y="470" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">less formatting time</text>
+  </g>
+
+  <g id="metric-c">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M968,348 H1206 A14,14 0 0 1 1220,362 V504 A14,14 0 0 1 1206,518 H968 A14,14 0 0 1 954,504 V362 A14,14 0 0 1 968,348 Z" />
+    <path d="M 954 348 h 252 a 10 10 0 0 1 4 4 v 40 h -260 v -40 a 10 10 0 0 1 4 -4 Z" fill="#00C896" />
+    <g transform="translate(966, 354) scale(1.8)" fill="#1A1A2E"><path d="M6 16L0 10L2 8L6 12L14 2L16 4L6 16Z"/></g>
+    <text x="998" y="378" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#1A1A2E" letter-spacing="2">PASS RATE</text>
+
+    <text x="994" y="440" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="-1">96%</text>
+    <text x="994" y="470" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">layout validation</text>
+  </g>
+
+  <!-- 底部备注卡片 -->
+  <g id="note">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M668,542 H1206 A14,14 0 0 1 1220,556 V644 A14,14 0 0 1 1206,658 H668 A14,14 0 0 1 654,644 V556 A14,14 0 0 1 668,542 Z" />
+    <path d="M 654 542 h 552 a 10 10 0 0 1 4 4 v 40 h -560 v -40 a 10 10 0 0 1 4 -4 Z" fill="#FFD93D" />
+    <g transform="translate(666, 548) scale(2.0)" fill="#1A1A2E"><path d="M5 14H11V15C11 15.6 10.6 16 10 16H6C5.4 16 5 15.6 5 15V14ZM8 0C4.7 0 2 2.7 2 6C2 8.2 3.4 10.1 5.5 11V12.5C5.5 13.1 5.8 13.4 6 13.5H10C10.2 13.4 10.5 13.1 10.5 12.5V11C12.6 10.1 14 8.2 14 6C14 2.7 11.3 0 8 0Z"/></g>
+    <text x="700" y="574" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E" letter-spacing="2">KEY TAKEAWAY</text>
+
+    <circle cx="694" cy="610" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="616" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Template-driven workflows cut design time by <tspan fill="#C0392B" font-weight="900">87%</tspan></text>
+    <circle cx="694" cy="638" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="644" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">while maintaining <tspan fill="#C0392B" font-weight="900">96% layout pass rate</tspan></text>
+  </g>
+
+  <!-- Footer -->
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">数据面板 · 关键指标一览</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">06 / 12</text>
+  </g>
+
+</svg>

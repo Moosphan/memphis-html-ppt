@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
+import { renderPremiumDeck } from "./lib/render-premium-deck.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -202,6 +203,14 @@ async function main() {
     return;
   }
 
+  if (args.premium === "true") {
+    const source = await loadSource(args.input);
+    const doc = parseSource(source, args.input);
+    await renderPremiumDeck({ output: args.output, sourceLabel: args.input, title: doc.title, source: doc });
+    console.log(`Generated ${path.resolve(args.output)} (premium deck)`);
+    return;
+  }
+
   const source = await loadSource(args.input);
   const doc = parseSource(source, args.input);
   const templateLibrary = JSON.parse(await fs.readFile(templateLibraryPath, "utf8"));
@@ -226,7 +235,7 @@ function parseArgs(argv) {
 }
 
 function printUsage() {
-  console.log("Usage: node scripts/generate-preview.js --input <url-or-file> --output <html-file>");
+  console.log("Usage: node scripts/generate-preview.js --input <url-or-file> --output <html-file> [--premium true]");
 }
 
 async function loadSource(input) {

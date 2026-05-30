@@ -73,6 +73,12 @@ node scripts/generate-preview.js --input https://example.com/article --output ./
 
 Then open the generated `preview.html` in your browser.
 
+Export the current premium HTML PPT output:
+
+```bash
+npm run export:premium -- --input ./test-content.md --output ./final.premium.html
+```
+
 ## Available Scripts
 
 ### `scripts/generate-preview.js`
@@ -108,6 +114,20 @@ Outputs:
 
 - `dist/codex/memphis-html-ppt`
 - `dist/claude/memphis-html-ppt`
+
+### `scripts/export-premium-html.js`
+
+Exports the current premium HTML PPT artifact.
+
+```bash
+node scripts/export-premium-html.js --input <url-or-file> --output <html-file>
+```
+
+Behavior:
+
+- Loads the source document
+- Maps source content into the current premium template specs
+- Writes a final premium HTML deck artifact
 
 ### `scripts/publish-local.js`
 

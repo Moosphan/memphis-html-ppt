@@ -388,6 +388,186 @@ They should be translated into HTML masters with:
 
 This is the shortest path to achieving matching visual quality.
 
+## Historical Template Migration Strategy
+
+Do not migrate every historical template by repeating a rigid:
+
+`SVG -> HTML`
+
+pipeline.
+
+That path is useful only for a small number of high-value templates where visual fidelity must be explicitly art-directed.
+
+The recommended hierarchy is:
+
+- `SVG` defines the visual benchmark
+- `templateSpec` defines the source-of-truth structure
+- `HTML renderer` produces the runtime output
+
+In other words:
+
+- SVG is for calibration
+- spec is for scalability
+- renderer is for production
+
+### When SVG-First Is Worth It
+
+Use an SVG-first workflow when a template:
+
+- is strategically important
+- has non-trivial composition
+- needs strong visual hierarchy
+- includes asymmetric decoration that should not be improvised
+- will be reused frequently across different decks
+
+Examples:
+
+- hero
+- insight board
+- comparison
+- process
+- closing
+
+For these templates, the workflow should be:
+
+1. design the master in SVG
+2. identify the named semantic regions
+3. convert those regions into a formal `templateSpec`
+4. implement deterministic HTML rendering against that spec
+5. validate overflow and downgrade behavior
+
+SVG should not remain the source of behavior.
+
+The source of behavior must become the spec.
+
+### When Direct Spec Migration Is Better
+
+For simpler historical templates, do not spend time drawing SVG first.
+
+If the template is mostly a semantic arrangement of known blocks, migrate directly into:
+
+- intent
+- slot schema
+- content budget
+- downgrade rules
+- renderer mapping
+
+This is better for templates such as:
+
+- checklist
+- FAQ
+- agenda
+- data table
+- icon list
+
+These do not benefit enough from a full SVG-first step to justify the extra cost.
+
+### Template Extensibility Rules
+
+To keep the system expandable, every migrated template should obey the same contract:
+
+- stable `id`
+- explicit `intent`
+- named semantic `slots`
+- required vs optional slot flags
+- hard text budgets
+- capacity score
+- downgrade / fallback behavior
+- decorative anchors as tokens, not hardcoded random shapes
+
+The template system should separate:
+
+- content semantics
+- layout composition
+- decorative styling
+- rendering implementation
+
+That means a future template can:
+
+- reuse an existing intent
+- reuse an existing slot schema
+- change only visual composition
+
+or:
+
+- reuse the same composition
+- swap only the style tokens
+
+This separation is what will make historical template migration sustainable.
+
+### Recommended Registry Shape
+
+The registry should be organized as:
+
+- `template-specs.js`
+  source-of-truth for template metadata and slot rules
+- `render-premium-slide.js`
+  deterministic rendering for premium masters
+- `render-slide.js`
+  dispatcher for premium and legacy renderers
+
+Each template entry should include at minimum:
+
+```json
+{
+  "id": "hero-cover-premium",
+  "intent": "hero",
+  "master": "hero",
+  "origin": {
+    "kind": "svg-benchmarked",
+    "source": "assets/svg/memphis-template-hero.svg"
+  },
+  "slots": {
+    "title": { "required": true, "maxLines": 2, "maxChars": 28 },
+    "dek": { "required": false, "maxLines": 3, "maxChars": 96 },
+    "summary": { "required": false, "maxLines": 3, "maxChars": 120 },
+    "tags": { "required": false, "maxItems": 3, "maxCharsPerItem": 16 },
+    "visual": { "required": false, "kind": "image-or-diagram" },
+    "insight": { "required": false, "maxLines": 3, "maxChars": 64 },
+    "evidence": { "required": false, "maxLines": 3, "maxChars": 64 }
+  },
+  "fallbacks": {
+    "visual": "hide-slot",
+    "tags": "drop-tail-items",
+    "summary": "split-slide"
+  }
+}
+```
+
+### Migration Readiness Criteria
+
+Historical templates should only start migrating in bulk after the first premium set proves reliable.
+
+That means all of the following should be true:
+
+- the premium templates are no longer stored only as static HTML examples
+- `templateSpec` is the actual runtime source of truth
+- renderer behavior follows slot constraints instead of sample content
+- overflow validation works on generated slides, not just demo masters
+- at least 3 to 5 real input documents render stably through the premium path
+
+Only after that should the broader historical template library be upgraded.
+
+### Practical Recommendation
+
+Start with a mixed strategy:
+
+- SVG-first for premium, high-fidelity masters
+- direct spec migration for structurally simpler historical templates
+
+This avoids two bad extremes:
+
+- over-designing every template in SVG
+- under-specifying complex templates directly in HTML
+
+The right long-term system is not:
+
+- a folder full of HTML demos
+
+It is:
+
+- a spec-driven template registry with SVG-calibrated premium masters and deterministic HTML renderers
+
 ## Rendering Strategy
 
 Do not rely on generic flexbox flow for premium templates.

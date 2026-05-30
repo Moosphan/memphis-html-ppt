@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+
+  <!-- ═══ Process Lane — 左3步流程, 右侧留白 ═══ -->
+
+  <g id="bg">
+    <rect width="1280" height="720" fill="#FFF8EE" />
+  </g>
+
+  <!-- ═══ Header ═══ -->
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#00C896" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">THE DESIGN PROCESS</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">三步流程 · FROM IDEA TO SLIDE</text>
+    <g transform="translate(1140, 60)">
+      <rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- ═══ 竖线连接 ═══ -->
+  <line x1="140" y1="200" x2="140" y2="620" stroke="#1A1A2E" stroke-width="3" stroke-dasharray="8,6" opacity="0.20" />
+
+  <!-- ═══ Step 1 ═══ -->
+  <g id="step-1">
+    <circle cx="140" cy="210" r="28" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="4" />
+    <text x="140" y="220" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E">1</text>
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M200,176 H1100 A14,14 0 0 1 1114,190 V310 A14,14 0 0 1 1100,324 H200 A14,14 0 0 1 186,310 V190 A14,14 0 0 1 200,176 Z" />
+    <rect x="186" y="176" width="120" height="36" fill="#FF3DA5" />
+    <text x="246" y="200" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#1A1A2E" letter-spacing="2">PLAN</text>
+    <g transform="translate(322, 180) scale(1.5)" fill="#1A1A2E"><path d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM8 14C4.69 14 2 11.31 2 8C2 4.69 4.69 2 8 2C11.31 2 14 4.69 14 8C14 11.31 11.31 14 8 14ZM8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11C9.66 11 11 9.66 11 8C11 6.34 9.66 5 8 5Z"/></g>
+    <circle cx="218" cy="248" r="6" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="238" y="254" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Define the narrative</tspan> — what's the one message?</text>
+    <circle cx="218" cy="284" r="6" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="238" y="290" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Choose template intent: hero, board, flow, grid</text>
+    <circle cx="218" cy="310" r="6" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="238" y="316" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Set mood: confident, calm, urgent, creative</text>
+  </g>
+
+  <!-- ═══ Step 2 ═══ -->
+  <g id="step-2">
+    <circle cx="140" cy="390" r="28" fill="#00B8D9" stroke="#1A1A2E" stroke-width="4" />
+    <text x="140" y="400" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E">2</text>
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M200,356 H1100 A14,14 0 0 1 1114,370 V490 A14,14 0 0 1 1100,504 H200 A14,14 0 0 1 186,490 V370 A14,14 0 0 1 200,356 Z" />
+    <rect x="186" y="356" width="120" height="36" fill="#00B8D9" />
+    <text x="246" y="380" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#1A1A2E" letter-spacing="2">EXTRACT</text>
+    <g transform="translate(322, 360) scale(1.5)" fill="#1A1A2E"><path d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM8 14C4.69 14 2 11.31 2 8C2 4.69 4.69 2 8 2C11.31 2 14 4.69 14 8C14 11.31 11.31 14 8 14Z" /></g>
+    <circle cx="218" cy="428" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="238" y="434" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Pull key content</tspan> — title, bullets, metrics</text>
+    <circle cx="218" cy="464" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="238" y="470" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Respect slot budgets: max chars, max items</text>
+    <circle cx="218" cy="494" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="238" y="500" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Compress without losing the core idea</text>
+  </g>
+
+  <!-- ═══ Step 3 ═══ -->
+  <g id="step-3">
+    <circle cx="140" cy="570" r="28" fill="#FFD93D" stroke="#1A1A2E" stroke-width="4" />
+    <text x="140" y="580" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E">3</text>
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M200,536 H1100 A14,14 0 0 1 1114,550 V644 A14,14 0 0 1 1100,658 H200 A14,14 0 0 1 186,644 V550 A14,14 0 0 1 200,536 Z" />
+    <rect x="186" y="536" width="120" height="36" fill="#FFD93D" />
+    <text x="246" y="560" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#1A1A2E" letter-spacing="2">RENDER</text>
+    <g transform="translate(322, 540) scale(1.5)" fill="#1A1A2E"><path d="M8 3L10.5 2.5L11 0H12L12.5 2.5L15 3V4L12.5 4.5L12 7H11L10.5 4.5L8 4V3Z" /><path d="M0 11V10L4 9L5 5H6L7 9L11 10V11L7 12L6 16H5L4 12L0 11Z" /></g>
+    <circle cx="218" cy="606" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="238" y="612" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Fill the master template</tspan> — slot by slot</text>
+    <circle cx="218" cy="638" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="238" y="644" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Apply theme tokens: color, type, spacing</text>
+  </g>
+
+  <!-- ═══ Footer ═══ -->
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">设计流程 · 从想法到成品的三步法</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">04 / 12</text>
+  </g>
+
+</svg>

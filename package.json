@@ -7,6 +7,11 @@
   "author": "dorck",
   "scripts": {
     "preview": "node scripts/generate-preview.js",
+    "export:premium": "node scripts/export-premium-html.js",
+    "validate:premium": "node scripts/validate-premium-masters.js",
+    "validate:preview": "node scripts/validate-generated-preview.js",
+    "compare:phase": "node scripts/build-compare-before-after.js --template phase",
+    "compare:risk": "node scripts/build-compare-before-after.js --template risk",
     "build": "node scripts/build-release.js",
     "publish:local": "node scripts/publish-local.js"
   },

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <g id="bg"><rect width="1280" height="720" fill="#FFF8EE" /></g>
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#FFD93D" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">HOW IT WORKS</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">技术实现 · TECHNICAL DETAILS</text>
+    <g transform="translate(1140, 60)"><rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" /><rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" /></g>
+  </g>
+
+  <!-- 命令卡片 1 (深色底) -->
+  <g id="cmd-1">
+    <path fill="#1A1A2E" stroke="#1A1A2E" stroke-width="4" d="M74,150 H1206 A14,14 0 0 1 1220,164 V310 A14,14 0 0 1 1206,324 H74 A14,14 0 0 1 60,310 V164 A14,14 0 0 1 74,150 Z" />
+    <text x="100" y="196" font-family="Courier New, monospace" font-size="18" font-weight="700" fill="#00C896">$ </text>
+    <text x="130" y="196" font-family="Courier New, monospace" font-size="18" font-weight="700" fill="#FFF8EE">npx memphis-html-ppt generate --source ./slides.md</text>
+    <text x="100" y="232" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">Parses Markdown source, extracts sections, builds slide plan,</text>
+    <text x="100" y="258" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">renders each slide with template masters, outputs self-contained HTML.</text>
+    <text x="100" y="294" font-family="Courier New, monospace" font-size="14" font-weight="600" fill="#00C896">✓ Generated 12 slides in 1.8s → output.html</text>
+  </g>
+
+  <!-- 命令卡片 2 -->
+  <g id="cmd-2">
+    <path fill="#1A1A2E" stroke="#1A1A2E" stroke-width="4" d="M74,348 H1206 A14,14 0 0 1 1220,362 V508 A14,14 0 0 1 1206,522 H74 A14,14 0 0 1 60,508 V362 A14,14 0 0 1 74,348 Z" />
+    <text x="100" y="394" font-family="Courier New, monospace" font-size="18" font-weight="700" fill="#00C896">$ </text>
+    <text x="130" y="394" font-family="Courier New, monospace" font-size="18" font-weight="700" fill="#FFF8EE">npx memphis-html-ppt validate --strict</text>
+    <text x="100" y="430" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">Runs layout validation: overflow check, contrast audit, spacing rules.</text>
+    <text x="100" y="456" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">Auto-fixes minor issues via reflow engine. Reports critical failures.</text>
+    <text x="100" y="492" font-family="Courier New, monospace" font-size="14" font-weight="600" fill="#00C896">✓ 96% pass rate · 2 warnings auto-fixed · 0 critical</text>
+  </g>
+
+  <!-- 命令卡片 3 -->
+  <g id="cmd-3">
+    <path fill="#1A1A2E" stroke="#1A1A2E" stroke-width="4" d="M74,546 H1206 A14,14 0 0 1 1220,560 V644 A14,14 0 0 1 1206,658 H74 A14,14 0 0 1 60,644 V560 A14,14 0 0 1 74,546 Z" />
+    <text x="100" y="592" font-family="Courier New, monospace" font-size="18" font-weight="700" fill="#00C896">$ </text>
+    <text x="130" y="592" font-family="Courier New, monospace" font-size="18" font-weight="700" fill="#FFF8EE">npx memphis-html-ppt edit "make slide 3 dark theme"</text>
+    <text x="100" y="628" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">Natural language edit: modifies SlidePlan, re-renders affected slides only.</text>
+    <text x="100" y="648" font-family="Courier New, monospace" font-size="14" font-weight="600" fill="#00C896">✓ Slide 3 updated · theme: dark · re-rendered in 0.2s</text>
+  </g>
+
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">技术实现 · CLI 命令示例</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">18 / 20</text>
+  </g>
+</svg>

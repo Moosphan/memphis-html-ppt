@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+
+  <!-- ═══ Hero Cover Alt A — 居中构图 ═══ -->
+  <!-- 特点: 标题居中, 上方大面积 Memphis 几何装饰组合, 文字极少 -->
+
+  <g id="bg">
+    <rect width="1280" height="720" fill="#FFF8EE" />
+  </g>
+
+  <!-- ═══ Memphis 几何装饰组合 (居中偏上, 占页面 40%) ═══ -->
+  <g id="memphis-art" transform="translate(640, 240)">
+    <!-- 大圆 (粉色, 左上) -->
+    <circle cx="-120" cy="-60" r="80" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="4" />
+    <!-- 大圆内小圆 (镂空感) -->
+    <circle cx="-120" cy="-60" r="50" fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" />
+
+    <!-- 方块 (青色, 右上) -->
+    <rect x="40" y="-100" width="90" height="90" fill="#00B8D9" stroke="#1A1A2E" stroke-width="4" transform="rotate(12 85 -55)" />
+    <!-- 方块内小方块 -->
+    <rect x="58" y="-82" width="54" height="54" fill="#FFF8EE" stroke="#1A1A2E" stroke-width="2" transform="rotate(12 85 -55)" />
+
+    <!-- 三角 (黄色, 中下) -->
+    <polygon points="0,40 -50,120 50,120" fill="#FFD93D" stroke="#1A1A2E" stroke-width="4" stroke-linejoin="round" />
+
+    <!-- 闪电 (绿色, 右下) -->
+    <g transform="translate(80, 50) scale(3.5)" fill="#00C896" stroke="#1A1A2E" stroke-width="1.5">
+      <path d="M9 7L10 0H8L2 7V9H7L6 16H8L14 9L14 7H9Z" />
+    </g>
+
+    <!-- 散布小圆点 -->
+    <circle cx="-180" cy="20" r="12" fill="#FFD93D" stroke="#1A1A2E" stroke-width="3" />
+    <circle cx="160" cy="-30" r="8" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2" />
+    <circle cx="-60" cy="130" r="10" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <circle cx="130" cy="100" r="6" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+
+    <!-- 虚线圆 (背景氛围) -->
+    <circle cx="0" cy="20" r="160" fill="none" stroke="#1A1A2E" stroke-width="1.5" stroke-dasharray="4,8" opacity="0.15" />
+  </g>
+
+  <!-- ═══ 标题 (居中, 大字) ═══ -->
+  <text x="640" y="490" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="72" font-weight="900" fill="#1A1A2E" letter-spacing="2">SUGAR RUSH</text>
+
+  <!-- ═══ 副标题 (居中) ═══ -->
+  <text x="640" y="530" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#5C5C7A" letter-spacing="4">MEMPHIS DESIGN SYSTEM · 2025</text>
+
+  <!-- ═══ 分隔线 ═══ -->
+  <line x1="520" y1="555" x2="760" y2="555" stroke="#1A1A2E" stroke-width="2" />
+
+  <!-- ═══ 底部标签行 ═══ -->
+  <rect x="490" y="580" width="88" height="30" rx="15" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2.5" />
+  <text x="508" y="600" font-family="Impact, sans-serif" font-size="12" font-weight="900" fill="#1A1A2E" letter-spacing="1">DESIGN</text>
+
+  <rect x="592" y="580" width="96" height="30" rx="15" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2.5" />
+  <text x="610" y="600" font-family="Impact, sans-serif" font-size="12" font-weight="900" fill="#1A1A2E" letter-spacing="1">SYSTEM</text>
+
+  <rect x="702" y="580" width="70" height="30" rx="15" fill="#00C896" stroke="#1A1A2E" stroke-width="2.5" />
+  <text x="714" y="600" font-family="Impact, sans-serif" font-size="12" font-weight="900" fill="#1A1A2E" letter-spacing="1">2025</text>
+
+  <!-- ═══ Footer ═══ -->
+  <text x="60" y="680" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">PREMIUM SLIDE DESIGN FRAMEWORK</text>
+  <text x="1220" y="680" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">01 / 12</text>
+
+</svg>

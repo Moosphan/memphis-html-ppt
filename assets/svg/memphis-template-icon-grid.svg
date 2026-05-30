@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <g id="bg"><rect width="1280" height="720" fill="#FFF8EE" /></g>
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#00B8D9" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">WHAT WE BUILD</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">核心能力 · CORE CAPABILITIES</text>
+    <g transform="translate(1140, 60)"><rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" /><rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" /></g>
+  </g>
+
+  <!-- 4×2 Grid: 每列 275px, 间距 20px -->
+  <!-- Col1 x=60, Col2 x=355, Col3 x=650, Col4 x=945 -->
+  <!-- Row1 y=150-370, Row2 y=394-614 -->
+
+  <!-- Row 1 -->
+  <g id="tile-1">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,150 H321 A14,14 0 0 1 335,164 V370 A14,14 0 0 1 321,384 H74 A14,14 0 0 1 60,370 V164 A14,14 0 0 1 74,150 Z" />
+    <circle cx="197" cy="230" r="30" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="3" />
+    <g transform="translate(181,214) scale(2)" fill="#1A1A2E"><path d="M9 7L10 0H8L2 7V9H7L6 16H8L14 9L14 7H9Z"/></g>
+    <text x="197" y="296" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">SPEED</text>
+    <text x="197" y="320" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">2 min per slide</text>
+  </g>
+
+  <g id="tile-2">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M369,150 H616 A14,14 0 0 1 630,164 V370 A14,14 0 0 1 616,384 H369 A14,14 0 0 1 355,370 V164 A14,14 0 0 1 369,150 Z" />
+    <circle cx="492" cy="230" r="30" fill="#00B8D9" stroke="#1A1A2E" stroke-width="3" />
+    <g transform="translate(476,214) scale(2)" fill="#1A1A2E"><path d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM8 14C4.69 14 2 11.31 2 8C2 4.69 4.69 2 8 2C11.31 2 14 4.69 14 8C14 11.31 11.31 14 8 14Z"/></g>
+    <text x="492" y="296" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">CONSISTENCY</text>
+    <text x="492" y="320" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">Unified design system</text>
+  </g>
+
+  <g id="tile-3">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M664,150 H911 A14,14 0 0 1 925,164 V370 A14,14 0 0 1 911,384 H664 A14,14 0 0 1 650,370 V164 A14,14 0 0 1 664,150 Z" />
+    <circle cx="787" cy="230" r="30" fill="#FFD93D" stroke="#1A1A2E" stroke-width="3" />
+    <g transform="translate(771,214) scale(2)" fill="#1A1A2E"><path d="M8 0L15 4V12L8 16L1 12V4L8 0ZM8 2L3 5V11L8 14L13 11V5L8 2Z"/></g>
+    <text x="787" y="296" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">QUALITY</text>
+    <text x="787" y="320" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">96% pass rate</text>
+  </g>
+
+  <g id="tile-4">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M959,150 H1206 A14,14 0 0 1 1220,164 V370 A14,14 0 0 1 1206,384 H959 A14,14 0 0 1 945,370 V164 A14,14 0 0 1 959,150 Z" />
+    <circle cx="1082" cy="230" r="30" fill="#00C896" stroke="#1A1A2E" stroke-width="3" />
+    <g transform="translate(1066,214) scale(2)" fill="#1A1A2E"><path d="M8 0L0 3V7.5C0 11.6 3.1 15.3 8 16C12.9 15.3 16 11.6 16 7.5V3L8 0ZM7 11L4 8L5.4 6.6L7 8.2L10.6 4.6L12 6L7 11Z"/></g>
+    <text x="1082" y="296" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">SAFETY</text>
+    <text x="1082" y="320" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">Validation built in</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g id="tile-5">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,394 H321 A14,14 0 0 1 335,408 V614 A14,14 0 0 1 321,628 H74 A14,14 0 0 1 60,614 V408 A14,14 0 0 1 74,394 Z" />
+    <circle cx="197" cy="474" r="30" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="3" />
+    <g transform="translate(181,458) scale(2)" fill="#1A1A2E"><path d="M8 0L16 8L8 16L0 8Z"/></g>
+    <text x="197" y="540" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">FLEXIBLE</text>
+    <text x="197" y="564" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">26 template types</text>
+  </g>
+
+  <g id="tile-6">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M369,394 H616 A14,14 0 0 1 630,408 V614 A14,14 0 0 1 616,628 H369 A14,14 0 0 1 355,614 V408 A14,14 0 0 1 369,394 Z" />
+    <circle cx="492" cy="474" r="30" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="3" />
+    <g transform="translate(476,458) scale(2)" fill="#1A1A2E"><path d="M5 0H10L10.5 2.5L12.5 3.5L15 2.5L16 5L14 7L14.5 9L16 10.5L14.5 13L12 12.5L10.5 14.5L11 16H5L5.5 14L3.5 13L1 14L0 11.5L2 9.5L1.5 7.5L0 6L1.5 3.5L4 4L5.5 2L6 0ZM8 5.5C6.6 5.5 5.5 6.6 5.5 8C5.5 9.4 6.6 10.5 8 10.5C9.4 10.5 10.5 9.4 10.5 8C10.5 6.6 9.4 5.5 8 5.5Z"/></g>
+    <text x="492" y="540" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">AUTOMATED</text>
+    <text x="492" y="564" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">AI-driven planning</text>
+  </g>
+
+  <g id="tile-7">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M664,394 H911 A14,14 0 0 1 925,408 V614 A14,14 0 0 1 911,628 H664 A14,14 0 0 1 650,614 V408 A14,14 0 0 1 664,394 Z" />
+    <circle cx="787" cy="474" r="30" fill="#00B8D9" stroke="#1A1A2E" stroke-width="3" />
+    <g transform="translate(771,458) scale(2)" fill="#1A1A2E"><path d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C8.83 16 9.5 15.33 9.5 14.5C9.5 14.1 9.35 13.75 9.1 13.5C8.85 13.25 8.7 12.9 8.7 12.5C8.7 11.67 9.37 11 10.2 11H12C14.21 11 16 9.21 16 7C16 3.13 12.42 0 8 0ZM3 5C2.45 5 2 4.55 2 4C2 3.45 2.45 3 3 3C3.55 3 4 3.45 4 4C4 4.55 3.55 5 3 5ZM5 2C4.45 2 4 1.55 4 1C4 0.45 4.45 0 5 0C5.55 0 6 0.45 6 1C6 1.55 5.55 2 5 2ZM9 2C8.45 2 8 1.55 8 1C8 0.45 8.45 0 9 0C9.55 0 10 0.45 10 1C10 1.55 9.55 2 9 2ZM13 5C12.45 5 12 4.55 12 4C12 3.45 12.45 3 13 3C13.55 3 14 3.45 14 4C14 4.55 13.55 5 13 5Z"/></g>
+    <text x="787" y="540" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">THEMED</text>
+    <text x="787" y="564" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">Token-based styling</text>
+  </g>
+
+  <g id="tile-8">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M959,394 H1206 A14,14 0 0 1 1220,408 V614 A14,14 0 0 1 1206,628 H959 A14,14 0 0 1 945,614 V408 A14,14 0 0 1 959,394 Z" />
+    <circle cx="1082" cy="474" r="30" fill="#FFD93D" stroke="#1A1A2E" stroke-width="3" />
+    <g transform="translate(1066,458) scale(2)" fill="#1A1A2E"><path d="M4 0H10L14 4V14C14 15.1 13.1 16 12 16H4C2.9 16 2 15.1 2 14V2C2 0.9 2.9 0 4 0ZM10 0V4H14L10 0Z"/></g>
+    <text x="1082" y="540" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">OPEN</text>
+    <text x="1082" y="564" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">Self-contained HTML</text>
+  </g>
+
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">核心能力 · 8 大特性一览</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">10 / 12</text>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+
+  <g id="bg">
+    <rect width="1280" height="720" fill="#FFF8EE" />
+  </g>
+
+  <!-- Header -->
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#FF6B4A" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">WATCH OUT FOR</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">风险提示 · KEY CONCERNS</text>
+    <g transform="translate(1140, 60)">
+      <rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- 主警告卡片 (左侧大卡) -->
+  <g id="primary-warning">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,150 H614 A14,14 0 0 1 628,164 V644 A14,14 0 0 1 614,658 H74 A14,14 0 0 1 60,644 V164 A14,14 0 0 1 74,150 Z" />
+    <path d="M 64 150 h 560 a 10 10 0 0 1 4 4 v 56 h -568 v -56 a 10 10 0 0 1 4 -4 Z" fill="#FF6B4A" />
+    <g transform="translate(76, 160) scale(2.25)" fill="#1A1A2E"><path d="M8 0L0 3V7.5C0 11.6 3.1 15.3 8 16C12.9 15.3 16 11.6 16 7.5V3L8 0ZM7 11L4 8L5.4 6.6L7 8.2L10.6 4.6L12 6L7 11Z"/></g>
+    <text x="122" y="186" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E" letter-spacing="2">PRIMARY EXPOSURE</text>
+
+    <!-- 警告标题 -->
+    <text x="100" y="270" font-family="Georgia, Times New Roman, serif" font-size="36" font-weight="700" fill="#1A1A2E">Automated outputs can</text>
+    <text x="100" y="310" font-family="Georgia, Times New Roman, serif" font-size="36" font-weight="700" fill="#1A1A2E">silently reshape trust</text>
+    <text x="100" y="350" font-family="Georgia, Times New Roman, serif" font-size="36" font-weight="700" fill="#1A1A2E">before anyone checks.</text>
+
+    <!-- 分隔线 -->
+    <line x1="100" y1="378" x2="580" y2="378" stroke="#1A1A2E" stroke-width="2" />
+
+    <!-- 说明 -->
+    <text x="100" y="416" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">When the system acts too early, users lose the</text>
+    <text x="100" y="440" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">chance to inspect, intervene, or recover from</text>
+    <text x="100" y="464" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">a bad action. Confidence without evidence</text>
+    <text x="100" y="488" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">needs a fallback path.</text>
+
+    <!-- 底部提示 -->
+    <line x1="100" y1="516" x2="580" y2="516" stroke="#1A1A2E" stroke-width="1" stroke-dasharray="4,4" opacity="0.2" />
+    <circle cx="110" cy="548" r="6" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2" />
+    <text x="130" y="554" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#5C5C7A">Best for the highest-impact or least-reversible issue.</text>
+  </g>
+
+  <!-- 右侧: 2 个次要警告卡片 -->
+  <g id="warning-a">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M668,150 H1206 A14,14 0 0 1 1220,164 V386 A14,14 0 0 1 1206,400 H668 A14,14 0 0 1 654,386 V164 A14,14 0 0 1 668,150 Z" />
+    <path d="M 654 150 h 552 a 10 10 0 0 1 4 4 v 56 h -560 v -56 a 10 10 0 0 1 4 -4 Z" fill="#00B8D9" />
+    <g transform="translate(666, 160) scale(2.0)" fill="#1A1A2E"><path d="M8 3C4.5 3 1.5 5.5 0 8C1.5 10.5 4.5 13 8 13C11.5 13 14.5 10.5 16 8C14.5 5.5 11.5 3 8 3ZM8 11C5.8 11 4 9.2 4 7C4 4.8 5.8 3 8 3C10.2 3 12 4.8 12 7C12 9.2 10.2 11 8 11Z"/><circle cx="8" cy="7" r="2"/></g>
+    <text x="700" y="186" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E" letter-spacing="2">OVER-AUTOMATION</text>
+
+    <circle cx="694" cy="240" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="246" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">System acts before user confirms</text>
+    <circle cx="694" cy="272" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="278" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">No undo path for generated content</text>
+    <circle cx="694" cy="304" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="310" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">User becomes reviewer, not creator</text>
+    <circle cx="694" cy="336" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="342" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">Trust erodes silently over time</text>
+    <circle cx="694" cy="368" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="374" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">Fix: always require explicit user step</text>
+  </g>
+
+  <g id="warning-b">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M668,424 H1206 A14,14 0 0 1 1220,438 V644 A14,14 0 0 1 1206,658 H668 A14,14 0 0 1 654,644 V438 A14,14 0 0 1 668,424 Z" />
+    <path d="M 654 424 h 552 a 10 10 0 0 1 4 4 v 56 h -560 v -56 a 10 10 0 0 1 4 -4 Z" fill="#FFD93D" />
+    <g transform="translate(666, 430) scale(2.0)" fill="#1A1A2E"><path d="M2 0V16H4V9L14 5L4 1V0H2Z"/></g>
+    <text x="700" y="460" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E" letter-spacing="2">HALLUCINATION CONTROL</text>
+
+    <circle cx="694" cy="510" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="516" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">Confident output without evidence</text>
+    <circle cx="694" cy="542" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="548" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">Needs fallback: citation, uncertainty, or review</text>
+    <circle cx="694" cy="574" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="580" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">Build validation into the pipeline</text>
+    <circle cx="694" cy="606" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="612" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">End with one practical check line</text>
+    <circle cx="694" cy="638" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="714" y="644" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">Owner, threshold, or recovery path</text>
+  </g>
+
+  <!-- Footer -->
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">风险提示 · 需要关注的核心问题</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">08 / 12</text>
+  </g>
+
+</svg>

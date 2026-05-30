@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+
+  <!-- ═══ 背景 ═══ -->
+  <g id="bg">
+    <rect width="1280" height="720" fill="#FFF8EE" />
+  </g>
+
+  <!-- ═══ Header: 左侧竖色条 + 标题 + 副标题 ═══ -->
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#FF6B4A" />
+    <text x="90" y="88" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">DESIGN THE FUTURE</text>
+    <text x="90" y="118" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">PREMIUM SLIDE DESIGN SYSTEMS</text>
+
+    <!-- 右上角装饰: 小彩色方块 -->
+    <rect x="1170" y="60" width="22" height="22" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <rect x="1196" y="60" width="22" height="22" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <rect x="1170" y="86" width="22" height="22" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <rect x="1196" y="86" width="22" height="22" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+  </g>
+
+  <!-- ═══ 左侧: 主内容卡片 ═══ -->
+  <g id="main-card">
+    <!-- 卡片外框: 圆角矩形, 4px 描边 -->
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,150 H631 A14,14 0 0 1 645,164 V616 A14,14 0 0 1 631,630 H74 A14,14 0 0 1 60,616 V164 A14,14 0 0 1 74,150 Z" />
+
+    <!-- 卡片顶部色块栏 -->
+    <path d="M 64 150 h 577 a 10 10 0 0 1 4 4 v 56 h -585 v -56 a 10 10 0 0 1 4 -4 Z" fill="#FF6B4A" />
+
+    <!-- 皇冠图标 -->
+    <g transform="translate(76.0, 160.0) scale(2.25)" fill="#1A1A2E">
+      <path d="M0 12L2 4L5 8L8 1L11 8L14 4L16 12H0ZM0 14H16V16H0V14Z" />
+    </g>
+
+    <!-- 色块栏标题 -->
+    <text x="122" y="186" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E" letter-spacing="2">HERO COVER</text>
+
+    <!-- 分类标签 (右上角小徽章) -->
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="2" d="M504,164 H616 A14,14 0 0 1 630,178 V178 A14,14 0 0 1 616,192 H504 A14,14 0 0 1 490,178 V178 A14,14 0 0 1 504,164 Z" />
+    <text x="560" y="183" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" font-weight="900" fill="#C0392B" letter-spacing="2">STRATEGY</text>
+
+    <!-- 大标题区域 -->
+    <text x="90" y="280" font-family="Impact, Arial Black, sans-serif" font-size="72" font-weight="900" fill="#1A1A2E" letter-spacing="-1">Design</text>
+    <text x="90" y="356" font-family="Impact, Arial Black, sans-serif" font-size="72" font-weight="900" fill="#1A1A2E" letter-spacing="-1">The</text>
+    <text x="90" y="432" font-family="Impact, Arial Black, sans-serif" font-size="72" font-weight="900" fill="#1A1A2E" letter-spacing="-1">Future.</text>
+
+    <!-- 分隔线 -->
+    <line x1="90" y1="460" x2="600" y2="460" stroke="#1A1A2E" stroke-width="2" />
+
+    <!-- 要点列表 (彩色圆点 + 加粗关键词) -->
+    <circle cx="100" cy="500" r="6" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2" />
+    <text x="120" y="506" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">A framework for <tspan fill="#C0392B" font-weight="900">premium slides</tspan></text>
+
+    <circle cx="100" cy="536" r="6" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2" />
+    <text x="120" y="542" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Clean geometry, <tspan fill="#C0392B" font-weight="900">intentional whitespace</tspan></text>
+
+    <circle cx="100" cy="572" r="6" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2" />
+    <text x="120" y="578" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Disciplined color — <tspan fill="#C0392B" font-weight="900">not decoration</tspan></text>
+
+    <circle cx="100" cy="608" r="6" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2" />
+    <text x="120" y="614" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Memphis DNA with <tspan fill="#C0392B" font-weight="900">modern restraint</tspan></text>
+  </g>
+
+  <!-- ═══ 右侧: 视觉区 + 信息卡片 ═══ -->
+
+  <!-- 视觉占位区 (大卡片) -->
+  <g id="visual-card">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M674,150 H1206 A14,14 0 0 1 1220,164 V436 A14,14 0 0 1 1206,450 H674 A14,14 0 0 1 660,436 V164 A14,14 0 0 1 674,150 Z" />
+    <!-- 色块顶栏 -->
+    <path d="M 664 150 h 552 a 10 10 0 0 1 4 4 v 56 h -560 v -56 a 10 10 0 0 1 4 -4 Z" fill="#00B8D9" />
+    <!-- 相机图标 -->
+    <g transform="translate(676.0, 160.0) scale(2.25)" fill="#1A1A2E">
+      <path d="M6 2L7.5 0H8.5L10 2H14C15.1 2 16 2.9 16 4V13C16 14.1 15.1 15 14 15H2C0.9 15 0 14.1 0 13V4C0 2.9 0.9 2 2 2H6ZM8 5C5.79 5 4 6.79 4 9C4 11.21 5.79 13 8 13C10.21 13 12 11.21 12 9C12 6.79 10.21 5 8 5Z" />
+    </g>
+    <text x="722" y="186" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E" letter-spacing="2">VISUAL AREA</text>
+
+    <!-- 占位内容 -->
+    <text x="940" y="300" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#5C5C7A" letter-spacing="1">IMAGE / DIAGRAM</text>
+    <text x="940" y="330" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#5C5C7A">Product shot, chart, or illustration</text>
+
+    <!-- 虚线装饰 -->
+    <circle cx="700" cy="280" r="30" fill="none" stroke="#00B8D9" stroke-width="2" stroke-dasharray="4,6" opacity="0.4" />
+    <circle cx="1160" cy="400" r="20" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" opacity="0.5" />
+  </g>
+
+  <!-- 右下: Insight 卡片 -->
+  <g id="insight-card">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M674,474 H930 A14,14 0 0 1 944,488 V616 A14,14 0 0 1 930,630 H674 A14,14 0 0 1 660,616 V488 A14,14 0 0 1 674,474 Z" />
+    <path d="M 664 474 h 266 a 10 10 0 0 1 4 4 v 40 h -274 v -40 a 10 10 0 0 1 4 -4 Z" fill="#FF3DA5" />
+    <!-- 眼睛图标 -->
+    <g transform="translate(676.0, 480.0) scale(2.0)" fill="#1A1A2E">
+      <path d="M8 3C4.5 3 1.5 5.5 0 8C1.5 10.5 4.5 13 8 13C11.5 13 14.5 10.5 16 8C14.5 5.5 11.5 3 8 3ZM8 11C5.8 11 4 9.2 4 7C4 4.8 5.8 3 8 3C10.2 3 12 4.8 12 7C12 9.2 10.2 11 8 11Z" />
+      <circle cx="8" cy="7" r="2" />
+    </g>
+    <text x="714" y="503" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E" letter-spacing="2">INSIGHT</text>
+
+    <circle cx="690" cy="540" r="5" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="708" y="545" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Brief observation that</text>
+    <circle cx="690" cy="570" r="5" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="708" y="575" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">frames the narrative</text>
+    <circle cx="690" cy="600" r="5" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="708" y="605" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">and anchors the story.</text>
+  </g>
+
+  <!-- 右下: Signal 卡片 -->
+  <g id="signal-card">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M954,474 H1206 A14,14 0 0 1 1220,488 V616 A14,14 0 0 1 1206,630 H954 A14,14 0 0 1 940,616 V488 A14,14 0 0 1 954,474 Z" />
+    <path d="M 944 474 h 262 a 10 10 0 0 1 4 4 v 40 h -270 v -40 a 10 10 0 0 1 4 -4 Z" fill="#FFD93D" />
+    <!-- 图表图标 -->
+    <g transform="translate(956.0, 480.0) scale(2.0)" fill="#1A1A2E">
+      <path d="M0 10H4V16H0V10ZM6 6H10V16H6V6ZM12 2H16V16H12V2Z" />
+    </g>
+    <text x="994" y="503" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E" letter-spacing="2">SIGNAL</text>
+
+    <circle cx="970" cy="540" r="5" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="988" y="545" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Key metric, hook, or</text>
+    <circle cx="970" cy="570" r="5" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="988" y="575" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">quick data point that</text>
+    <circle cx="970" cy="600" r="5" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="988" y="605" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">supports the message.</text>
+  </g>
+
+  <!-- ═══ 装饰元素 ═══ -->
+  <g id="decor">
+    <!-- 左下: 小彩色圆 -->
+    <circle cx="100" cy="680" r="10" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <circle cx="120" cy="690" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <!-- 右上: 小三角 -->
+    <polygon points="1100,140 1118,170 1082,170" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+  </g>
+
+  <!-- ═══ Footer ═══ -->
+  <g id="footer">
+    <text x="60" y="680" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">Memphis-HTML-PPT · 极简设计框架 · 自 2025 年起</text>
+    <text x="1220" y="680" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">01 / 12</text>
+  </g>
+
+</svg>

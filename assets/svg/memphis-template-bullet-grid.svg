@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+
+  <!-- ═══ Bullet Grid — 2×3 要点网格 ═══ -->
+
+  <g id="bg">
+    <rect width="1280" height="720" fill="#FFF8EE" />
+  </g>
+
+  <!-- ═══ Header ═══ -->
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#FF3DA5" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">SIX CORE PRINCIPLES</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">设计准则 · DESIGN PILLARS</text>
+    <g transform="translate(1140, 60)">
+      <rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    </g>
+  </g>
+
+  <!--
+    网格: 3列, 每列 354px, 间距 20px
+    Col1: 60 → 414   Col2: 434 → 788   Col3: 808 → 1220 (应为1162, 实际取1206留60右边距)
+    统一: 60, 434, 808 起始; 宽 354; 间距 20
+    实际: 60-414(354), 434-788(354), 808-1162(354)
+    但 1162+60=1222 > 1280-60=1220, 需微调
+    最终: Col1=60-410(350), Col2=430-780(350), Col3=800-1206(406)
+    不对, 应该统一宽度。用 340px 宽:
+    Col1=60-400(340), Col2=420-760(340), Col3=780-1140(340), 右边距 140px 太大
+    用 354px:
+    Col1=60-414, Col2=434-788, Col3=808-1162, 右边距=1280-1162=118 OK
+  -->
+
+  <!-- ═══ 第一行 ═══ -->
+
+  <!-- 卡片 1: 粉色 — 闪电 -->
+  <g id="card-1">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,150 H400 A14,14 0 0 1 414,164 V390 A14,14 0 0 1 400,404 H74 A14,14 0 0 1 60,390 V164 A14,14 0 0 1 74,150 Z" />
+    <path d="M 64 150 h 346 a 10 10 0 0 1 4 4 v 40 h -354 v -40 a 10 10 0 0 1 4 -4 Z" fill="#FF3DA5" />
+    <g transform="translate(76.0, 152.0) scale(2.0)" fill="#1A1A2E"><path d="M9 7L10 0H8L2 7V9H7L6 16H8L14 9L14 7H9Z" /></g>
+    <text x="110" y="180" font-family="Impact, Arial Black, sans-serif" font-size="32" font-weight="900" fill="#1A1A2E" letter-spacing="-1">01</text>
+    <circle cx="86" cy="230" r="6" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="106" y="236" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Hierarchy first</tspan> — size matters</text>
+    <circle cx="86" cy="266" r="6" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="106" y="272" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Use scale to guide the eye</text>
+    <circle cx="86" cy="302" r="6" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="106" y="308" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Big title, small body, clear tags</text>
+    <circle cx="86" cy="338" r="6" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="106" y="344" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">4:1 minimum ratio for impact</text>
+  </g>
+
+  <!-- 卡片 2: 青色 — 圆环 -->
+  <g id="card-2">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M448,150 H774 A14,14 0 0 1 788,164 V390 A14,14 0 0 1 774,404 H448 A14,14 0 0 1 434,390 V164 A14,14 0 0 1 448,150 Z" />
+    <path d="M 438 150 h 346 a 10 10 0 0 1 4 4 v 40 h -354 v -40 a 10 10 0 0 1 4 -4 Z" fill="#00B8D9" />
+    <g transform="translate(450.0, 152.0) scale(2.0)" fill="#1A1A2E"><path d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM8 14C4.69 14 2 11.31 2 8C2 4.69 4.69 2 8 2C11.31 2 14 4.69 14 8C14 11.31 11.31 14 8 14Z" /></g>
+    <text x="484" y="180" font-family="Impact, Arial Black, sans-serif" font-size="32" font-weight="900" fill="#1A1A2E" letter-spacing="-1">02</text>
+    <circle cx="466" cy="230" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="486" y="236" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Whitespace works</tspan> — let it breathe</text>
+    <circle cx="466" cy="266" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="486" y="272" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Empty space creates focus</text>
+    <circle cx="466" cy="302" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="486" y="308" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Don't fear the blank canvas</text>
+    <circle cx="466" cy="338" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="486" y="344" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Margins are your best friend</text>
+  </g>
+
+  <!-- 卡片 3: 黄色 — 星星 -->
+  <g id="card-3">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M822,150 H1192 A14,14 0 0 1 1206,164 V390 A14,14 0 0 1 1192,404 H822 A14,14 0 0 1 808,390 V164 A14,14 0 0 1 822,150 Z" />
+    <path d="M 812 150 h 380 a 10 10 0 0 1 4 4 v 40 h -388 v -40 a 10 10 0 0 1 4 -4 Z" fill="#FFD93D" />
+    <g transform="translate(824.0, 152.0) scale(2.0)" fill="#1A1A2E"><path d="M8 3L10.5 2.5L11 0H12L12.5 2.5L15 3V4L12.5 4.5L12 7H11L10.5 4.5L8 4V3Z" /><path d="M0 11V10L4 9L5 5H6L7 9L11 10V11L7 12L6 16H5L4 12L0 11Z" /></g>
+    <text x="858" y="180" font-family="Impact, Arial Black, sans-serif" font-size="32" font-weight="900" fill="#1A1A2E" letter-spacing="-1">03</text>
+    <circle cx="840" cy="230" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="860" y="236" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Color with intent</tspan> — not randomly</text>
+    <circle cx="840" cy="266" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="860" y="272" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">One primary, one accent max</text>
+    <circle cx="840" cy="302" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="860" y="308" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Color = meaning, not decoration</text>
+    <circle cx="840" cy="338" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="860" y="344" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Grayscale test: still clear?</text>
+  </g>
+
+  <!-- ═══ 第二行 ═══ -->
+
+  <!-- 卡片 4: 绿色 — 爱心 -->
+  <g id="card-4">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,430 H400 A14,14 0 0 1 414,444 V630 A14,14 0 0 1 400,644 H74 A14,14 0 0 1 60,630 V444 A14,14 0 0 1 74,430 Z" />
+    <path d="M 64 430 h 346 a 10 10 0 0 1 4 4 v 40 h -354 v -40 a 10 10 0 0 1 4 -4 Z" fill="#00C896" />
+    <g transform="translate(76.0, 432.0) scale(2.0)" fill="#1A1A2E"><path d="M1.24264 8.24264L8 15L14.7574 8.24264C15.553 7.44699 16 6.36786 16 5.24264V5.05234C16 2.8143 14.1857 1 11.9477 1C10.7166 1 9.55233 1.55959 8.78331 2.52086L8 3.5L7.21669 2.52086C6.44767 1.55959 5.28338 1 4.05234 1C1.8143 1 0 2.8143 0 5.05234V5.24264C0 6.36786 0.44699 7.44699 1.24264 8.24264Z" /></g>
+    <text x="110" y="460" font-family="Impact, Arial Black, sans-serif" font-size="32" font-weight="900" fill="#1A1A2E" letter-spacing="-1">04</text>
+    <circle cx="86" cy="510" r="6" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+    <text x="106" y="516" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Grid alignment</tspan> — snap everything</text>
+    <circle cx="86" cy="546" r="6" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+    <text x="106" y="552" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Invisible structure, visible order</text>
+    <circle cx="86" cy="582" r="6" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+    <text x="106" y="588" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Consistency beats cleverness</text>
+    <circle cx="86" cy="618" r="6" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+    <text x="106" y="624" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">8px grid is your foundation</text>
+  </g>
+
+  <!-- 卡片 5: 珊瑚 — 音符 -->
+  <g id="card-5">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M448,430 H774 A14,14 0 0 1 788,444 V630 A14,14 0 0 1 774,644 H448 A14,14 0 0 1 434,630 V444 A14,14 0 0 1 448,430 Z" />
+    <path d="M 438 430 h 346 a 10 10 0 0 1 4 4 v 40 h -354 v -40 a 10 10 0 0 1 4 -4 Z" fill="#FF6B4A" />
+    <!-- 笔图标 -->
+    <g transform="translate(450.0, 432.0) scale(2.0)" fill="#1A1A2E"><path d="M12 0L16 4L5 15H1V11L12 0ZM13.5 1.5L14.5 2.5L13 4L12 3L13.5 1.5Z" /></g>
+    <text x="484" y="460" font-family="Impact, Arial Black, sans-serif" font-size="32" font-weight="900" fill="#1A1A2E" letter-spacing="-1">05</text>
+    <circle cx="466" cy="510" r="6" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2" />
+    <text x="486" y="516" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">One idea per slide</tspan> — never more</text>
+    <circle cx="466" cy="546" r="6" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2" />
+    <text x="486" y="552" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Split rather than overload</text>
+    <circle cx="466" cy="582" r="6" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2" />
+    <text x="486" y="588" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">40 words max per slide</text>
+    <circle cx="466" cy="618" r="6" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="2" />
+    <text x="486" y="624" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">If it's crowded, it's wrong</text>
+  </g>
+
+  <!-- 卡片 6: 青色 — 菱形 -->
+  <g id="card-6">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M822,430 H1192 A14,14 0 0 1 1206,444 V630 A14,14 0 0 1 1192,644 H822 A14,14 0 0 1 808,630 V444 A14,14 0 0 1 822,430 Z" />
+    <path d="M 812 430 h 380 a 10 10 0 0 1 4 4 v 40 h -388 v -40 a 10 10 0 0 1 4 -4 Z" fill="#00B8D9" />
+    <!-- 靶心图标 -->
+    <g transform="translate(828.0, 436.0) scale(2.0)" fill="#1A1A2E"><path d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM8 14C4.69 14 2 11.31 2 8C2 4.69 4.69 2 8 2C11.31 2 14 4.69 14 8C14 11.31 11.31 14 8 14ZM8 4C5.79 4 4 5.79 4 8C4 10.21 5.79 12 8 12C10.21 12 12 10.21 12 8C12 5.79 10.21 4 8 4ZM8 6C9.1 6 10 6.9 10 8C10 9.1 9.1 10 8 10C6.9 10 6 9.1 6 8C6 6.9 6.9 6 8 6Z" /></g>
+    <text x="858" y="460" font-family="Impact, Arial Black, sans-serif" font-size="32" font-weight="900" fill="#1A1A2E" letter-spacing="-1">06</text>
+    <circle cx="840" cy="510" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="860" y="516" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Test with strangers</tspan> — not peers</text>
+    <circle cx="840" cy="546" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="860" y="552" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">6-second rule: can they get it?</text>
+    <circle cx="840" cy="582" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="860" y="588" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Confusion = design failure</text>
+    <circle cx="840" cy="618" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="860" y="624" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Simplicity is the hardest design</text>
+  </g>
+
+  <!-- ═══ Footer ═══ -->
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">6 条设计准则 · 适用于所有类型演示文稿</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">03 / 12</text>
+  </g>
+
+</svg>
