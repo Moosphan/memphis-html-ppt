@@ -1,44 +1,65 @@
 # Memphis HTML PPT
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-111111?style=flat-square)](LICENSE)
+[![Node.js 18+](https://img.shields.io/badge/node-18%2B-111111?style=flat-square)](https://nodejs.org/)
+[![Adaptive chain](https://img.shields.io/badge/pipeline-adaptive%20chain-111111?style=flat-square)](#how-it-works)
+[![HTML preview](https://img.shields.io/badge/output-HTML%20PPT-111111?style=flat-square)](#preview)
+
 [中文文档](README.zh-CN.md)
 
 ![Memphis HTML PPT project banner](assets/readme-banner.jpg)
 
-Memphis HTML PPT is a lightweight toolkit for turning Markdown files or web pages into a local HTML slide deck with a bold Memphis-inspired visual style.
+Memphis HTML PPT turns Markdown files or web pages into browser-ready HTML presentations with a bold Memphis-inspired visual style.
 
-It is designed for quick presentation prototyping, skill packaging, and visual storytelling experiments where you want a deck-like preview without opening PowerPoint, Keynote, or Google Slides.
+It is useful for presentation prototyping, article-to-deck conversion, and shareable HTML previews when PowerPoint, Keynote, or Google Slides are not the right fit.
 
 ## Highlights
 
-- Generate HTML slide decks from local Markdown or remote web pages
-- Uses a curated Memphis visual system with bold colors, geometric decoration, and editorial-style layouts
-- Includes a template library for cover, narrative, comparison, checklist, timeline, metric, FAQ, and closing slides
-- Ships with local packaging scripts for Codex / Claude skill distribution workflows
-- Outputs a self-contained HTML preview that can be opened directly in a browser
+- Convert local Markdown or remote web pages into HTML slide decks
+- Apply a curated Memphis visual system with bold color, geometric accents, and editorial layouts
+- Run an adaptive chain for source extraction, cleaning, planning, rendering, and validation
+- Validate structure, content quality, and visual fit before sharing
+- Output a self-contained HTML preview that opens directly in any browser
 
 ## Project Status
 
-This repository is currently best described as a practical generator and reusable project template rather than a polished npm package.
+This repository is a working generator plus reusable project template.
 
-- The preview generator is usable now
-- The packaging scripts are usable for local bundle generation
-- The project includes a minimal `package.json` for Node.js script management
-
-The repository now uses a single adaptive AI-planned pipeline.
+- The adaptive preview generator handles local Markdown and remote URLs
+- The packaging scripts support local bundle generation for Codex / Claude distribution
+- The current workflow centers on a single adaptive AI-planned pipeline
 
 - Migration map: [`docs/04-adaptive-chain-migration-map.md`](docs/04-adaptive-chain-migration-map.md)
+- Validation plan: [`docs/05-content-quality-validation-plan.md`](docs/05-content-quality-validation-plan.md)
 
 ## Preview
 
-![Travel preview](assets/travel-preview.jpg)
+This gallery comes from the real adaptive preview demo under `artifacts/visual-demo/demo-adaptive-deck`.
+
+<table>
+  <tr>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/1.unknown.html.png" alt="Adaptive demo slide 1" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/2.unknown.html.png" alt="Adaptive demo slide 2" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/3.unknown.html.png" alt="Adaptive demo slide 3" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/4.unknown.html.png" alt="Adaptive demo slide 4" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/5.unknown.html.png" alt="Adaptive demo slide 5" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/6.unknown.html.png" alt="Adaptive demo slide 6" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/7.unknown.html.png" alt="Adaptive demo slide 7" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/8.unknown.html.png" alt="Adaptive demo slide 8" width="100%"></td>
+  </tr>
+</table>
+
+Visual summary: `0` failures, `0` warnings.
 
 ## Directory Structure
 
 ```text
 .
-├── assets/                    # Shared CSS and template libraries
+├── assets/                    # Shared SVG templates, CSS, and demo images
 ├── references/                # Style, workflow, and packaging notes
-├── scripts/                   # Preview generation and release scripts
+├── scripts/                   # Preview generation, validation, and release scripts
 ├── SKILL.md                   # Skill definition
 ├── juejin-skill-ppt.md        # Sample source content
 ├── juejin-skill-memphis.html  # Example generated preview
