@@ -28,14 +28,25 @@
 | **装饰与模板解耦** | 装饰随机生成或固定在 renderer 里 | 应该绑定到 template spec 的 anchor 上 |
 | **没有主题系统** | 颜色、字体硬编码 | 需要 token 化 + 主题切换 |
 
-### 1.3 双管线遗留问题
+### 1.3 统一链路现状
 
-当前存在两套平行的生成系统：
+当前仓库已统一为单一 adaptive 管线：
 
-- **Legacy 管线**: `generate-preview.js` + `memphis-preview.css` + `template-library.json` (23 模板)
-- **Premium 管线**: `scripts/lib/` + `premium-masters.css` + `template-specs.js` (6 模板)
+- `scripts/generate-adaptive-preview.js`
+- `scripts/lib/adaptive-deck-planner.js`
+- `scripts/lib/render-adaptive.js`
+- `scripts/lib/template-registry.js`
+- `scripts/lib/theme-engine.js`
 
-两套系统代码重复、风格不统一、维护成本高。需要统一到一套架构下。
+旧的 legacy / premium 双管线及其相关样式、模板库与校验脚本已清理。
+
+迁移影响范围与删链路顺序见：
+
+- [`docs/04-adaptive-chain-migration-map.md`](docs/04-adaptive-chain-migration-map.md)
+
+内容质量、杂质去除与自动化验证方案见：
+
+- [`docs/05-content-quality-validation-plan.md`](docs/05-content-quality-validation-plan.md)
 
 ---
 
@@ -415,6 +426,39 @@ visualStyles: {
 ---
 
 ## 六、SVG-First 设计策略
+
+### 6.0 核心原则：SVG 是设计参考，不是像素蓝图
+
+**SVG 的角色是定义设计语言，不是定义固定布局。**
+
+```
+SVG 定义什么:                    HTML 渲染需要什么:
+├── 色彩体系                    ├── 同一套色彩 token
+├── 字体层次                    ├── 同一套 typography scale
+├── 卡片风格 (圆角/描边)         ├── 同一套组件样式
+├── 装饰元素类型                 ├── 同一套装饰素材
+├── 区域划分比例                 ├── CSS Grid 弹性布局
+└── 视觉层次关系                 └── 内容自适应渲染
+```
+
+**HTML 渲染必须适应实际内容，而非照搬 SVG 坐标：**
+
+| SVG 中的固定值 | HTML 中的自适应策略 |
+|----------------|-------------------|
+| 标题固定 3 行 | 标题 1-3 行，字号根据字数自动缩放 |
+| 要点固定 4 个 | 要点 2-6 个，卡片高度自适应 |
+| 卡片固定 320×200px | 卡片宽度固定，高度由内容撑开 |
+| 间距固定 24px | 间距用 CSS 变量，可按内容密度调整 |
+| 图标固定位置 | 图标跟随卡片流式布局 |
+| 装饰固定坐标 | 装饰锚定到容器边缘 (position: absolute + top/right/bottom/left) |
+
+**自适应渲染的核心规则：**
+
+1. **宽度固定，高度弹性** — 卡片宽度由 Grid 列定义，高度由内容撑开
+2. **字号响应式** — 用 `clamp()` 根据容器宽度缩放
+3. **溢出优雅降级** — 内容超限 → 缩小字号 → 截断 → 隐藏 → 拆分页
+4. **最少/最多约束** — 每个 slot 有 min/max 限制 (如 bullets: 2-6)
+5. **装饰跟随容器** — 装饰用 `position: absolute` 锚定到卡片边缘，不锚定到画布坐标
 
 ### 6.1 为什么 SVG-First
 

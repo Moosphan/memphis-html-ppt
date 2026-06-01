@@ -29,6 +29,11 @@ Memphis HTML PPT 是一个轻量级工具集，用于将 Markdown 文档或网�
 - 打包脚本可用于本地生成发布目录
 - 项目已补充最小 `package.json`，便于统一用 Node.js 脚本管理命令
 
+当前仓库已经收敛到单一的 adaptive AI 规划链路。
+
+- 迁移梳理文档：[`docs/04-adaptive-chain-migration-map.md`](docs/04-adaptive-chain-migration-map.md)
+- 内容质量与自动化验证方案：[`docs/05-content-quality-validation-plan.md`](docs/05-content-quality-validation-plan.md)
+
 ## 预览效果
 
 ![旅游方向预览图](assets/travel-preview.jpg)
@@ -67,39 +72,95 @@ npm run preview -- --input ./test-content.md --output ./preview.html
 或者直接执行脚本：
 
 ```bash
-node scripts/generate-preview.js --input ./test-content.md --output ./preview.html
+node scripts/generate-adaptive-preview.js --input ./test-content.md --output ./preview.html --plan-output ./preview.plan.json --source-output ./preview.source.md --source-package-output ./preview.source-package.json
 ```
 
 从网页生成 HTML 预览：
 
 ```bash
-node scripts/generate-preview.js --input https://example.com/article --output ./preview.html
+node scripts/generate-adaptive-preview.js --input https://example.com/article --output ./preview.html --plan-output ./preview.plan.json --source-output ./preview.source.md --source-package-output ./preview.source-package.json
 ```
+
+生成新的 adaptive AI 规划版预览：
+
+```bash
+npm run preview:adaptive -- --input https://example.com/article --output ./adaptive-preview.html --plan-output ./adaptive-preview.plan.json
+```
+
+运行 adaptive 自动校验：
+
+```bash
+npm run validate:preview -- --html ./preview.html --plan ./preview.plan.json
+```
+
+运行内容质量校验：
+
+```bash
+npm run validate:content -- --plan ./preview.plan.json --source-package ./preview.source-package.json --html ./preview.html --out-report ./artifacts/content-quality.json
+```
+
+运行 adaptive 视觉回归校验：
+
+```bash
+npm run validate:visual -- --html ./preview.html --compare-svg true --out-dir ./artifacts/visual
+```
+
+生成的产物目录会包含：
+
+- `deck.html`：最终 HTML 格式 PPT
+- `index.html`：视觉校验报告入口
+- `visual-summary.json`：结构化校验结果
+- 每页的 `html / ref / diff / compare` 图片
 
 生成后，直接用浏览器打开 `preview.html` 即可查看。
 
-导出当前 premium 版最终 HTML PPT：
-
-```bash
-npm run export:premium -- --input ./test-content.md --output ./final.premium.html
-```
-
 ## 可用脚本
 
-### `scripts/generate-preview.js`
+### `scripts/generate-adaptive-preview.js`
 
-生成 Memphis 风格 HTML 幻灯片预览。
+生成 adaptive AI 规划版预览，以及配套的 cleaned markdown、`source package` 和 `deckPlan` JSON。
 
 ```bash
-node scripts/generate-preview.js --input <url-or-file> --output <html-file>
+node scripts/generate-adaptive-preview.js --input <url-or-markdown-file> --output <html-file> [--plan-output <deck-plan.json>] [--source-output <clean.md>] [--source-package-output <source-package.json>]
 ```
 
 主要行为：
 
-- 支持本地 Markdown、本地 HTML、远程 HTTP/HTTPS 页面
-- 将内容解析为章节、段落和列表项
-- 基于 [`assets/template-library.json`](assets/template-library.json) 选择版式模板
-- 输出最终 HTML 文件到指定路径
+- 对 URL 先抽取可读 Markdown 原文
+- 先生成 cleaned markdown，再抽取 `source package`
+- 生成带 `templateId`、`reasoning` 和结构化内容的 `deckPlan`
+- 通过 `render-adaptive.js` 渲染为 adaptive HTML Deck
+- 同时输出 HTML、可单独校验的 plan JSON，以及 source package JSON
+
+### `scripts/validate-adaptive-preview.js`
+
+校验 adaptive HTML 预览和可选的 `deckPlan` JSON。
+
+```bash
+node scripts/validate-adaptive-preview.js --html <preview.html> [--plan <deck-plan.json>] [--min-slides 1] [--strict-fit true]
+```
+
+主要行为：
+
+- 检查 adaptive HTML 的 slide wrapper、导航、页码和进度条结构
+- 校验 `deckPlan` 元数据、模板 id 和 HTML / plan 的对应关系
+- 基于模板 slot 约束输出 overflow、缺字段和匹配不足等问题
+
+### `scripts/validate-content-quality.js`
+
+校验 cleaned markdown / source package / deck plan 的内容质量。
+
+```bash
+node scripts/validate-content-quality.js --plan <deck-plan.json> [--source-package <source-package.json>] [--cleaned-markdown <clean.md>] [--html <preview.html>] [--out-report <report.json>]
+```
+
+主要行为：
+
+- 检查噪声内容是否仍然残留
+- 校验强重点 section 的覆盖率
+- 校验 metric / command 是否被合理抽取
+- 校验代码资产是否以合适模板呈现
+- 校验模板语义是否和 slide content 匹配
 
 ### `scripts/build-release.js`
 
@@ -119,20 +180,6 @@ node scripts/build-release.js
 
 - `dist/codex/memphis-html-ppt`
 - `dist/claude/memphis-html-ppt`
-
-### `scripts/export-premium-html.js`
-
-导出当前 premium 版 HTML PPT 成品。
-
-```bash
-node scripts/export-premium-html.js --input <url-or-file> --output <html-file>
-```
-
-主要行为：
-
-- 读取源文档
-- 将内容映射到当前 premium 模板规范
-- 输出最终 premium HTML Deck 文件
 
 ### `scripts/publish-local.js`
 
@@ -155,12 +202,12 @@ node scripts/publish-local.js
 
 ## 工作原理
 
-当前生成流程比较直接：
+当前生成流程已经统一为：
 
-1. 读取 Markdown、HTML 或远程网页。
-2. 提取章节、段落和列表内容。
-3. 为每个章节匹配一个幻灯片模板。
-4. 使用共享的 Memphis 样式渲染为 HTML Deck。
+1. 读取本地 Markdown 或远程网页。
+2. 抽取清洗后的源 Markdown。
+3. 构建 `source package` 和 `deckPlan`。
+4. 渲染 adaptive HTML Deck 并执行校验。
 
 现阶段实现更偏向“快速可用”和“视觉呈现”，不是深度语义理解型排版引擎。
 

@@ -17,7 +17,7 @@
 - Use one dominant focal point per slide.
 - Keep text short enough to read at a glance.
 - Prefer visual rhythm over dense paragraph blocks.
-- Use `node scripts/generate-preview.js --input <source> --output <preview.html>` when the user wants a first-pass artifact quickly.
+- Prefer `node scripts/generate-adaptive-preview.js --input <source> --output <preview.html> --plan-output <preview.plan.json> --source-package-output <preview.source-package.json>` for the current first-pass artifact.
 
 ## Quality Check
 
@@ -25,3 +25,4 @@
 - Does the deck feel Memphis, not random clip-art?
 - Is the hierarchy obvious on desktop and mobile?
 - Is the final HTML preview something the user can actually open and use?
+- Does the generated `deckPlan` pass `node scripts/validate-adaptive-preview.js --html <preview.html> --plan <preview.plan.json>`?
