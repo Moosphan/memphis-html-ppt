@@ -1,0 +1,288 @@
+{
+  "failures": 0,
+  "warnings": 0,
+  "items": [
+    {
+      "slideId": "1",
+      "ok": true,
+      "message": "visual OK",
+      "report": {
+        "slideId": "1",
+        "templateId": "",
+        "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/1.unknown.html.png",
+        "safeArea": {
+          "ok": true,
+          "minInset": 60,
+          "insets": {
+            "top": 60,
+            "left": 60,
+            "right": 60.015625,
+            "bottom": 60
+          }
+        }
+      }
+    },
+    {
+      "slideId": "2",
+      "ok": true,
+      "message": "visual OK",
+      "report": {
+        "slideId": "2",
+        "templateId": "",
+        "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/2.unknown.html.png",
+        "safeArea": {
+          "ok": true,
+          "minInset": 23.75,
+          "insets": {
+            "top": 60,
+            "left": 60,
+            "right": 60,
+            "bottom": 23.75
+          }
+        }
+      }
+    },
+    {
+      "slideId": "3",
+      "ok": true,
+      "message": "visual OK",
+      "report": {
+        "slideId": "3",
+        "templateId": "",
+        "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/3.unknown.html.png",
+        "safeArea": {
+          "ok": true,
+          "minInset": 60,
+          "insets": {
+            "top": 60,
+            "left": 60,
+            "right": 60,
+            "bottom": 206.203125
+          }
+        }
+      }
+    },
+    {
+      "slideId": "4",
+      "ok": true,
+      "message": "visual OK",
+      "report": {
+        "slideId": "4",
+        "templateId": "",
+        "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/4.unknown.html.png",
+        "safeArea": {
+          "ok": true,
+          "minInset": 60,
+          "insets": {
+            "top": 60,
+            "left": 90,
+            "right": 60,
+            "bottom": 67.203125
+          }
+        }
+      }
+    },
+    {
+      "slideId": "5",
+      "ok": true,
+      "message": "visual OK",
+      "report": {
+        "slideId": "5",
+        "templateId": "",
+        "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/5.unknown.html.png",
+        "safeArea": {
+          "ok": true,
+          "minInset": 60,
+          "insets": {
+            "top": 60,
+            "left": 60,
+            "right": 60,
+            "bottom": 60
+          }
+        }
+      }
+    },
+    {
+      "slideId": "6",
+      "ok": true,
+      "message": "visual OK",
+      "report": {
+        "slideId": "6",
+        "templateId": "",
+        "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/6.unknown.html.png",
+        "safeArea": {
+          "ok": true,
+          "minInset": 60,
+          "insets": {
+            "top": 60,
+            "left": 60,
+            "right": 60,
+            "bottom": 60
+          }
+        }
+      }
+    },
+    {
+      "slideId": "7",
+      "ok": true,
+      "message": "visual OK",
+      "report": {
+        "slideId": "7",
+        "templateId": "",
+        "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/7.unknown.html.png",
+        "safeArea": {
+          "ok": true,
+          "minInset": 60,
+          "insets": {
+            "top": 60,
+            "left": 60,
+            "right": 60,
+            "bottom": 75
+          }
+        }
+      }
+    },
+    {
+      "slideId": "8",
+      "ok": true,
+      "message": "visual OK",
+      "report": {
+        "slideId": "8",
+        "templateId": "",
+        "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/8.unknown.html.png",
+        "safeArea": {
+          "ok": true,
+          "minInset": 60,
+          "insets": {
+            "top": 140.78125,
+            "left": 60,
+            "right": 60,
+            "bottom": 140.796875
+          }
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "slideId": "1",
+      "templateId": "",
+      "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/1.unknown.html.png",
+      "safeArea": {
+        "ok": true,
+        "minInset": 60,
+        "insets": {
+          "top": 60,
+          "left": 60,
+          "right": 60.015625,
+          "bottom": 60
+        }
+      }
+    },
+    {
+      "slideId": "2",
+      "templateId": "",
+      "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/2.unknown.html.png",
+      "safeArea": {
+        "ok": true,
+        "minInset": 23.75,
+        "insets": {
+          "top": 60,
+          "left": 60,
+          "right": 60,
+          "bottom": 23.75
+        }
+      }
+    },
+    {
+      "slideId": "3",
+      "templateId": "",
+      "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/3.unknown.html.png",
+      "safeArea": {
+        "ok": true,
+        "minInset": 60,
+        "insets": {
+          "top": 60,
+          "left": 60,
+          "right": 60,
+          "bottom": 206.203125
+        }
+      }
+    },
+    {
+      "slideId": "4",
+      "templateId": "",
+      "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/4.unknown.html.png",
+      "safeArea": {
+        "ok": true,
+        "minInset": 60,
+        "insets": {
+          "top": 60,
+          "left": 90,
+          "right": 60,
+          "bottom": 67.203125
+        }
+      }
+    },
+    {
+      "slideId": "5",
+      "templateId": "",
+      "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/5.unknown.html.png",
+      "safeArea": {
+        "ok": true,
+        "minInset": 60,
+        "insets": {
+          "top": 60,
+          "left": 60,
+          "right": 60,
+          "bottom": 60
+        }
+      }
+    },
+    {
+      "slideId": "6",
+      "templateId": "",
+      "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/6.unknown.html.png",
+      "safeArea": {
+        "ok": true,
+        "minInset": 60,
+        "insets": {
+          "top": 60,
+          "left": 60,
+          "right": 60,
+          "bottom": 60
+        }
+      }
+    },
+    {
+      "slideId": "7",
+      "templateId": "",
+      "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/7.unknown.html.png",
+      "safeArea": {
+        "ok": true,
+        "minInset": 60,
+        "insets": {
+          "top": 60,
+          "left": 60,
+          "right": 60,
+          "bottom": 75
+        }
+      }
+    },
+    {
+      "slideId": "8",
+      "templateId": "",
+      "htmlScreenshot": "/Users/dorck/self-projects/html-ppt/memphis-html-ppt/artifacts/visual-demo/demo-adaptive-deck/8.unknown.html.png",
+      "safeArea": {
+        "ok": true,
+        "minInset": 60,
+        "insets": {
+          "top": 140.78125,
+          "left": 60,
+          "right": 60,
+          "bottom": 140.796875
+        }
+      }
+    }
+  ]
+}

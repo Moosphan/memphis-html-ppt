@@ -39,20 +39,20 @@ Memphis HTML PPT 会将 Markdown 文档或网页转换为可直接在浏览器�
 
 ## 预览效果
 
-下面这组图来自 `artifacts/visual-demo/demo-adaptive-deck` 的真实 adaptive 生成结果。
+下面这组图来自 `assets/readme-preview/demo-adaptive-deck` 的真实 adaptive 生成结果。
 
 <table>
   <tr>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/1.unknown.html.png" alt="Adaptive 示例第 1 页" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/2.unknown.html.png" alt="Adaptive 示例第 2 页" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/3.unknown.html.png" alt="Adaptive 示例第 3 页" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/4.unknown.html.png" alt="Adaptive 示例第 4 页" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/1.unknown.html.png" alt="Adaptive 示例第 1 页" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/2.unknown.html.png" alt="Adaptive 示例第 2 页" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/3.unknown.html.png" alt="Adaptive 示例第 3 页" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/4.unknown.html.png" alt="Adaptive 示例第 4 页" width="100%"></td>
   </tr>
   <tr>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/5.unknown.html.png" alt="Adaptive 示例第 5 页" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/6.unknown.html.png" alt="Adaptive 示例第 6 页" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/7.unknown.html.png" alt="Adaptive 示例第 7 页" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/8.unknown.html.png" alt="Adaptive 示例第 8 页" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/5.unknown.html.png" alt="Adaptive 示例第 5 页" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/6.unknown.html.png" alt="Adaptive 示例第 6 页" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/7.unknown.html.png" alt="Adaptive 示例第 7 页" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/8.unknown.html.png" alt="Adaptive 示例第 8 页" width="100%"></td>
   </tr>
 </table>
 

@@ -34,20 +34,20 @@ This repository is a working generator plus reusable project template.
 
 ## Preview
 
-This gallery comes from the real adaptive preview demo under `artifacts/visual-demo/demo-adaptive-deck`.
+This gallery comes from the real adaptive preview demo under `assets/readme-preview/demo-adaptive-deck`.
 
 <table>
   <tr>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/1.unknown.html.png" alt="Adaptive demo slide 1" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/2.unknown.html.png" alt="Adaptive demo slide 2" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/3.unknown.html.png" alt="Adaptive demo slide 3" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/4.unknown.html.png" alt="Adaptive demo slide 4" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/1.unknown.html.png" alt="Adaptive demo slide 1" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/2.unknown.html.png" alt="Adaptive demo slide 2" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/3.unknown.html.png" alt="Adaptive demo slide 3" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/4.unknown.html.png" alt="Adaptive demo slide 4" width="100%"></td>
   </tr>
   <tr>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/5.unknown.html.png" alt="Adaptive demo slide 5" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/6.unknown.html.png" alt="Adaptive demo slide 6" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/7.unknown.html.png" alt="Adaptive demo slide 7" width="100%"></td>
-    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/8.unknown.html.png" alt="Adaptive demo slide 8" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/5.unknown.html.png" alt="Adaptive demo slide 5" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/6.unknown.html.png" alt="Adaptive demo slide 6" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/7.unknown.html.png" alt="Adaptive demo slide 7" width="100%"></td>
+    <td width="25%"><img src="assets/readme-preview/demo-adaptive-deck/8.unknown.html.png" alt="Adaptive demo slide 8" width="100%"></td>
   </tr>
 </table>
 
