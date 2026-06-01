@@ -1,0 +1,16 @@
+.DS_Store
+assets/.DS_Store
+assets/svg/.DS_Store
+
+.tmp-*
+
+artifacts/
+compare.before-after.html
+compare.before-after.png
+compare.legacy-template.html
+compare.premium-template.html
+demo-adaptive-deck.html
+refactor_history/
+
+juejin-*-ppt.md
+juejin-*-source.adaptive.md
