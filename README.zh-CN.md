@@ -1,17 +1,22 @@
 # Memphis HTML PPT
 
+[![许可证: MIT](https://img.shields.io/badge/license-MIT-111111?style=flat-square)](LICENSE)
+[![Node.js 18+](https://img.shields.io/badge/node-18%2B-111111?style=flat-square)](https://nodejs.org/)
+[![Adaptive 链路](https://img.shields.io/badge/pipeline-adaptive%20chain-111111?style=flat-square)](#工作原理)
+[![HTML 预览](https://img.shields.io/badge/output-HTML%20PPT-111111?style=flat-square)](#预览效果)
+
 [English README](README.md)
 
 ![Memphis HTML PPT 项目横幅](assets/readme-banner.jpg)
 
-Memphis HTML PPT 是一个轻量级工具集，用于将 Markdown 文档或网页快速转换为本地可打开的 HTML 幻灯片预览，并采用鲜明的 Memphis 风格视觉设计。
+Memphis HTML PPT 会将 Markdown 文档或网页转换为可直接在浏览器打开的 HTML 演示稿，并采用鲜明的 Memphis 风格视觉设计。
 
 它适合以下场景：
 
-- 快速做演示稿原型
-- 将文章内容转成“像 PPT 一样”的 HTML 预览
-- 作为 Codex / Claude Skill 的可复用模板项目
-- 做带有强视觉风格的信息展示实验
+- 快速构建演示稿原型
+- 将文章内容转换为“像 PPT 一样”的 HTML 预览
+- 作为 Codex / Claude Skill 的可复用模板工程
+- 进行带有鲜明视觉风格的信息展示实验
 
 ## 项目亮点
 
@@ -23,28 +28,43 @@ Memphis HTML PPT 是一个轻量级工具集，用于将 Markdown 文档或网�
 
 ## 当前状态
 
-这个仓库目前更适合作为“可用的生成器 + 可复用模板工程”，而不是一个已经完全产品化的 npm 包。
+这个仓库是一个可用的生成器加可复用模板工程。
 
-- 预览生成脚本已经可用
+- 预览生成脚本可直接处理本地 Markdown 和远程 URL
 - 打包脚本可用于本地生成发布目录
-- 项目已补充最小 `package.json`，便于统一用 Node.js 脚本管理命令
-
-当前仓库已经收敛到单一的 adaptive AI 规划链路。
+- 当前工作流已经收敛到单一的 adaptive AI 规划链路
 
 - 迁移梳理文档：[`docs/04-adaptive-chain-migration-map.md`](docs/04-adaptive-chain-migration-map.md)
 - 内容质量与自动化验证方案：[`docs/05-content-quality-validation-plan.md`](docs/05-content-quality-validation-plan.md)
 
 ## 预览效果
 
-![旅游方向预览图](assets/travel-preview.jpg)
+下面这组图来自 `artifacts/visual-demo/demo-adaptive-deck` 的真实 adaptive 生成结果。
+
+<table>
+  <tr>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/1.unknown.html.png" alt="Adaptive 示例第 1 页" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/2.unknown.html.png" alt="Adaptive 示例第 2 页" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/3.unknown.html.png" alt="Adaptive 示例第 3 页" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/4.unknown.html.png" alt="Adaptive 示例第 4 页" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/5.unknown.html.png" alt="Adaptive 示例第 5 页" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/6.unknown.html.png" alt="Adaptive 示例第 6 页" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/7.unknown.html.png" alt="Adaptive 示例第 7 页" width="100%"></td>
+    <td width="25%"><img src="artifacts/visual-demo/demo-adaptive-deck/8.unknown.html.png" alt="Adaptive 示例第 8 页" width="100%"></td>
+  </tr>
+</table>
+
+视觉校验结果：`0` 个 failure，`0` 个 warning。
 
 ## 目录结构
 
 ```text
 .
-├── assets/                    # 样式和模板库
+├── assets/                    # 共享 SVG 模板、样式和演示图
 ├── references/                # 设计规范、工作流和打包说明
-├── scripts/                   # 生成预览和构建发布包的脚本
+├── scripts/                   # 预览生成、校验和发布脚本
 ├── SKILL.md                   # Skill 定义文件
 ├── juejin-skill-ppt.md        # 示例源内容
 ├── juejin-skill-memphis.html  # 示例生成结果
