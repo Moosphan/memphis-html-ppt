@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <g id="bg"><rect width="1280" height="720" fill="#FFF8EE" /></g>
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#FFD93D" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">WHY IT MATTERS</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">功能收益 · FEATURE × BENEFIT</text>
+    <g transform="translate(1140, 60)"><rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" /><rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" /></g>
+  </g>
+
+  <!-- 表头 -->
+  <g id="col-headers">
+    <rect x="74" y="150" width="530" height="44" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="3" />
+    <text x="340" y="180" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#FFF8EE" letter-spacing="2">FEATURE</text>
+    <rect x="604" y="150" width="56" height="44" fill="#FFD93D" stroke="#1A1A2E" stroke-width="3" />
+    <text x="632" y="180" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">→</text>
+    <rect x="660" y="150" width="546" height="44" fill="#00C896" stroke="#1A1A2E" stroke-width="3" />
+    <text x="934" y="180" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#FFF8EE" letter-spacing="2">BENEFIT</text>
+  </g>
+
+  <!-- Row 1 -->
+  <g id="row-1">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M74,210 H604 A10,10 0 0 1 614,220 V290 A10,10 0 0 1 604,300 H74 A10,10 0 0 1 64,290 V220 A10,10 0 0 1 74,210 Z" />
+    <g transform="translate(86,228) scale(1.8)" fill="#1A1A2E"><path d="M8 0L15 4V12L8 16L1 12V4L8 0ZM8 2L3 5V11L8 14L13 11V5L8 2Z"/></g>
+    <text x="122" y="252" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">Spec-driven templates</text>
+    <text x="122" y="278" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">Each template has formal slot definitions and budgets</text>
+
+    <text x="632" y="260" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E">→</text>
+
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M660,210 H1206 A10,10 0 0 1 1216,220 V290 A10,10 0 0 1 1206,300 H660 A10,10 0 0 1 650,290 V220 A10,10 0 0 1 660,210 Z" />
+    <g transform="translate(672,228) scale(1.8)" fill="#00C896"><path d="M6 16L0 10L2 8L6 12L14 2L16 4L6 16Z"/></g>
+    <text x="708" y="252" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">Predictable output</text>
+    <text x="708" y="278" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">Same input always produces same layout quality</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g id="row-2">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M74,320 H604 A10,10 0 0 1 614,330 V400 A10,10 0 0 1 604,410 H74 A10,10 0 0 1 64,400 V330 A10,10 0 0 1 74,320 Z" />
+    <g transform="translate(86,338) scale(1.8)" fill="#1A1A2E"><path d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM8 14C4.69 14 2 11.31 2 8C2 4.69 4.69 2 8 2C11.31 2 14 4.69 14 8C14 11.31 11.31 14 8 14Z"/></g>
+    <text x="122" y="362" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">Reflow engine</text>
+    <text x="122" y="388" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">Automatic overflow detection and recovery</text>
+
+    <text x="632" y="370" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E">→</text>
+
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M660,320 H1206 A10,10 0 0 1 1216,330 V400 A10,10 0 0 1 1206,410 H660 A10,10 0 0 1 650,400 V330 A10,10 0 0 1 660,320 Z" />
+    <g transform="translate(672,338) scale(1.8)" fill="#00C896"><path d="M6 16L0 10L2 8L6 12L14 2L16 4L6 16Z"/></g>
+    <text x="708" y="362" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">Zero broken layouts</text>
+    <text x="708" y="388" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">96% pass rate, remaining 4% auto-fixed</text>
+  </g>
+
+  <!-- Row 3 -->
+  <g id="row-3">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M74,430 H604 A10,10 0 0 1 614,440 V510 A10,10 0 0 1 604,520 H74 A10,10 0 0 1 64,510 V440 A10,10 0 0 1 74,430 Z" />
+    <g transform="translate(86,448) scale(1.8)" fill="#1A1A2E"><path d="M5 14H11V15C11 15.6 10.6 16 10 16H6C5.4 16 5 15.6 5 15V14ZM8 0C4.7 0 2 2.7 2 6C2 8.2 3.4 10.1 5.5 11V12.5C5.5 13.1 5.8 13.4 6 13.5H10C10.2 13.4 10.5 13.1 10.5 12.5V11C12.6 10.1 14 8.2 14 6C14 2.7 11.3 0 8 0Z"/></g>
+    <text x="122" y="472" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">Theme tokens</text>
+    <text x="122" y="498" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">Color, typography, spacing as CSS variables</text>
+
+    <text x="632" y="480" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E">→</text>
+
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M660,430 H1206 A10,10 0 0 1 1216,440 V510 A10,10 0 0 1 1206,520 H660 A10,10 0 0 1 650,510 V440 A10,10 0 0 1 660,430 Z" />
+    <g transform="translate(672,448) scale(1.8)" fill="#00C896"><path d="M6 16L0 10L2 8L6 12L14 2L16 4L6 16Z"/></g>
+    <text x="708" y="472" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">Instant rebranding</text>
+    <text x="708" y="498" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">Swap one file, entire deck updates</text>
+  </g>
+
+  <!-- Row 4 -->
+  <g id="row-4">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M74,540 H604 A10,10 0 0 1 614,550 V620 A10,10 0 0 1 604,630 H74 A10,10 0 0 1 64,620 V550 A10,10 0 0 1 74,540 Z" />
+    <g transform="translate(86,558) scale(1.8)" fill="#1A1A2E"><path d="M0 2C0 0.9 0.9 0 2 0H14C15.1 0 16 0.9 16 2V10C16 11.1 15.1 12 14 12H5L0 16V2Z"/></g>
+    <text x="122" y="582" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">Natural language edits</text>
+    <text x="122" y="608" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">User describes changes in plain language</text>
+
+    <text x="632" y="590" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E">→</text>
+
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M660,540 H1206 A10,10 0 0 1 1216,550 V620 A10,10 0 0 1 1206,630 H660 A10,10 0 0 1 650,620 V550 A10,10 0 0 1 660,540 Z" />
+    <g transform="translate(672,558) scale(1.8)" fill="#00C896"><path d="M6 16L0 10L2 8L6 12L14 2L16 4L6 16Z"/></g>
+    <text x="708" y="582" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">Non-technical control</text>
+    <text x="708" y="608" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">No code needed, just describe what you want</text>
+  </g>
+
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">功能收益 · 4 组核心 Feature-Benefit 对照</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">22 / 22</text>
+  </g>
+</svg>

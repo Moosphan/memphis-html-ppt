@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+
+  <!-- ═══ Narrative Split — 左叙事 + 右双卡 ═══ -->
+
+  <g id="bg">
+    <rect width="1280" height="720" fill="#FFF8EE" />
+  </g>
+
+  <!-- ═══ Header ═══ -->
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#00B8D9" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">WHY THIS MATTERS</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">核心观点 · CORE INSIGHT</text>
+    <g transform="translate(1140, 60)">
+      <rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- ═══ 左侧: 主叙事卡片 ═══ -->
+  <g id="main-narrative">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,150 H631 A14,14 0 0 1 645,164 V616 A14,14 0 0 1 631,630 H74 A14,14 0 0 1 60,616 V164 A14,14 0 0 1 74,150 Z" />
+    <path d="M 64 150 h 577 a 10 10 0 0 1 4 4 v 56 h -585 v -56 a 10 10 0 0 1 4 -4 Z" fill="#00B8D9" />
+    <!-- 圆环图标 -->
+    <!-- 灯泡图标 -->
+    <g transform="translate(76.0, 160.0) scale(2.25)" fill="#1A1A2E">
+      <path d="M5 14H11V15C11 15.6 10.6 16 10 16H6C5.4 16 5 15.6 5 15V14ZM8 0C4.7 0 2 2.7 2 6C2 8.2 3.4 10.1 5.5 11V12.5C5.5 13.1 5.8 13.4 6 13.5H10C10.2 13.4 10.5 13.1 10.5 12.5V11C12.6 10.1 14 8.2 14 6C14 2.7 11.3 0 8 0Z" />
+    </g>
+    <text x="122" y="186" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E" letter-spacing="2">MAIN ARGUMENT</text>
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="2" d="M504,164 H616 A14,14 0 0 1 630,178 V178 A14,14 0 0 1 616,192 H504 A14,14 0 0 1 490,178 V178 A14,14 0 0 1 504,164 Z" />
+    <text x="560" y="183" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" font-weight="900" fill="#00B8D9" letter-spacing="2">SECTION</text>
+
+    <!-- 段落文字 -->
+    <text x="96" y="250" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Great presentations don't happen by accident.</text>
+    <text x="96" y="276" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">They are <tspan fill="#C0392B" font-weight="900">planned like editorial stories</tspan> — with</text>
+    <text x="96" y="302" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">a clear narrative arc, intentional pacing, and</text>
+    <text x="96" y="328" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">visual hierarchy that guides the audience.</text>
+
+    <line x1="96" y1="356" x2="600" y2="356" stroke="#1A1A2E" stroke-width="2" />
+
+    <!-- 要点列表 -->
+    <circle cx="106" cy="390" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="126" y="396" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">One message per slide</tspan> — never overload</text>
+    <circle cx="106" cy="426" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="126" y="432" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Strong visual pacing</tspan> — dense then sparse</text>
+    <circle cx="106" cy="462" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="126" y="468" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Typography as structure</tspan> — not decoration</text>
+    <circle cx="106" cy="498" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="126" y="504" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Color with purpose</tspan> — every choice means sth</text>
+    <circle cx="106" cy="534" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="126" y="540" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E"><tspan fill="#C0392B" font-weight="900">Whitespace is active</tspan> — it creates focus</text>
+
+    <!-- 底部引用 -->
+    <line x1="96" y1="570" x2="600" y2="570" stroke="#1A1A2E" stroke-width="1" stroke-dasharray="4,4" opacity="0.3" />
+    <text x="96" y="600" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A" font-style="italic">"The secret of being boring is to say everything."</text>
+    <text x="96" y="620" font-family="Arial, Microsoft YaHei, sans-serif" font-size="12" font-weight="700" fill="#5C5C7A">— Voltaire</text>
+  </g>
+
+  <!-- ═══ 右上: 支撑卡片 1 ═══ -->
+  <g id="support-1">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M674,150 H1206 A14,14 0 0 1 1220,164 V386 A14,14 0 0 1 1206,400 H674 A14,14 0 0 1 660,386 V164 A14,14 0 0 1 674,150 Z" />
+    <path d="M 664 150 h 552 a 10 10 0 0 1 4 4 v 56 h -560 v -56 a 10 10 0 0 1 4 -4 Z" fill="#FF3DA5" />
+    <!-- 闪电图标 -->
+    <!-- 图表图标 -->
+    <g transform="translate(676.0, 160.0) scale(2.25)" fill="#1A1A2E">
+      <path d="M0 10H4V16H0V10ZM6 6H10V16H6V6ZM12 2H16V16H12V2Z" />
+    </g>
+    <text x="722" y="186" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E" letter-spacing="2">KEY EVIDENCE</text>
+    <text x="696" y="260" font-family="Impact, Arial Black, sans-serif" font-size="64" font-weight="900" fill="#1A1A2E" letter-spacing="-1">84%</text>
+    <text x="696" y="290" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">of speakers say visual-heavy</text>
+    <text x="696" y="312" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">decks perform better.</text>
+    <rect x="696" y="340" width="120" height="28" rx="14" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="712" y="360" font-family="Impact, sans-serif" font-size="12" font-weight="900" fill="#1A1A2E" letter-spacing="1">SOURCE: VENNGAGE</text>
+  </g>
+
+  <!-- ═══ 右下: 支撑卡片 2 ═══ -->
+  <g id="support-2">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M674,424 H1206 A14,14 0 0 1 1220,438 V616 A14,14 0 0 1 1206,630 H674 A14,14 0 0 1 660,616 V438 A14,14 0 0 1 674,424 Z" />
+    <path d="M 664 424 h 552 a 10 10 0 0 1 4 4 v 56 h -560 v -56 a 10 10 0 0 1 4 -4 Z" fill="#FFD93D" />
+    <!-- 星星图标 -->
+    <!-- 箭头图标 -->
+    <g transform="translate(676.0, 434.0) scale(2.25)" fill="#1A1A2E">
+      <path d="M8 0L16 8L8 16L6 14L10 10H0V6H10L6 2L8 0Z" />
+    </g>
+    <text x="722" y="460" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E" letter-spacing="2">NEXT STEP</text>
+    <circle cx="696" cy="510" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="716" y="516" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Audit your current deck</text>
+    <circle cx="696" cy="546" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="716" y="552" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Apply the <tspan fill="#C0392B" font-weight="900">one-message rule</tspan></text>
+    <circle cx="696" cy="582" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="716" y="588" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Test with a <tspan fill="#C0392B" font-weight="900">6-second scan</tspan></text>
+  </g>
+
+  <!-- ═══ 装饰 (丰富化) ═══ -->
+  <g id="decor">
+    <!-- 左下: 散布圆点 -->
+    <circle cx="100" cy="680" r="10" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <circle cx="120" cy="695" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <circle cx="80" cy="700" r="4" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="1.5" />
+    <!-- 右上: 三角 -->
+    <polygon points="1100,140 1118,170 1082,170" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <!-- 左上: 小方块 -->
+    <rect x="32" y="160" width="16" height="16" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" transform="rotate(15 40 168)" />
+    <!-- 右下: 虚线圆 -->
+    <circle cx="1200" cy="640" r="24" fill="none" stroke="#00B8D9" stroke-width="2" stroke-dasharray="4,6" opacity="0.35" />
+    <!-- 卡片间: 小圆点 -->
+    <circle cx="660" cy="300" r="5" fill="#00C896" stroke="#1A1A2E" stroke-width="1.5" />
+    <circle cx="660" cy="500" r="4" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="1.5" />
+    <!-- 右卡之间: 十字 -->
+    <g transform="translate(940, 408)" fill="#1A1A2E" opacity="0.25">
+      <rect x="0" y="-6" width="12" height="12" rx="1" />
+      <rect x="-3" y="0" width="18" height="6" rx="1" />
+    </g>
+  </g>
+
+  <!-- ═══ Footer ═══ -->
+  <g id="footer">
+    <text x="60" y="680" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">核心观点 · 论点+论据的经典叙事结构</text>
+    <text x="1220" y="680" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">02 / 12</text>
+  </g>
+
+</svg>

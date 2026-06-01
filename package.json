@@ -6,7 +6,11 @@
   "license": "MIT",
   "author": "dorck",
   "scripts": {
-    "preview": "node scripts/generate-preview.js",
+    "preview": "node scripts/generate-adaptive-preview.js",
+    "preview:adaptive": "node scripts/generate-adaptive-preview.js",
+    "validate:preview": "node scripts/validate-adaptive-preview.js",
+    "validate:content": "node scripts/validate-content-quality.js",
+    "validate:visual": "node scripts/validate-adaptive-visual.js",
     "build": "node scripts/build-release.js",
     "publish:local": "node scripts/publish-local.js"
   },

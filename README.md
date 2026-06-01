@@ -24,6 +24,10 @@ This repository is currently best described as a practical generator and reusabl
 - The packaging scripts are usable for local bundle generation
 - The project includes a minimal `package.json` for Node.js script management
 
+The repository now uses a single adaptive AI-planned pipeline.
+
+- Migration map: [`docs/04-adaptive-chain-migration-map.md`](docs/04-adaptive-chain-migration-map.md)
+
 ## Preview
 
 ![Travel preview](assets/travel-preview.jpg)
@@ -62,33 +66,89 @@ npm run preview -- --input ./test-content.md --output ./preview.html
 Or run the script directly:
 
 ```bash
-node scripts/generate-preview.js --input ./test-content.md --output ./preview.html
+node scripts/generate-adaptive-preview.js --input ./test-content.md --output ./preview.html --plan-output ./preview.plan.json --source-output ./preview.source.md --source-package-output ./preview.source-package.json
 ```
 
 Generate an HTML preview from a web page:
 
 ```bash
-node scripts/generate-preview.js --input https://example.com/article --output ./preview.html
+node scripts/generate-adaptive-preview.js --input https://example.com/article --output ./preview.html --plan-output ./preview.plan.json --source-output ./preview.source.md --source-package-output ./preview.source-package.json
 ```
+
+Run the adaptive validator:
+
+```bash
+npm run validate:preview -- --html ./preview.html --plan ./preview.plan.json
+```
+
+Run the content-quality validator:
+
+```bash
+npm run validate:content -- --plan ./preview.plan.json --source-package ./preview.source-package.json --html ./preview.html --out-report ./artifacts/content-quality.json
+```
+
+Run the adaptive visual regression checker:
+
+```bash
+npm run validate:visual -- --html ./preview.html --compare-svg true --out-dir ./artifacts/visual
+```
+
+The output folder now includes:
+
+- `deck.html`: the final HTML PPT artifact
+- `index.html`: a browsable visual validation report
+- `visual-summary.json`: structured validation results
+- Per-slide `html / ref / diff / compare` images
 
 Then open the generated `preview.html` in your browser.
 
 ## Available Scripts
 
-### `scripts/generate-preview.js`
+### `scripts/generate-adaptive-preview.js`
 
-Generates a Memphis-style HTML presentation preview.
+Generates the adaptive AI-planned preview plus cleaned markdown, a `source package`, and its `deckPlan` JSON.
 
 ```bash
-node scripts/generate-preview.js --input <url-or-file> --output <html-file>
+node scripts/generate-adaptive-preview.js --input <url-or-markdown-file> --output <html-file> [--plan-output <deck-plan.json>] [--source-output <clean.md>] [--source-package-output <source-package.json>]
 ```
 
 Behavior:
 
-- Accepts local Markdown, local HTML, or remote HTTP/HTTPS URLs
-- Parses source sections into slide candidates
-- Applies built-in templates from [`assets/template-library.json`](assets/template-library.json)
-- Writes the final HTML file to the requested output path
+- For URLs, extracts readable source Markdown first
+- Produces cleaned markdown first, then builds a structured `source package`
+- Builds a structured `deckPlan` with `templateId`, `reasoning`, and slide content
+- Renders the adaptive HTML deck using `render-adaptive.js`
+- Writes HTML, plan JSON, and source package JSON that can be validated independently
+
+### `scripts/validate-adaptive-preview.js`
+
+Validates the adaptive HTML preview and optional `deckPlan` JSON.
+
+```bash
+node scripts/validate-adaptive-preview.js --html <preview.html> [--plan <deck-plan.json>] [--min-slides 1] [--strict-fit true]
+```
+
+Behavior:
+
+- Checks adaptive HTML structure such as slide wrappers, nav, counter, and progress bar
+- Verifies `deckPlan` metadata, template ids, and slide/template matching
+- Uses template slot constraints to surface overflow, missing required content, and weak fits
+
+### `scripts/validate-content-quality.js`
+
+Validates cleaned markdown, the source package, and the deck plan.
+
+```bash
+node scripts/validate-content-quality.js --plan <deck-plan.json> [--source-package <source-package.json>] [--cleaned-markdown <clean.md>] [--html <preview.html>] [--out-report <report.json>]
+```
+
+Behavior:
+
+- Checks for residual platform noise
+- Verifies strong section coverage
+- Verifies metric and command extraction
+- Checks whether code assets were mapped to suitable slide templates
+- Checks whether template semantics match the final slide content
 
 ### `scripts/build-release.js`
 
@@ -130,14 +190,14 @@ Targets:
 
 ## How It Works
 
-The generator follows a simple workflow:
+The generator follows a single workflow:
 
-1. Load Markdown, HTML, or a remote page.
-2. Extract sections, paragraphs, and bullet points.
-3. Map each section to a slide template.
-4. Render a themed HTML deck using the shared Memphis stylesheet.
+1. Load a Markdown file or remote page.
+2. Extract cleaned source Markdown.
+3. Build a `source package` and `deckPlan`.
+4. Render an adaptive HTML deck and validate it.
 
-The current implementation prioritizes speed and readability over deep semantic analysis.
+The current implementation prioritizes readable source extraction, template-fit checks, and stable HTML output.
 
 ## Design Direction
 

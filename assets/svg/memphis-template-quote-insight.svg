@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+
+  <g id="bg">
+    <rect width="1280" height="720" fill="#FFF8EE" />
+  </g>
+
+  <!-- Header -->
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#00B8D9" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">WORDS THAT MATTER</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">关键引言 · QUOTABLE INSIGHTS</text>
+    <g transform="translate(1140, 60)">
+      <rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- 主引言卡片 -->
+  <g id="quote-card">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,150 H1206 A14,14 0 0 1 1220,164 V460 A14,14 0 0 1 1206,474 H74 A14,14 0 0 1 60,460 V164 A14,14 0 0 1 74,150 Z" />
+    <path d="M 64 150 h 560 a 10 10 0 0 1 4 4 v 56 h -568 v -56 a 10 10 0 0 1 4 -4 Z" fill="#00B8D9" />
+    <g transform="translate(76, 160) scale(2.25)" fill="#1A1A2E"><path d="M0 2C0 0.9 0.9 0 2 0H14C15.1 0 16 0.9 16 2V10C16 11.1 15.1 12 14 12H5L0 16V2Z"/></g>
+    <text x="122" y="186" font-family="Impact, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#1A1A2E" letter-spacing="2">FEATURED QUOTE</text>
+
+    <!-- 大引号装饰 -->
+    <text x="100" y="280" font-family="Georgia, serif" font-size="120" font-weight="700" fill="#00B8D9" fill-opacity="0.15">"</text>
+
+    <!-- 引言文字 -->
+    <text x="160" y="280" font-family="Georgia, Times New Roman, serif" font-size="32" font-weight="700" fill="#1A1A2E" font-style="italic">The secret of being boring</text>
+    <text x="160" y="320" font-family="Georgia, Times New Roman, serif" font-size="32" font-weight="700" fill="#1A1A2E" font-style="italic">is to say everything.</text>
+
+    <!-- 归属 -->
+    <line x1="160" y1="350" x2="400" y2="350" stroke="#1A1A2E" stroke-width="2" />
+    <text x="160" y="380" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A">— Voltaire</text>
+    <text x="160" y="406" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">French Enlightenment Writer, 1778</text>
+
+    <!-- 右侧: 关键词标签 (左移避免溢出) -->
+    <g transform="translate(700, 240)">
+      <rect x="0" y="0" width="130" height="36" rx="18" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2.5" />
+      <text x="24" y="24" font-family="Impact, sans-serif" font-size="12" font-weight="900" fill="#FFF8EE" letter-spacing="1">BREVITY</text>
+
+      <rect x="146" y="0" width="130" height="36" rx="18" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2.5" />
+      <text x="170" y="24" font-family="Impact, sans-serif" font-size="12" font-weight="900" fill="#1A1A2E" letter-spacing="1">CLARITY</text>
+
+      <rect x="292" y="0" width="130" height="36" rx="18" fill="#00C896" stroke="#1A1A2E" stroke-width="2.5" />
+      <text x="318" y="24" font-family="Impact, sans-serif" font-size="12" font-weight="900" fill="#FFF8EE" letter-spacing="1">IMPACT</text>
+    </g>
+  </g>
+
+  <!-- 底部: 3 个上下文卡片 (下移增加间距) -->
+  <!-- 底部3卡片: 等宽353px, 间距20px, x=60/433/806 -->
+  <g id="context-1">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,530 H419 A14,14 0 0 1 433,544 V644 A14,14 0 0 1 419,658 H74 A14,14 0 0 1 60,644 V544 A14,14 0 0 1 74,530 Z" />
+    <path d="M 64 530 h 355 a 10 10 0 0 1 4 4 v 36 h -363 v -36 a 10 10 0 0 1 4 -4 Z" fill="#FF3DA5" />
+    <g transform="translate(76, 536) scale(2.0)" fill="#1A1A2E"><path d="M8 3C4.5 3 1.5 5.5 0 8C1.5 10.5 4.5 13 8 13C11.5 13 14.5 10.5 16 8C14.5 5.5 11.5 3 8 3ZM8 11C5.8 11 4 9.2 4 7C4 4.8 5.8 3 8 3C10.2 3 12 4.8 12 7C12 9.2 10.2 11 8 11Z"/><circle cx="8" cy="7" r="2"/></g>
+    <text x="110" y="558" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#1A1A2E" letter-spacing="2">CONTEXT</text>
+    <circle cx="96" cy="596" r="6" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="116" y="602" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Said during a debate on</text>
+    <circle cx="96" cy="622" r="6" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <text x="116" y="628" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">artistic economy.</text>
+  </g>
+
+  <g id="context-2">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M447,530 H792 A14,14 0 0 1 806,544 V644 A14,14 0 0 1 792,658 H447 A14,14 0 0 1 433,644 V544 A14,14 0 0 1 447,530 Z" />
+    <path d="M 437 530 h 355 a 10 10 0 0 1 4 4 v 36 h -363 v -36 a 10 10 0 0 1 4 -4 Z" fill="#00B8D9" />
+    <g transform="translate(449, 536) scale(2.0)" fill="#1A1A2E"><path d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM8 14C4.69 14 2 11.31 2 8C2 4.69 4.69 2 8 2C11.31 2 14 4.69 14 8C14 11.31 11.31 14 8 14Z" /></g>
+    <text x="483" y="558" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#1A1A2E" letter-spacing="2">RELEVANCE</text>
+    <circle cx="469" cy="596" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="489" y="602" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Applies directly to</text>
+    <circle cx="469" cy="622" r="6" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <text x="489" y="628" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">say less, show more.</text>
+  </g>
+
+  <g id="context-3">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M820,530 H1206 A14,14 0 0 1 1220,544 V644 A14,14 0 0 1 1206,658 H820 A14,14 0 0 1 806,644 V544 A14,14 0 0 1 820,530 Z" />
+    <path d="M 810 530 h 396 a 10 10 0 0 1 4 4 v 36 h -404 v -36 a 10 10 0 0 1 4 -4 Z" fill="#FFD93D" />
+    <g transform="translate(822, 536) scale(2.0)" fill="#1A1A2E"><path d="M5 14H11V15C11 15.6 10.6 16 10 16H6C5.4 16 5 15.6 5 15V14ZM8 0C4.7 0 2 2.7 2 6C2 8.2 3.4 10.1 5.5 11V12.5C5.5 13.1 5.8 13.4 6 13.5H10C10.2 13.4 10.5 13.1 10.5 12.5V11C12.6 10.1 14 8.2 14 6C14 2.7 11.3 0 8 0Z"/></g>
+    <text x="856" y="558" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#1A1A2E" letter-spacing="2">APPLICATION</text>
+    <circle cx="842" cy="596" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="862" y="602" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Guiding principle:</text>
+    <circle cx="842" cy="622" r="6" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    <text x="862" y="628" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">every word earns its place.</text>
+  </g>
+
+  <!-- Footer -->
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">引言洞察 · 关键语录与上下文</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">07 / 12</text>
+  </g>
+
+</svg>

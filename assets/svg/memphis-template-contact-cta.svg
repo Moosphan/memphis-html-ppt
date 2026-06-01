@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <g id="bg"><rect width="1280" height="720" fill="#FFF8EE" /></g>
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#FF3DA5" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">GET IN TOUCH</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">联系我们 · LET'S CONNECT</text>
+    <g transform="translate(1140, 60)"><rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" /><rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" /></g>
+  </g>
+
+  <!-- 大图标居中 -->
+  <circle cx="640" cy="260" r="48" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="4" />
+  <g transform="translate(616,236) scale(3)" fill="#1A1A2E"><path d="M0 2C0 0.9 0.9 0 2 0H14C15.1 0 16 0.9 16 2V10C16 11.1 15.1 12 14 12H5L0 16V2Z"/></g>
+
+  <!-- 标题 -->
+  <text x="640" y="360" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="52" font-weight="900" fill="#1A1A2E" letter-spacing="2">LET'S BUILD SOMETHING</text>
+  <text x="640" y="410" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="52" font-weight="900" fill="#1A1A2E" letter-spacing="2">GREAT TOGETHER.</text>
+
+  <!-- 分隔线 -->
+  <rect x="520" y="430" width="240" height="4" rx="2" fill="#FF3DA5" />
+
+  <!-- 联系方式卡片 (紧凑间距) -->
+  <g id="contact-card">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M314,466 H966 A14,14 0 0 1 980,480 V596 A14,14 0 0 1 966,610 H314 A14,14 0 0 1 300,596 V480 A14,14 0 0 1 314,466 Z" />
+
+    <!-- Email -->
+    <circle cx="360" cy="508" r="12" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+    <g transform="translate(351,499) scale(1.1)" fill="#1A1A2E"><path d="M0 2C0 0.9 0.9 0 2 0H14C15.1 0 16 0.9 16 2V10C16 11.1 15.1 12 14 12H5L0 16V2Z"/></g>
+    <text x="384" y="514" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">hello@example.com</text>
+
+    <!-- Phone -->
+    <circle cx="360" cy="548" r="12" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+    <g transform="translate(351,539) scale(1.1)" fill="#1A1A2E"><path d="M3 0H5L6.5 4L5 5.5C5.7 7.1 7 8.5 8.5 9.3L10 7.5L14 9V12C14 13.1 13.1 14 12 14C6.5 14 2 9.5 2 4C2 2.9 2.9 2 4 2L3 0Z"/></g>
+    <text x="384" y="554" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">+1 (555) 123-4567</text>
+
+    <!-- Website -->
+    <circle cx="360" cy="588" r="12" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+    <g transform="translate(351,579) scale(1.1)" fill="#1A1A2E"><path d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM8 14C4.69 14 2 11.31 2 8C2 4.69 4.69 2 8 2C11.31 2 14 4.69 14 8C14 11.31 11.31 14 8 14Z"/></g>
+    <text x="384" y="594" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#1A1A2E">https://example.com</text>
+  </g>
+
+  <!-- 底部行动按钮 -->
+  <g id="cta-buttons">
+    <rect x="430" y="636" width="190" height="40" rx="20" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="3" />
+    <text x="525" y="662" text-anchor="middle" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#FFF8EE" letter-spacing="1">SCHEDULE CALL</text>
+    <rect x="660" y="636" width="190" height="40" rx="20" fill="#00B8D9" stroke="#1A1A2E" stroke-width="3" />
+    <text x="755" y="662" text-anchor="middle" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#FFF8EE" letter-spacing="1">SEND EMAIL</text>
+  </g>
+
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">联系我们 · 期待与您合作</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">17 / 17</text>
+  </g>
+</svg>

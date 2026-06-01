@@ -15,23 +15,22 @@ Use this skill to turn a source document or webpage into a polished HTML present
 
 ## Core Workflow
 
-1. Extract the source into slide-worthy sections.
-2. Preserve every source section and subsection; never cut content just to reduce page count.
-3. Split overflow into continuation slides when a section exceeds a template's capacity.
-4. Map each section to one or more templates from the skill template library.
-5. Render the deck as an HTML preview with Memphis styling and responsive 16:9 framing.
-6. Keep the presentation readable first, decorative second.
+1. Extract the source into cleaned raw Markdown first.
+2. Analyze the source and build a structured `deckPlan` with slide intent, template choice, and content slots.
+3. Keep the strongest material and merge weak fragments instead of forcing thin continuation slides.
+4. Render the deck as an HTML preview with Memphis styling and responsive 16:9 framing.
+5. Keep the presentation readable first, decorative second.
 
 ## Fast Path
 
 Use the bundled generator when the user wants an immediate preview:
 
 ```bash
-node scripts/generate-preview.js --input ./notes.md --output ./preview.html
-node scripts/generate-preview.js --input https://example.com/article --output ./preview.html
+node scripts/generate-adaptive-preview.js --input ./notes.md --output ./preview.html --plan-output ./preview.plan.json
+node scripts/generate-adaptive-preview.js --input https://example.com/article --output ./preview.html --plan-output ./preview.plan.json
 ```
 
-The generated preview uses the shared Memphis stylesheet in `assets/memphis-preview.css`.
+The default `preview` npm script now points to the adaptive chain.
 
 ## Style Rules
 
@@ -59,6 +58,7 @@ The generated preview uses the shared Memphis stylesheet in `assets/memphis-prev
 - Include navigation, progress, and responsive behavior.
 - Keep the final deck aligned to the Memphis system in `references/memphis-style.md`.
 - Use only templates documented in `references/template-catalog.md`.
+- Prefer `npm run validate:preview -- --html <preview.html> --plan <preview.plan.json>` to verify adaptive output.
 
 ## References
 

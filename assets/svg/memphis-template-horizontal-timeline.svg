@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <g id="bg"><rect width="1280" height="720" fill="#FFF8EE" /></g>
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#00B8D9" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">PROJECT TIMELINE</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">项目时间线 · ROADMAP</text>
+    <g transform="translate(1140, 60)"><rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" /><rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" /></g>
+  </g>
+
+  <!-- 时间轴主线 -->
+  <line x1="140" y1="360" x2="1140" y2="360" stroke="#1A1A2E" stroke-width="4" />
+
+  <!-- Phase 1 -->
+  <g id="phase-1">
+    <circle cx="200" cy="360" r="20" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="4" />
+    <text x="200" y="367" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#FFF8EE">1</text>
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M120,180 H280 A10,10 0 0 1 290,190 V310 A10,10 0 0 1 280,320 H120 A10,10 0 0 1 110,310 V190 A10,10 0 0 1 120,180 Z" />
+    <rect x="110" y="180" width="180" height="34" fill="#FF3DA5" />
+    <text x="200" y="203" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="2">WEEK 1-2</text>
+    <text x="200" y="244" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">PLAN</text>
+    <text x="200" y="270" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">Define system</text>
+    <text x="200" y="290" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">Design tokens</text>
+    <text x="200" y="310" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">SVG masters</text>
+  </g>
+
+  <!-- Phase 2 -->
+  <g id="phase-2">
+    <circle cx="440" cy="360" r="20" fill="#00B8D9" stroke="#1A1A2E" stroke-width="4" />
+    <text x="440" y="367" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#FFF8EE">2</text>
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M360,400 H520 A10,10 0 0 1 530,410 V550 A10,10 0 0 1 520,560 H360 A10,10 0 0 1 350,550 V410 A10,10 0 0 1 360,400 Z" />
+    <rect x="350" y="400" width="180" height="34" fill="#00B8D9" />
+    <text x="440" y="423" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="2">WEEK 3-4</text>
+    <text x="440" y="464" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">BUILD</text>
+    <text x="440" y="490" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">HTML renderers</text>
+    <text x="440" y="510" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">Slot filler</text>
+    <text x="440" y="530" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">Theme engine</text>
+  </g>
+
+  <!-- Phase 3 -->
+  <g id="phase-3">
+    <circle cx="680" cy="360" r="20" fill="#FFD93D" stroke="#1A1A2E" stroke-width="4" />
+    <text x="680" y="367" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#1A1A2E">3</text>
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M600,180 H760 A10,10 0 0 1 770,190 V310 A10,10 0 0 1 760,320 H600 A10,10 0 0 1 590,310 V190 A10,10 0 0 1 600,180 Z" />
+    <rect x="590" y="180" width="180" height="34" fill="#FFD93D" />
+    <text x="680" y="203" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="2">WEEK 5-6</text>
+    <text x="680" y="244" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">VALIDATE</text>
+    <text x="680" y="270" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">Layout checks</text>
+    <text x="680" y="290" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">Contrast audit</text>
+    <text x="680" y="310" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">Reflow engine</text>
+  </g>
+
+  <!-- Phase 4 -->
+  <g id="phase-4">
+    <circle cx="920" cy="360" r="20" fill="#00C896" stroke="#1A1A2E" stroke-width="4" />
+    <text x="920" y="367" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="16" font-weight="900" fill="#FFF8EE">4</text>
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M840,400 H1000 A10,10 0 0 1 1010,410 V550 A10,10 0 0 1 1000,560 H840 A10,10 0 0 1 830,550 V410 A10,10 0 0 1 840,400 Z" />
+    <rect x="830" y="400" width="180" height="34" fill="#00C896" />
+    <text x="920" y="423" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="2">WEEK 7-8</text>
+    <text x="920" y="464" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E">SHIP</text>
+    <text x="920" y="490" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">Export pipeline</text>
+    <text x="920" y="510" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">Real doc testing</text>
+    <text x="920" y="530" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#5C5C7A">User feedback</text>
+  </g>
+
+  <!-- 装饰 -->
+  <circle cx="1100" cy="360" r="12" fill="#FF6B4A" stroke="#1A1A2E" stroke-width="3" />
+
+  <!-- Footer -->
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">项目时间线 · 8 周交付计划</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">16 / 16</text>
+  </g>
+</svg>

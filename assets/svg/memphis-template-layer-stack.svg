@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <g id="bg"><rect width="1280" height="720" fill="#FFF8EE" /></g>
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#00C896" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">TECH STACK</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">技术栈 · LAYER ARCHITECTURE</text>
+    <g transform="translate(1140, 60)"><rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" /><rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" /></g>
+  </g>
+
+  <!-- Layer 1 (底部) -->
+  <g id="layer-1">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M150,520 H1130 A14,14 0 0 1 1144,534 V590 A14,14 0 0 1 1130,604 H150 A14,14 0 0 1 136,590 V534 A14,14 0 0 1 150,520 Z" />
+    <rect x="136" y="520" width="180" height="84" fill="#FFD93D" />
+    <text x="226" y="566" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#1A1A2E" letter-spacing="1">LAYER 0</text>
+    <text x="226" y="590" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#1A1A2E">Foundation</text>
+    <text x="380" y="566" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Node.js runtime, file system, CSS variables, HTML canvas</text>
+  </g>
+
+  <!-- Layer 2 -->
+  <g id="layer-2">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M150,406 H1130 A14,14 0 0 1 1144,420 V476 A14,14 0 0 1 1130,490 H150 A14,14 0 0 1 136,476 V420 A14,14 0 0 1 150,406 Z" />
+    <rect x="136" y="406" width="180" height="84" fill="#00C896" />
+    <text x="226" y="452" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#FFF8EE" letter-spacing="1">LAYER 1</text>
+    <text x="226" y="476" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#FFF8EE">Core Engine</text>
+    <text x="380" y="452" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Source parser, template registry, slot filler, theme engine</text>
+  </g>
+
+  <!-- Layer 3 -->
+  <g id="layer-3">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M150,292 H1130 A14,14 0 0 1 1144,306 V362 A14,14 0 0 1 1130,376 H150 A14,14 0 0 1 136,362 V306 A14,14 0 0 1 150,292 Z" />
+    <rect x="136" y="292" width="180" height="84" fill="#00B8D9" />
+    <text x="226" y="338" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#FFF8EE" letter-spacing="1">LAYER 2</text>
+    <text x="226" y="362" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#FFF8EE">Intelligence</text>
+    <text x="380" y="338" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">Model-driven planner, content analyzer, intent classifier</text>
+  </g>
+
+  <!-- Layer 4 (顶部) -->
+  <g id="layer-4">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M150,178 H1130 A14,14 0 0 1 1144,192 V248 A14,14 0 0 1 1130,262 H150 A14,14 0 0 1 136,248 V192 A14,14 0 0 1 150,178 Z" />
+    <rect x="136" y="178" width="180" height="84" fill="#FF3DA5" />
+    <text x="226" y="224" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="18" font-weight="900" fill="#FFF8EE" letter-spacing="1">LAYER 3</text>
+    <text x="226" y="248" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#FFF8EE">Interface</text>
+    <text x="380" y="224" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1A1A2E">CLI commands, natural language API, validation reports</text>
+  </g>
+
+  <!-- 连接箭头 -->
+  <g id="arrows" opacity="0.3">
+    <line x1="640" y1="262" x2="640" y2="292" stroke="#1A1A2E" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="640" y1="376" x2="640" y2="406" stroke="#1A1A2E" stroke-width="2" />
+    <line x1="640" y1="490" x2="640" y2="520" stroke="#1A1A2E" stroke-width="2" />
+  </g>
+
+  <!-- 底部说明 -->
+  <text x="640" y="670" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="600" fill="#5C5C7A">每层只依赖下层 · 替换任意层不影响上层 · 单向依赖</text>
+
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">技术栈 · 四层架构</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">23 / 24</text>
+  </g>
+</svg>

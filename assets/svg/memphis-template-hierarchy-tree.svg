@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <g id="bg"><rect width="1280" height="720" fill="#FFF8EE" /></g>
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#FF3DA5" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">SYSTEM ARCHITECTURE</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">系统架构 · COMPONENT TREE</text>
+    <g transform="translate(1140, 60)"><rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" /><rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" /><rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" /></g>
+  </g>
+
+  <!-- Root: 居中, 240×60 -->
+  <g id="root">
+    <path fill="#FF3DA5" stroke="#1A1A2E" stroke-width="4" d="M520,160 H760 A14,14 0 0 1 774,174 V206 A14,14 0 0 1 760,220 H520 A14,14 0 0 1 506,206 V174 A14,14 0 0 1 520,160 Z" />
+    <text x="640" y="200" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#FFF8EE" letter-spacing="1">GENERATOR</text>
+  </g>
+
+  <!-- 连接线: root → 4 children (均匀分布, 每个 240px 宽, 间距 40px) -->
+  <!-- Children: x=100, x=380, x=660, x=940 (各 240px 宽) -->
+  <line x1="640" y1="220" x2="640" y2="250" stroke="#1A1A2E" stroke-width="3" />
+  <line x1="220" y1="250" x2="1060" y2="250" stroke="#1A1A2E" stroke-width="3" />
+  <line x1="220" y1="250" x2="220" y2="280" stroke="#1A1A2E" stroke-width="3" />
+  <line x1="500" y1="250" x2="500" y2="280" stroke="#1A1A2E" stroke-width="3" />
+  <line x1="780" y1="250" x2="780" y2="280" stroke="#1A1A2E" stroke-width="3" />
+  <line x1="1060" y1="250" x2="1060" y2="280" stroke="#1A1A2E" stroke-width="3" />
+
+  <!-- Child 1: Source Loader (x=100-340) -->
+  <g id="child-1">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M114,280 H326 A10,10 0 0 1 336,290 V350 A10,10 0 0 1 326,360 H114 A10,10 0 0 1 104,350 V290 A10,10 0 0 1 114,280 Z" />
+    <rect x="104" y="280" width="232" height="30" fill="#00B8D9" />
+    <text x="220" y="302" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="13" font-weight="900" fill="#1A1A2E" letter-spacing="2">SOURCE LOADER</text>
+    <text x="220" y="340" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">MD / HTML / URL</text>
+  </g>
+
+  <!-- Child 2: Planner (x=380-620) -->
+  <g id="child-2">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M394,280 H606 A10,10 0 0 1 616,290 V350 A10,10 0 0 1 606,360 H394 A10,10 0 0 1 384,350 V290 A10,10 0 0 1 394,280 Z" />
+    <rect x="384" y="280" width="232" height="30" fill="#FFD93D" />
+    <text x="500" y="302" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="13" font-weight="900" fill="#1A1A2E" letter-spacing="2">SLIDE PLANNER</text>
+    <text x="500" y="340" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">Model-driven</text>
+  </g>
+
+  <!-- Child 3: Renderer (x=660-900) -->
+  <g id="child-3">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M674,280 H886 A10,10 0 0 1 896,290 V350 A10,10 0 0 1 886,360 H674 A10,10 0 0 1 664,350 V290 A10,10 0 0 1 674,280 Z" />
+    <rect x="664" y="280" width="232" height="30" fill="#00C896" />
+    <text x="780" y="302" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="13" font-weight="900" fill="#1A1A2E" letter-spacing="2">RENDERER</text>
+    <text x="780" y="340" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">Deterministic HTML</text>
+  </g>
+
+  <!-- Child 4: Validator (x=940-1180) -->
+  <g id="child-4">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="3" d="M954,280 H1166 A10,10 0 0 1 1176,290 V350 A10,10 0 0 1 1166,360 H954 A10,10 0 0 1 944,350 V290 A10,10 0 0 1 954,280 Z" />
+    <rect x="944" y="280" width="232" height="30" fill="#FF6B4A" />
+    <text x="1060" y="302" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="13" font-weight="900" fill="#1A1A2E" letter-spacing="2">VALIDATOR</text>
+    <text x="1060" y="340" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">Layout + contrast</text>
+  </g>
+
+  <!-- 连接线: Planner + Renderer → 4 grandchildren -->
+  <!-- GCs: x=200, x=460, x=720, x=980 (各 200px 宽, 间距 60px) -->
+  <line x1="500" y1="360" x2="500" y2="400" stroke="#1A1A2E" stroke-width="2" />
+  <line x1="780" y1="360" x2="780" y2="400" stroke="#1A1A2E" stroke-width="2" />
+  <line x1="300" y1="400" x2="980" y2="400" stroke="#1A1A2E" stroke-width="2" />
+  <line x1="300" y1="400" x2="300" y2="430" stroke="#1A1A2E" stroke-width="2" />
+  <line x1="500" y1="400" x2="500" y2="430" stroke="#1A1A2E" stroke-width="2" />
+  <line x1="700" y1="400" x2="700" y2="430" stroke="#1A1A2E" stroke-width="2" />
+  <line x1="900" y1="400" x2="900" y2="430" stroke="#1A1A2E" stroke-width="2" />
+
+  <!-- GC 1: Template Registry (x=200-400) -->
+  <g id="gc-1">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="2" d="M214,430 H386 A8,8 0 0 1 394,438 V476 A8,8 0 0 1 386,484 H214 A8,8 0 0 1 206,476 V438 A8,8 0 0 1 214,430 Z" />
+    <rect x="206" y="430" width="188" height="24" fill="#FF3DA5" fill-opacity="0.3" />
+    <text x="300" y="449" text-anchor="middle" font-family="Impact, sans-serif" font-size="11" font-weight="900" fill="#1A1A2E" letter-spacing="1">TEMPLATE REGISTRY</text>
+    <text x="300" y="474" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="10" font-weight="600" fill="#5C5C7A">26 specs</text>
+  </g>
+
+  <!-- GC 2: Slot Filler (x=400-600) -->
+  <g id="gc-2">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="2" d="M414,430 H586 A8,8 0 0 1 594,438 V476 A8,8 0 0 1 586,484 H414 A8,8 0 0 1 406,476 V438 A8,8 0 0 1 414,430 Z" />
+    <rect x="406" y="430" width="188" height="24" fill="#FFD93D" fill-opacity="0.3" />
+    <text x="500" y="449" text-anchor="middle" font-family="Impact, sans-serif" font-size="11" font-weight="900" fill="#1A1A2E" letter-spacing="1">SLOT FILLER</text>
+    <text x="500" y="474" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="10" font-weight="600" fill="#5C5C7A">Budget-aware</text>
+  </g>
+
+  <!-- GC 3: Theme Engine (x=600-800) -->
+  <g id="gc-3">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="2" d="M614,430 H786 A8,8 0 0 1 794,438 V476 A8,8 0 0 1 786,484 H614 A8,8 0 0 1 606,476 V438 A8,8 0 0 1 614,430 Z" />
+    <rect x="606" y="430" width="188" height="24" fill="#00C896" fill-opacity="0.3" />
+    <text x="700" y="449" text-anchor="middle" font-family="Impact, sans-serif" font-size="11" font-weight="900" fill="#1A1A2E" letter-spacing="1">THEME ENGINE</text>
+    <text x="700" y="474" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="10" font-weight="600" fill="#5C5C7A">CSS variables</text>
+  </g>
+
+  <!-- GC 4: Reflow (x=800-1000) -->
+  <g id="gc-4">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="2" d="M814,430 H986 A8,8 0 0 1 994,438 V476 A8,8 0 0 1 986,484 H814 A8,8 0 0 1 806,476 V438 A8,8 0 0 1 814,430 Z" />
+    <rect x="806" y="430" width="188" height="24" fill="#00B8D9" fill-opacity="0.3" />
+    <text x="900" y="449" text-anchor="middle" font-family="Impact, sans-serif" font-size="11" font-weight="900" fill="#1A1A2E" letter-spacing="1">REFLOW</text>
+    <text x="900" y="474" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="10" font-weight="600" fill="#5C5C7A">Auto-fix overflow</text>
+  </g>
+
+  <!-- Output (Validator → Output) -->
+  <g id="output">
+    <line x1="1060" y1="360" x2="1060" y2="540" stroke="#1A1A2E" stroke-width="2" stroke-dasharray="6,4" />
+    <path fill="#1A1A2E" stroke="#1A1A2E" stroke-width="3" d="M940,540 H1180 A10,10 0 0 1 1190,550 V590 A10,10 0 0 1 1180,600 H940 A10,10 0 0 1 930,590 V550 A10,10 0 0 1 940,540 Z" />
+    <g transform="translate(948,552) scale(1.5)" fill="#FFF8EE"><path d="M4 0H10L14 4V14C14 15.1 13.1 16 12 16H4C2.9 16 2 15.1 2 14V2C2 0.9 2.9 0 4 0ZM10 0V4H14L10 0Z"/></g>
+    <text x="986" y="576" font-family="Impact, Arial Black, sans-serif" font-size="14" font-weight="900" fill="#FFF8EE" letter-spacing="1">OUTPUT.HTML</text>
+    <text x="986" y="594" font-family="Arial, Microsoft YaHei, sans-serif" font-size="10" font-weight="600" fill="#5C5C7A">Self-contained deck</text>
+  </g>
+
+  <!-- 底部说明 -->
+  <text x="640" y="660" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#5C5C7A">每个模块独立可替换 · Spec 驱动 · 确定性渲染 · 模型只用于规划阶段</text>
+
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">系统架构 · 模块化组件树</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">20 / 20</text>
+  </g>
+</svg>

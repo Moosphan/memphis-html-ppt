@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+
+  <g id="bg">
+    <rect width="1280" height="720" fill="#FFF8EE" />
+  </g>
+
+  <!-- Header -->
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#00C896" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">THE ROADMAP</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">议程概览 · AGENDA OVERVIEW</text>
+    <g transform="translate(1140, 60)">
+      <rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- 6 个议程项 -->
+  <g id="agenda-card">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,150 H1206 A14,14 0 0 1 1220,164 V644 A14,14 0 0 1 1206,658 H74 A14,14 0 0 1 60,644 V164 A14,14 0 0 1 74,150 Z" />
+
+    <!-- Item 1 -->
+    <text x="100" y="210" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#FF3DA5" fill-opacity="0.3">01</text>
+    <text x="170" y="200" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#1A1A2E">FOUNDATION</text>
+    <text x="170" y="224" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#5C5C7A">Design system setup, color tokens, typography scale, spacing grid</text>
+    <line x1="100" y1="244" x2="1180" y2="244" stroke="#1A1A2E" stroke-width="1" opacity="0.1" />
+
+    <!-- Item 2 -->
+    <text x="100" y="296" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#00B8D9" fill-opacity="0.3">02</text>
+    <text x="170" y="286" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#1A1A2E">CONTENT EXTRACTION</text>
+    <text x="170" y="310" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#5C5C7A">Source parsing, semantic analysis, slot assignment, budget enforcement</text>
+    <line x1="100" y1="330" x2="1180" y2="330" stroke="#1A1A2E" stroke-width="1" opacity="0.1" />
+
+    <!-- Item 3 -->
+    <text x="100" y="382" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#FFD93D" fill-opacity="0.3">03</text>
+    <text x="170" y="372" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#1A1A2E">TEMPLATE SELECTION</text>
+    <text x="170" y="396" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#5C5C7A">Intent matching, layout planning, decorative anchor binding</text>
+    <line x1="100" y1="416" x2="1180" y2="416" stroke="#1A1A2E" stroke-width="1" opacity="0.1" />
+
+    <!-- Item 4 -->
+    <text x="100" y="468" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#00C896" fill-opacity="0.3">04</text>
+    <text x="170" y="458" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#1A1A2E">RENDERING</text>
+    <text x="170" y="482" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#5C5C7A">Deterministic HTML output, theme token application, decoration placement</text>
+    <line x1="100" y1="502" x2="1180" y2="502" stroke="#1A1A2E" stroke-width="1" opacity="0.1" />
+
+    <!-- Item 5 -->
+    <text x="100" y="554" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#FF6B4A" fill-opacity="0.3">05</text>
+    <text x="170" y="544" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#1A1A2E">VALIDATION</text>
+    <text x="170" y="568" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#5C5C7A">Layout check, overflow detection, contrast audit, reflow if needed</text>
+    <line x1="100" y1="588" x2="1180" y2="588" stroke="#1A1A2E" stroke-width="1" opacity="0.1" />
+
+    <!-- Item 6 -->
+    <text x="100" y="634" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#FF3DA5" fill-opacity="0.3">06</text>
+    <text x="170" y="624" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#1A1A2E">DELIVERY</text>
+    <text x="170" y="648" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#5C5C7A">Self-contained HTML export, presentation mode, sharing</text>
+  </g>
+
+  <!-- Footer -->
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">议程概览 · 六步工作流程</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">11 / 12</text>
+  </g>
+
+</svg>

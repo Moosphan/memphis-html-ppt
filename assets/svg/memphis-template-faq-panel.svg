@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+
+  <g id="bg">
+    <rect width="1280" height="720" fill="#FFF8EE" />
+  </g>
+
+  <!-- Header -->
+  <g id="header">
+    <rect x="60" y="55" width="14" height="60" fill="#FF3DA5" />
+    <text x="90" y="95" font-family="Impact, Arial Black, sans-serif" font-size="48" font-weight="900" fill="#1A1A2E" letter-spacing="1">FAQ</text>
+    <text x="90" y="125" font-family="Arial, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#5C5C7A" letter-spacing="3">常见问题 · FREQUENTLY ASKED</text>
+    <g transform="translate(1140, 60)">
+      <rect x="0" y="0" width="26" height="26" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="0" width="26" height="26" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="0" y="28" width="26" height="26" fill="#00C896" stroke="#1A1A2E" stroke-width="2" />
+      <rect x="28" y="28" width="26" height="26" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- Q1 -->
+  <g id="q1">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,150 H1206 A14,14 0 0 1 1220,164 V310 A14,14 0 0 1 1206,324 H74 A14,14 0 0 1 60,310 V164 A14,14 0 0 1 74,150 Z" />
+    <!-- Q 标签 -->
+    <rect x="86" y="174" width="36" height="36" rx="4" fill="#FF3DA5" stroke="#1A1A2E" stroke-width="2.5" />
+    <text x="104" y="200" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#FFF8EE">Q</text>
+    <text x="136" y="200" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">How does the template system work?</text>
+    <!-- 分隔线 -->
+    <line x1="86" y1="224" x2="1194" y2="224" stroke="#1A1A2E" stroke-width="1" opacity="0.12" />
+    <!-- A -->
+    <text x="86" y="258" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">Each template is a self-contained spec with named slots, content budgets,</text>
+    <text x="86" y="280" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">overflow rules, and decorative anchors. The planner fills slots deterministically.</text>
+  </g>
+
+  <!-- Q2 -->
+  <g id="q2">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,348 H1206 A14,14 0 0 1 1220,362 V508 A14,14 0 0 1 1206,522 H74 A14,14 0 0 1 60,508 V362 A14,14 0 0 1 74,348 Z" />
+    <rect x="86" y="372" width="36" height="36" rx="4" fill="#00B8D9" stroke="#1A1A2E" stroke-width="2.5" />
+    <text x="104" y="398" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#FFF8EE">Q</text>
+    <text x="136" y="398" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">Can I customize the color theme?</text>
+    <line x1="86" y1="422" x2="1194" y2="422" stroke="#1A1A2E" stroke-width="1" opacity="0.12" />
+    <text x="86" y="456" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">Yes. The theme engine uses CSS custom properties. Swap the token file to change</text>
+    <text x="86" y="478" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">all colors, fonts, and spacing at runtime. Natural language edits also work.</text>
+  </g>
+
+  <!-- Q3 -->
+  <g id="q3">
+    <path fill="#FFF8EE" stroke="#1A1A2E" stroke-width="4" d="M74,546 H1206 A14,14 0 0 1 1220,560 V644 A14,14 0 0 1 1206,658 H74 A14,14 0 0 1 60,644 V560 A14,14 0 0 1 74,546 Z" />
+    <rect x="86" y="570" width="36" height="36" rx="4" fill="#FFD93D" stroke="#1A1A2E" stroke-width="2.5" />
+    <text x="104" y="596" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">Q</text>
+    <text x="136" y="596" font-family="Impact, Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1A1A2E">What happens when content overflows a slot?</text>
+    <line x1="86" y1="620" x2="1194" y2="620" stroke="#1A1A2E" stroke-width="1" opacity="0.12" />
+    <text x="86" y="648" font-family="Arial, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#5C5C7A">The reflow engine tries: drop tail items → hide slot → split slide → replace with text. Automatic.</text>
+  </g>
+
+  <!-- Footer -->
+  <g id="footer">
+    <text x="60" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5C5C7A">常见问题 · 3 个核心问答</text>
+    <text x="1220" y="700" text-anchor="end" font-family="Impact, sans-serif" font-size="14" font-weight="900" fill="#1A1A2E" letter-spacing="3">14 / 14</text>
+  </g>
+
+</svg>

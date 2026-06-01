@@ -1,0 +1,141 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .paper { fill: #FFF8EE; }
+      .paper-soft { fill: #FFE9C7; }
+      .ink { fill: #1A1A2E; }
+      .ink-soft { fill: #4A4A6A; }
+      .pink { fill: #FF3DA5; }
+      .blue { fill: #00B8D9; }
+      .yellow { fill: #FFD93D; }
+      .mint { fill: #00C896; }
+      .coral { fill: #FF6B4A; }
+      .chip-text {
+        font-family: "Montserrat", "Noto Sans SC", sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+      }
+      .title {
+        font-family: "Georgia", "Times New Roman", serif;
+        font-size: 84px;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+      }
+      .subtitle {
+        font-family: "Montserrat", "Noto Sans SC", sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+      .card-title {
+        font-family: "Montserrat", "Noto Sans SC", sans-serif;
+        font-size: 26px;
+        font-weight: 900;
+      }
+      .body {
+        font-family: "Montserrat", "Noto Sans SC", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .big-number {
+        font-family: "Georgia", "Times New Roman", serif;
+        font-size: 118px;
+        font-weight: 700;
+        letter-spacing: -0.06em;
+      }
+      .small {
+        font-family: "Montserrat", "Noto Sans SC", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    </style>
+    <pattern id="dots-shared-b" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="3.1" fill="#1A1A2E" fill-opacity="0.36"/>
+    </pattern>
+    <filter id="shadow-shared-b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="10" dy="10" stdDeviation="0" flood-color="#1A1A2E" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" class="paper"/>
+  <circle cx="154" cy="812" r="118" fill="#FF6B4A" fill-opacity="0.15"/>
+  <circle cx="1414" cy="176" r="134" fill="#FFD93D" fill-opacity="0.20"/>
+
+  <rect x="72" y="56" width="236" height="56" class="yellow"/>
+  <rect x="72" y="56" width="236" height="56" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+  <text x="104" y="92" class="chip-text ink">SECTION 02</text>
+
+  <rect x="1292" y="770" width="212" height="56" fill="#FFFFFF" stroke="#1A1A2E" stroke-width="6"/>
+  <text x="1342" y="806" class="chip-text ink">04 / 12</text>
+
+  <text x="82" y="220" class="title ink">Insight Board</text>
+  <text x="84" y="264" class="subtitle ink-soft">A structured Memphis slide for metrics,</text>
+  <text x="84" y="300" class="subtitle ink-soft">highlights, and supporting content.</text>
+
+  <g transform="translate(78 366)">
+    <rect x="0" y="0" width="430" height="366" rx="28" fill="#FFFFFF" filter="url(#shadow-shared-b)"/>
+    <rect x="0" y="0" width="430" height="366" rx="28" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+    <text x="42" y="68" class="card-title ink">Hero Metric</text>
+    <text x="40" y="194" class="big-number coral">78%</text>
+    <text x="44" y="246" class="subtitle ink-soft">Put a big result</text>
+    <text x="44" y="280" class="subtitle ink-soft">or KPI here.</text>
+    <rect x="42" y="300" width="156" height="42" rx="16" class="mint"/>
+    <rect x="42" y="300" width="156" height="42" rx="16" fill="none" stroke="#1A1A2E" stroke-width="4"/>
+    <text x="70" y="327" class="small" fill="#FFF8EE">+12% vs last</text>
+  </g>
+
+  <g transform="translate(534 366)">
+    <rect x="0" y="0" width="472" height="366" rx="28" class="paper-soft" filter="url(#shadow-shared-b)"/>
+    <rect x="0" y="0" width="472" height="366" rx="28" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+    <text x="40" y="68" class="card-title ink">Key Points</text>
+
+    <circle cx="58" cy="124" r="14" class="coral"/>
+    <text x="92" y="132" class="body ink-soft">Use this block for three concise</text>
+    <text x="92" y="158" class="body ink-soft">supporting bullets.</text>
+
+    <circle cx="58" cy="200" r="14" class="blue"/>
+    <text x="92" y="204" class="body ink-soft">Keep each line short, punchy,</text>
+    <text x="92" y="230" class="body ink-soft">and easy to scan live.</text>
+
+    <circle cx="58" cy="276" r="14" class="yellow"/>
+    <text x="92" y="276" class="body ink-soft">Decoration should frame the page,</text>
+    <text x="92" y="302" class="body ink-soft">not compete with content.</text>
+
+    <rect x="354" y="246" width="70" height="70" class="mint" fill-opacity="0.84"/>
+    <circle cx="382" cy="114" r="40" class="pink" fill-opacity="0.22"/>
+  </g>
+
+  <g transform="translate(1042 366)">
+    <rect x="0" y="0" width="480" height="176" rx="28" fill="#FFFFFF" filter="url(#shadow-shared-b)"/>
+    <rect x="0" y="0" width="480" height="176" rx="28" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+    <text x="38" y="60" class="card-title ink">Visual Placeholder</text>
+    <rect x="38" y="84" width="404" height="54" rx="18" fill="none" stroke="#1A1A2E" stroke-width="4" stroke-dasharray="12 10"/>
+    <text x="142" y="118" class="small ink-soft">Chart, screenshot, or panel</text>
+  </g>
+
+  <g transform="translate(1042 558)">
+    <rect x="0" y="0" width="232" height="174" rx="24" class="blue" filter="url(#shadow-shared-b)"/>
+    <rect x="0" y="0" width="232" height="174" rx="24" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+    <text x="28" y="54" class="card-title" fill="#FFF8EE">Quote</text>
+    <text x="28" y="92" class="small" fill="#FFF8EE">“Drop a sharp insight</text>
+    <text x="28" y="116" class="small" fill="#FFF8EE">or short takeaway.”</text>
+  </g>
+
+  <g transform="translate(1290 558)">
+    <rect x="0" y="0" width="232" height="174" rx="24" class="coral" filter="url(#shadow-shared-b)"/>
+    <rect x="0" y="0" width="232" height="174" rx="24" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+    <text x="28" y="54" class="card-title" fill="#FFF8EE">Next Step</text>
+    <text x="28" y="92" class="small" fill="#FFF8EE">Call out an action,</text>
+    <text x="28" y="116" class="small" fill="#FFF8EE">owner, or next move.</text>
+  </g>
+
+  <rect x="1278" y="58" width="180" height="84" fill="url(#dots-shared-b)"/>
+  <rect x="114" y="784" width="208" height="60" fill="url(#dots-shared-b)"/>
+  <path d="M1206 96C1230 68 1268 68 1292 96C1316 124 1354 124 1378 96" stroke="#00C896" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1482 242L1562 302L1482 362Z" class="yellow"/>
+  <path d="M1482 242L1562 302L1482 362Z" fill="none" stroke="#1A1A2E" stroke-width="6"/>
+  <path d="M504 810C620 760 750 792 868 826C970 854 1068 848 1162 798" stroke="#1A1A2E" stroke-width="4" stroke-dasharray="12 12" fill="none"/>
+  <circle cx="490" cy="816" r="18" class="ink"/>
+  <circle cx="1180" cy="792" r="18" class="ink"/>
+</svg>
